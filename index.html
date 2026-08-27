@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="th" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work & Travel USA: คู่มือและระบบเปรียบเทียบ 50 รัฐ (Spring 7 มี.ค. - 7 ก.ค. & Summer 7 พ.ค. - 7 ก.ย.)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-xs py-2 px-4 border-b border-blue-800/40 text-center font-medium">
+    ✨ ปรับปรุงข้อมูลตาม 2 ซีซันหลัก: 🌱 <strong>Spring (7 มี.ค. - 7 ก.ค.)</strong> และ ☀️ <strong>Summer (7 พ.ค. - 7 ก.ย.)</strong> | ระบบจำลองการเงินและภาษีสมจริง 50 รัฐ 🇹🇭🇺🇸
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Title -->
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-2xl shadow-lg shadow-blue-500/20">
+            🗽
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-heading font-extrabold text-xl sm:text-2xl text-white tracking-tight">Work & Travel USA</h1>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider">Spring & Summer 2026</span>
+            </div>
+            <p class="text-xs text-slate-400 font-medium hidden sm:block">คู่มือและระบบเปรียบเทียบ 50 รัฐสำหรับเด็กเวิร์กอย่างละเอียด ถูกต้องตามกฎหมาย และสมจริง</p>
+          </div>
+        </div>
+
+        <!-- Header Stats Pills -->
+        <div class="hidden lg:flex items-center gap-2">
+          <div class="bg-slate-800/80 border border-slate-700/80 px-3 py-1.5 rounded-xl text-center">
+            <span class="text-[10px] text-slate-400 block font-medium">ข้อมูลทั้งหมด</span>
+            <span id="stat-total-states" class="font-heading font-extrabold text-sm text-blue-400">50</span> <span class="text-[10px] text-slate-400">รัฐ</span>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/80 px-3 py-1.5 rounded-xl text-center">
+            <span class="text-[10px] text-slate-400 block font-medium">ปลอดภาษีเงินได้</span>
+            <span id="stat-no-income-tax" class="font-heading font-extrabold text-sm text-amber-400">9</span> <span class="text-[10px] text-slate-400">รัฐ</span>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/80 px-3 py-1.5 rounded-xl text-center">
+            <span class="text-[10px] text-slate-400 block font-medium">ช้อปปลอดภาษี</span>
+            <span id="stat-no-sales-tax" class="font-heading font-extrabold text-sm text-emerald-400">5</span> <span class="text-[10px] text-slate-400">รัฐ</span>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/80 px-3 py-1.5 rounded-xl text-center">
+            <span class="text-[10px] text-slate-400 block font-medium">ระดับ Tier S</span>
+            <span id="stat-tier-s" class="font-heading font-extrabold text-sm text-purple-400">12</span> <span class="text-[10px] text-slate-400">รัฐ</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex space-x-1 sm:space-x-2 overflow-x-auto pb-2 scrollbar-none">
+        <button data-tab="explore" class="nav-tab active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all">
+          <i data-lucide="map" class="w-4 h-4"></i>
+          <span>1. สำรวจ 50 รัฐ (Explore)</span>
+        </button>
+
+        <button data-tab="compare" class="nav-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap transition-all">
+          <i data-lucide="scale" class="w-4 h-4"></i>
+          <span>2. เปรียบเทียบเทียบข้าง (Compare)</span>
+          <span id="compare-tab-badge" class="px-1.5 py-0.2 rounded-full bg-amber-500 text-slate-950 font-black text-[10px]">3</span>
+        </button>
+
+        <button data-tab="quiz" class="nav-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap transition-all">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+          <span>3. ค้นหารัฐที่เหมาะกับคุณ (10-Question Quiz)</span>
+        </button>
+
+        <button data-tab="calculator" class="nav-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap transition-all">
+          <i data-lucide="calculator" class="w-4 h-4 text-emerald-400"></i>
+          <span>4. จำลองรายได้, ภาษี & คืนทุน (Pro Financial Simulator)</span>
+        </button>
+
+        <button data-tab="guide" class="nav-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap transition-all">
+          <i data-lucide="book-open" class="w-4 h-4 text-blue-400"></i>
+          <span>5. สารานุกรมความรู้ & คำถามพบบ่อย (Knowledge Hub)</span>
+        </button>
+
+        <button data-tab="agencies" class="nav-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap transition-all">
+          <i data-lucide="building-2" class="w-4 h-4 text-purple-400"></i>
+          <span>6. รีวิว & เปรียบเทียบเอเจนซี่ (Agencies)</span>
+          <span class="px-1.5 py-0.2 rounded-full bg-purple-500 text-slate-950 font-black text-[10px]">8+</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+    <!-- ========================================================= -->
+    <!-- TAB 1: EXPLORE STATES -->
+    <!-- ========================================================= -->
+    <section id="tab-content-explore" class="tab-content space-y-6">
+      
+      <!-- Hero Filter Box -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-slate-800">
+        <div class="relative z-10 space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">ค้นหาและสำรวจ 50 รัฐ</h2>
+              <p class="text-sm text-slate-400 mt-1">ประเมิน 7 มิติอย่างสมจริง (มิติ 4 งาน 2/ภาษี/ครองชีพ ถ่วงน้ำหนัก 2x) &bull; สามารถสลับดูมุมมองเฉพาะ **Spring (7 มี.ค.-7 ก.ค.)** หรือ **Summer (7 พ.ค.-7 ก.ย.)** ได้</p>
+            </div>
+            
+            <!-- Quick Season Badges -->
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1.5 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-1.5">
+                🌱 Spring: 7 มี.ค. - 7 ก.ค.
+              </span>
+              <span class="px-3 py-1.5 rounded-xl bg-amber-950/40 border border-amber-500/40 text-amber-300 text-xs font-bold flex items-center gap-1.5">
+                ☀️ Summer: 7 พ.ค. - 7 ก.ย.
+              </span>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative">
+            <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="พิมพ์ชื่อรัฐ (เช่น Wisconsin, Wyoming, Florida), รหัสย่อ (WI, WY, FL), เมือง (Dells, Orlando) หรือสไตล์..." 
+              class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-slate-900/90 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+            />
+          </div>
+
+          <!-- Season Selection Controls -->
+          <div class="flex items-center gap-2 p-2 bg-slate-900/80 rounded-2xl border border-slate-800 overflow-x-auto">
+            <span class="text-xs font-bold text-slate-400 px-2 shrink-0">🗓️ สลับมุมมองซีซัน:</span>
+            <button data-season="all" class="season-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-600 text-white transition-all whitespace-nowrap">🌸 ภาพรวมมาตรฐาน (All 50 States)</button>
+            <button data-season="spring" class="season-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap">🌱 มุมมองช่วง Spring (7 มี.ค. - 7 ก.ค.) — ครบ 50 รัฐ</button>
+            <button data-season="summer" class="season-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap">☀️ มุมมองช่วง Summer (7 พ.ค. - 7 ก.ย.) — ครบ 50 รัฐ</button>
+          </div>
+
+          <!-- Filter Controls Row -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-3 pt-1">
+            
+            <!-- Tier Filters -->
+            <div class="md:col-span-4 flex items-center gap-1.5 overflow-x-auto pb-1">
+              <button data-tier="all" class="tier-filter-btn px-3 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all whitespace-nowrap">ทุก Tier</button>
+              <button data-tier="Tier S" class="tier-filter-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap">👑 Tier S</button>
+              <button data-tier="Tier A" class="tier-filter-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap">⭐ Tier A</button>
+              <button data-tier="Tier B" class="tier-filter-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap">Tier B</button>
+              <button data-tier="Tier C" class="tier-filter-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap">Tier C</button>
+            </div>
+
+            <!-- Region Filter -->
+            <div class="md:col-span-3">
+              <select id="region-filter-select" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
+                <option value="all">📍 ทุกภูมิภาค (All Regions)</option>
+                <option value="East Coast">East Coast (ฝั่งตะวันออก)</option>
+                <option value="Midwest">Midwest (แถบตอนกลาง)</option>
+                <option value="Mountain West">Mountain West (แถบเทือกเขา)</option>
+                <option value="South">South (แถบภาคใต้)</option>
+                <option value="West Coast">West Coast (ฝั่งตะวันตก)</option>
+                <option value="New England">New England (นิวอิงแลนด์)</option>
+                <option value="Pacific">Pacific (แปซิฟิก)</option>
+              </select>
+            </div>
+
+            <!-- Feature Badges Filter -->
+            <div class="md:col-span-3">
+              <select id="badge-filter-select" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
+                <option value="all">✨ ทุกจุดเด่นพิเศษ (All Features)</option>
+                <option value="no_income_tax">💸 0% State Income Tax (ไม่มีภาษีเงินได้รัฐ)</option>
+                <option value="no_sales_tax">🛍️ 0% Sales Tax (ช้อปปิ้งปลอดภาษี)</option>
+                <option value="clothing_tax_free">👗 เสื้อผ้า/รองเท้า ปลอดภาษีซื้อ</option>
+                <option value="bikeable">🚴 ปั่นจักรยานสะดวก (Bike Friendly)</option>
+                <option value="employer_housing">🏠 มีหอพักนายจ้าง/อุทยาน (Employer Housing)</option>
+                <option value="high_earning">💰 โอกาสทำเงิน/งาน 2/ครองชีพดี (High Earning)</option>
+              </select>
+            </div>
+
+            <!-- Sort By -->
+            <div class="md:col-span-2">
+              <select id="sort-select" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
+                <option value="overall_score_desc">🏆 เรียงตามคะแนนรวม (ถ่วงน้ำหนัก 2x)</option>
+                <option value="safety_desc">🛡️ ความปลอดภัยสูงสุด</option>
+                <option value="earning_desc">💰 โอกาสทำเงิน/งาน 2/ครองชีพ (มิติ 4)</option>
+                <option value="housing_desc">🏠 ที่พักคุ้มค่า</option>
+                <option value="commute_desc">🚴 เดินทางสะดวก</option>
+                <option value="alumni_desc">🌟 ความพึงพอใจรุ่นพี่</option>
+                <option value="name_asc">🔤 ชื่อ A &rarr; Z</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Active Filter Status & View Switcher -->
+          <div class="flex items-center justify-between pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+            <div id="results-count" class="font-semibold text-slate-300">
+              พบ 50 รัฐ (ภาพรวมมาตรฐาน)
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="hidden sm:inline text-slate-500 text-[11px]">รูปแบบการแสดง:</span>
+              <button id="btn-view-grid" class="p-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition-colors" title="Grid View">
+                <i data-lucide="grid" class="w-4 h-4"></i>
+              </button>
+              <button id="btn-view-table" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Table View">
+                <i data-lucide="table" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- State Cards Grid Container -->
+      <div id="states-grid-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- State Table View Container -->
+      <div id="states-table-view" class="hidden">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 2: COMPARE STATES -->
+    <!-- ========================================================= -->
+    <section id="tab-content-compare" class="tab-content hidden space-y-6">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800">
+        <div class="max-w-3xl mb-6">
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 inline-block mb-2">⚖️ Multi-State Side-by-Side Comparison</span>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">เปรียบเทียบรัฐแบบเทียบข้าง (สูงสุด 3 รัฐ)</h2>
+          <p class="text-sm text-slate-400 mt-1">วิเคราะห์ความแตกต่างของค่าแรง อัตราภาษี ค่าครองชีพ ความเหมาะสมช่วง Spring/Summer และเรดาร์คะแนน 7 ด้าน</p>
+        </div>
+
+        <!-- Select Pickers Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div>
+            <label class="block text-xs font-bold text-blue-400 mb-1.5">รัฐที่ 1 (State 1):</label>
+            <select id="compare-select-1" class="w-full py-2.5 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-emerald-400 mb-1.5">รัฐที่ 2 (State 2):</label>
+            <select id="compare-select-2" class="w-full py-2.5 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-emerald-500"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-amber-400 mb-1.5">รัฐที่ 3 (State 3):</label>
+            <select id="compare-select-3" class="w-full py-2.5 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-500"></select>
+          </div>
+        </div>
+
+        <!-- Dynamic Compare Content Container -->
+        <div id="compare-results-container">
+          <!-- Rendered by JavaScript -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 3: QUIZ - FIND YOUR BEST FIT (10 QUESTIONS) -->
+    <!-- ========================================================= -->
+    <section id="tab-content-quiz" class="tab-content hidden space-y-6">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800">
+        <div class="max-w-3xl mb-8">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 inline-block">✨ AI Comprehensive 10-Dimension Match Quiz</span>
+            <span id="quiz-progress-text" class="text-xs font-bold text-blue-400 bg-blue-950/40 px-3 py-1 rounded-full border border-blue-800/40">ตอบแล้ว 0 จาก 10 ข้อ</span>
+          </div>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">แบบทดสอบวิเคราะห์และค้นหารัฐที่เหมาะกับคุณที่สุด</h2>
+          <p class="text-sm text-slate-400 mt-1">ตอบคำถามเชิงลึก 10 มิติ (ช่วงเวลา Spring/Summer, เป้าหมาย, ภาษี, ที่พัก, การเดินทาง, คอมมูนิตี้, แผนงานเสริม, อากาศ, วันหยุด และความปลอดภัย) เพื่อให้อัลกอริทึมจับคู่ 3 รัฐที่สมบูรณ์แบบที่สุด</p>
+        </div>
+
+        <div id="quiz-questions-container" class="space-y-6 mb-8">
+          <!-- Rendered by JavaScript -->
+        </div>
+
+        <div class="text-center pt-4">
+          <button 
+            id="btn-submit-quiz"
+            onclick="calculateQuizResults()"
+            disabled
+            class="py-4 px-10 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-heading font-bold text-sm shadow-xl shadow-blue-600/30 opacity-50 cursor-not-allowed transition-all"
+          >
+            ตอบคำถามให้ครบ 10 ข้อ (เหลืออีก 10 ข้อ)
+          </button>
+        </div>
+
+        <div id="quiz-results-container" class="mt-8">
+          <!-- Rendered by JavaScript after submit -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 4: ADVANCED J-1 FINANCIAL & TAX SIMULATOR (50 STATES) -->
+    <!-- ========================================================= -->
+    <section id="tab-content-calculator" class="tab-content hidden space-y-6">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800">
+        
+        <!-- Title & Presets -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+          <div class="max-w-3xl">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 inline-block">🧮 Comprehensive J-1 Financial Simulator (2026 Edition)</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">จำลองจริงครบ 50 รัฐ</span>
+            </div>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">เครื่องคำนวณจำลองรายได้จริง, ภาษี 2026, ค่าครองชีพ & จุดคุ้มทุน</h2>
+            <p class="text-sm text-slate-400 mt-1">คำนวณตลอดวงจรชีวิตโครงการ: ต้นทุนก่อนบิน + ชั่วโมงปกติ & OT (1.5x) + ภาษี Fed/State จริง + สิทธิยกเว้น FICA 7.65% + เงินคืนภาษี (Tax Refund) + คำนวณสัปดาห์คืนทุน (Break-Even ROI)</p>
+          </div>
+
+          <!-- Quick Scenario Presets -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            <span class="text-xs font-bold text-slate-400 shrink-0">🎯 เลือกแผนจำลอง:</span>
+            <div class="flex gap-1.5 overflow-x-auto">
+              <button onclick="applyCalcPreset('hardcore')" class="calc-preset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition-all whitespace-nowrap">🔥 ลุยทำเงินสูงสุด (Hardcore)</button>
+              <button onclick="applyCalcPreset('balanced')" class="calc-preset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40 hover:bg-blue-500/30 transition-all whitespace-nowrap">⚖️ ทำงานคู่เที่ยว (Balanced)</button>
+              <button onclick="applyCalcPreset('chill')" class="calc-preset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 transition-all whitespace-nowrap">🌴 เน้นเที่ยว/ชิล (Relax)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATE DYNAMIC REFERENCE BENCHMARK CARD -->
+        <div id="calc-state-reference-card" class="bg-gradient-to-r from-blue-950/40 via-slate-900 to-indigo-950/40 p-5 rounded-2xl border border-blue-500/30 mb-8 shadow-xl">
+          <!-- Dynamically Injected by JavaScript -->
+        </div>
+
+        <!-- Simulator Form Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: All Input Fields -->
+          <div class="lg:col-span-7 space-y-6">
+
+            <!-- Card A: Job & State Settings -->
+            <div class="bg-slate-900/70 p-5 rounded-2xl border border-slate-800 space-y-4">
+              <h3 class="font-heading font-bold text-sm text-white flex items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="briefcase" class="w-4 h-4 text-blue-400"></i>
+                  1. ข้อมูลสถานที่ทำงาน & ชั่วโมงงาน (Jobs & Hours)
+                </span>
+                <span class="text-[10px] text-blue-400 bg-blue-950/60 px-2 py-0.5 rounded border border-blue-800/40">ดึงข้อมูลอ้างอิงอัตโนมัติ</span>
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">เลือกรัฐที่ไปทำงาน (State)</label>
+                  <select id="calc-state-select" class="w-full py-2.5 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500 font-bold"></select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">ระยะเวลาทำงานจริง (สัปดาห์)</label>
+                  <input type="number" id="calc-weeks" value="12" step="1" min="4" max="18" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500 font-bold" />
+                </div>
+              </div>
+
+              <!-- Primary Job -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">ค่าแรงงานหลัก ($/ชม.)</label>
+                  <input type="number" id="calc-wage" value="15.0" step="0.5" min="7.25" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500 font-bold" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">ชั่วโมงงานหลัก (ชม./สัปดาห์)</label>
+                  <input type="number" id="calc-job1-hours" value="48" step="1" min="10" max="80" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500 font-bold" />
+                  <span class="text-[10px] text-amber-400/90 font-medium">>40 ชม. ระบบคิด OT 1.5 เท่าให้อัตโนมัติ</span>
+                </div>
+              </div>
+
+              <!-- Second Job Toggle -->
+              <div class="pt-1">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" id="calc-has-job2" checked class="w-4 h-4 text-blue-600 rounded bg-slate-800 border-slate-700" />
+                  <span class="text-xs font-bold text-amber-300">ฉันมีแผนจะทำ "งานที่ 2" (ต้องได้รับอนุมัติจาก Sponsor ใน SEVIS ก่อน)</span>
+                </label>
+              </div>
+
+              <!-- Job 2 Fields -->
+              <div id="job2-fields-wrapper" class="grid grid-cols-2 gap-3 bg-amber-950/20 p-3 rounded-xl border border-amber-500/20">
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-300 mb-1">ค่าแรงงาน 2 ($/ชม.)</label>
+                  <input type="number" id="calc-job2-wage" value="14.5" step="0.5" min="7.25" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-300 mb-1">ชั่วโมงงาน 2 (ชม./สัปดาห์)</label>
+                  <input type="number" id="calc-job2-hours" value="15" step="1" min="0" max="40" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+              </div>
+
+              <!-- Tips Field -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">ประมาณการเงินทิป ($/สัปดาห์)</label>
+                  <input type="number" id="calc-tips-weekly" value="0" step="10" min="0" max="500" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" placeholder="เช่น 50 สำหรับงานร้านอาหาร" />
+                  <span class="text-[10px] text-slate-500">สำหรับตำแหน่ง Server, Busser, Runner</span>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1 flex items-center justify-between">
+                    <span>อัตราแลกเปลี่ยน (บาท/$1)</span>
+                    <span class="text-[10px] text-emerald-400 font-bold">อัปเดตล่าสุด: ~32.85฿</span>
+                  </label>
+                  <input type="number" id="calc-rate" value="32.85" step="0.05" min="25" max="45" class="w-full py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                  <span class="text-[10px] text-slate-500">อัตราตลาดปัจจุบัน ~32.80 - 32.85 บาท</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Card B: Real Taxes & Safety Buffer -->
+            <div class="bg-slate-900/70 p-5 rounded-2xl border border-slate-800 space-y-4">
+              <h3 class="font-heading font-bold text-sm text-white flex items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="receipt" class="w-4 h-4 text-emerald-400"></i>
+                  2. ภาษีตามกฎหมายสหรัฐฯ 2026 & ตัวคูณ Safety Factor
+                </span>
+                <span class="text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">IRC Sec 3121(b)(19)</span>
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <label class="block text-[11px] font-bold text-slate-300 mb-1">ภาษีกลาง Federal Tax (%)</label>
+                  <input type="number" id="calc-fed-tax-rate" value="10.0" step="0.5" min="0" max="25" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                  <div class="mt-1.5 space-y-0.5">
+                    <span id="calc-fed-tax-calc-badge" class="text-[11px] text-rose-400 font-bold block">คำนวณหัก: -$0</span>
+                    <span class="text-[10px] text-slate-500 block">อัตราหัก ณ ที่จ่าย 10-12%</span>
+                  </div>
+                </div>
+
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <label class="block text-[11px] font-bold text-slate-300 mb-1">ภาษีรัฐ State Tax (%)</label>
+                  <input type="number" id="calc-state-tax-rate" value="0.0" step="0.01" min="0" max="15" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                  <div class="mt-1.5 space-y-0.5">
+                    <span id="calc-state-tax-calc-badge" class="text-[11px] text-rose-400 font-bold block">คำนวณหัก: $0.00</span>
+                    <span id="calc-state-tax-note" class="text-[10px] text-amber-300 font-semibold block leading-tight">0% ปลอดภาษี</span>
+                  </div>
+                </div>
+
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <label class="block text-[11px] font-bold text-slate-300 mb-1">ภาษีท้องถิ่น Local Tax (%)</label>
+                  <input type="number" id="calc-local-tax-rate" value="0.0" step="0.01" min="0" max="5" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                  <div class="mt-1.5 space-y-0.5">
+                    <span id="calc-local-tax-calc-badge" class="text-[11px] text-slate-400 font-bold block">คำนวณหัก: $0.00</span>
+                    <span id="calc-local-tax-note" class="text-[10px] text-slate-500 block leading-tight">ไม่มีภาษีท้องถิ่น</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Safety Factor -->
+              <div class="p-3.5 rounded-xl bg-blue-950/20 border border-blue-500/30 flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-xs font-bold text-blue-300 block">🛡️ Safety Buffer Factor (ตัวคูณสำรองฉุกเฉินสำหรับรายจ่าย):</span>
+                  <span class="text-[11px] text-slate-400">เพิ่มสัดส่วนค่าใช้จ่ายเพื่อความปลอดภัย ไม่ประเมินโลกสวยเกินจริง</span>
+                </div>
+                <select id="calc-safety-factor" class="py-2 px-3 rounded-xl bg-slate-800 border border-slate-700 text-xs text-blue-400 font-bold focus:outline-none focus:border-blue-500">
+                  <option value="1.00">1.00x (ไม่เผื่อ)</option>
+                  <option value="1.10">1.10x (เผื่อ 10%)</option>
+                  <option value="1.15" selected>1.15x (แนะนำ เผื่อ 15%)</option>
+                  <option value="1.20">1.20x (เผื่อ 20% เซฟสุด)</option>
+                </select>
+              </div>
+
+              <!-- Estimated Tax Refund Percentage -->
+              <div class="flex items-center justify-between text-xs text-slate-300 p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <div>
+                  <span class="font-semibold text-slate-200 block">💰 ประมาณการเงินขอคืนภาษี (Estimated Tax Refund):</span>
+                  <span class="text-[10px] text-slate-400">ยื่นแบบฟอร์ม 1040-NR ต้นปีถัดไปเพื่อขอคืนเงินภาษีที่หักไว้เกิน</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <input type="number" id="calc-tax-refund-rate" value="50" step="5" min="0" max="100" class="w-16 py-1.5 px-2 rounded-lg bg-slate-800 border border-slate-700 text-xs text-white font-bold text-center" />
+                  <span class="text-xs font-bold">%</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Card C: On-Site Living & Travel Budget -->
+            <div class="bg-slate-900/70 p-5 rounded-2xl border border-slate-800 space-y-4">
+              <h3 class="font-heading font-bold text-sm text-white flex items-center gap-2">
+                <i data-lucide="home" class="w-4 h-4 text-purple-400"></i>
+                3. ค่าครองชีพหน้างาน & งบเที่ยว/ช้อปปิ้ง (Living & Travel)
+              </h3>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">ค่าเช่าที่พัก ($/wk)</label>
+                  <input type="number" id="calc-housing" value="105" step="5" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">ค่ากินอยู่ ($/wk)</label>
+                  <input type="number" id="calc-living" value="75" step="5" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">เดินทาง/รถบัส ($/wk)</label>
+                  <input type="number" id="calc-commute-cost" value="10" step="5" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">เน็ต/ซักผ้า/ของใช้ ($/wk)</label>
+                  <input type="number" id="calc-misc-weekly" value="15" step="5" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1 border-t border-slate-800">
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">มัดจำที่พัก ($ Deposit)</label>
+                  <input type="number" id="calc-housing-deposit" value="200" step="50" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                  <span class="text-[10px] text-slate-500">ได้คืนเมื่อจบทริป</span>
+                </div>
+                <div>
+                  <label class="block text-[11px] text-amber-300 mb-1">งบเที่ยว Grace Period ($)</label>
+                  <input type="number" id="calc-travel-budget" value="1000" step="100" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-amber-300 font-bold" />
+                  <span class="text-[10px] text-slate-500">รร./เครื่องบิน/ทัวร์ 1-2 สัปดาห์</span>
+                </div>
+                <div>
+                  <label class="block text-[11px] text-purple-300 mb-1">งบช้อปปิ้งของฝาก ($)</label>
+                  <input type="number" id="calc-shopping-budget" value="500" step="50" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-purple-300 font-bold" />
+                  <span class="text-[10px] text-slate-500">iPhone, เสื้อผ้า, ของขวัญ</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Card D: Pre-Departure Investments -->
+            <div class="bg-slate-900/70 p-5 rounded-2xl border border-slate-800 space-y-3">
+              <h3 class="font-heading font-bold text-sm text-white flex items-center gap-2">
+                <i data-lucide="plane-takeoff" class="w-4 h-4 text-amber-400"></i>
+                4. ต้นทุนก่อนบินไปสหรัฐฯ ทั้งหมด (Pre-Departure Out-of-Pocket Costs)
+              </h3>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">ค่าโครงการเอเจนซี่ (฿)</label>
+                  <input type="number" id="calc-pre-program-fee" value="75000" step="1000" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">ค่าวีซ่า+SEVIS (฿)</label>
+                  <input type="number" id="calc-pre-visa-sevis" value="7800" step="500" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">ตั๋วเครื่องบินไป-กลับ (฿)</label>
+                  <input type="number" id="calc-pre-flight" value="48000" step="1000" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Pocket Money สัปดาห์แรก ($)</label>
+                  <input type="number" id="calc-pre-pocket-usd" value="800" step="50" min="0" class="w-full py-2 px-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-white font-bold" />
+                </div>
+              </div>
+              <div class="text-[11px] text-slate-400 pt-1 flex justify-between">
+                <span>รวมเงินลงทุนเริ่มต้นก่อนบิน:</span>
+                <span id="res-total-pre-departure-thb" class="font-bold text-rose-300">≈ 159,200 บาท</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Live Executive Results & Analytics Dashboard -->
+          <div class="lg:col-span-5 space-y-5 sticky top-24">
+            
+            <!-- Result Card 1: On-Site Cash & Net ROI -->
+            <div class="glass-card rounded-3xl p-6 bg-gradient-to-br from-emerald-950/50 via-slate-900 to-slate-900 border border-emerald-500/50 relative overflow-hidden shadow-2xl">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block">💵 เงินสดคงเหลือหน้างาน (On-Site Cash Flow)</span>
+                  <div id="res-onsite-net-usd" class="font-heading font-black text-3xl sm:text-4xl text-white mt-1">$5,840</div>
+                  <div id="res-onsite-net-thb" class="font-heading font-bold text-lg text-emerald-400 mt-0.5">≈ 207,320 บาท</div>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl border border-emerald-500/30 shadow-lg">
+                  💰
+                </div>
+              </div>
+
+              <!-- True Net ROI Badge -->
+              <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-1 my-3">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="text-slate-400 font-semibold">📈 กำไรสุทธิหลังหักทุนก่อนบินทั้งหมด (True Net ROI):</span>
+                  <span id="res-true-roi-thb" class="font-black text-emerald-300 text-sm">+76,520 บาท</span>
+                </div>
+                <div class="flex justify-between items-center text-[11px] text-slate-500">
+                  <span>(รวมประมาณการ Tax Refund <span id="res-tax-refund-summary" class="text-amber-400">+$620</span>)</span>
+                  <span id="res-roi-percentage" class="text-emerald-400 font-bold">+48.1% ROI</span>
+                </div>
+              </div>
+
+              <!-- Break-Even Tracker Card -->
+              <div class="p-3 rounded-xl bg-gradient-to-r from-blue-950/40 to-indigo-950/40 border border-blue-500/30 flex items-center gap-3 text-xs">
+                <i data-lucide="zap" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                <div>
+                  <span class="text-slate-300 block font-bold">สัปดาห์จุดคุ้มทุน (Break-Even Timeline):</span>
+                  <span id="res-breakeven-text" class="text-amber-300 font-bold">คืนทุนค่าโครงการและตั๋วเครื่องบินในสัปดาห์ที่ 6!</span>
+                </div>
+              </div>
+
+              <!-- Doughnut Chart -->
+              <div class="w-full h-44 relative my-3">
+                <canvas id="calc-doughnut-canvas"></canvas>
+              </div>
+            </div>
+
+            <!-- Detailed Line-Items Breakdown -->
+            <div class="glass-panel rounded-2xl p-5 border border-slate-800 space-y-2 text-xs">
+              <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-slate-400 pb-1 border-b border-slate-800 flex justify-between">
+                <span>รายละเอียดบัญชีรายรับ-รายจ่าย</span>
+                <span class="text-slate-500 font-normal">ตลอด <span id="res-weeks-count-badge">12</span> สัปดาห์</span>
+              </h4>
+
+              <div class="flex justify-between py-1">
+                <span class="text-slate-300">1. รายได้รวมก่อนหักภาษี (Gross Income):</span>
+                <span id="res-total-gross" class="font-bold text-white">$10,440</span>
+              </div>
+              <div class="flex justify-between py-1 text-slate-400 pl-3">
+                <span>- รายได้เฉลี่ยต่อสัปดาห์ (Weekly Average):</span>
+                <span id="res-weekly-gross" class="text-slate-300">$870/wk</span>
+              </div>
+              <div class="flex justify-between py-1 border-t border-slate-800/60">
+                <span class="text-slate-300">2. ภาษีเงินได้ที่ถูกหัก (Total Taxes Withheld):</span>
+                <span id="res-total-tax-deducted" class="font-bold text-rose-400">-$1,044</span>
+              </div>
+              <div class="flex justify-between py-0.5 text-slate-400 pl-3">
+                <span>- ภาษี Federal (~10%):</span>
+                <span id="res-fed-tax" class="text-rose-400">-$1,044</span>
+              </div>
+              <div class="flex justify-between py-0.5 text-slate-400 pl-3">
+                <span>- ภาษีเงินได้รัฐ State Tax:</span>
+                <span id="res-state-tax" class="text-slate-200">$0 (0%)</span>
+              </div>
+              <div class="flex justify-between py-1 bg-amber-500/10 px-2 rounded-lg my-1">
+                <span class="text-amber-300 font-semibold">🛡️ สิทธิยกเว้น FICA 7.65% (IRC 3121(b)(19)):</span>
+                <span id="res-fica-savings" class="font-bold text-amber-300">+$798 (ยกเว้น)</span>
+              </div>
+              <div class="flex justify-between py-1 border-t border-slate-800/60">
+                <span class="text-slate-300">3. ค่าครองชีพหน้างานจริง (รวม Safety Buffer):</span>
+                <span id="res-total-expenses" class="font-bold text-rose-400">-$2,058</span>
+              </div>
+              <div class="flex justify-between py-0.5 text-slate-400 pl-3">
+                <span>- ค่าเช่าที่พักตลอดโครงการ:</span>
+                <span id="res-breakdown-housing" class="text-slate-300">-$1,260</span>
+              </div>
+              <div class="flex justify-between py-0.5 text-slate-400 pl-3">
+                <span>- ค่ากินอยู่/เดินทาง/ของใช้:</span>
+                <span id="res-breakdown-living" class="text-slate-300">-$798</span>
+              </div>
+              <div class="flex justify-between py-1 border-t border-slate-800/60">
+                <span class="text-slate-300">4. งบเที่ยว & ช้อปปิ้งจบทริป:</span>
+                <span id="res-breakdown-travel-shop" class="font-semibold text-rose-400">-$1,500</span>
+              </div>
+            </div>
+
+            <!-- Transparency Legal Disclaimer -->
+            <div class="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800 text-[11px] text-slate-400 space-y-1">
+              <div class="font-bold text-slate-300 flex items-center gap-1.5">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-blue-400"></i>
+                <span>ข้อชี้แจงความโปร่งใสทางกฎหมายและการเงิน (Legal Disclaimer)</span>
+              </div>
+              <p>เครื่องมือนี้จำลองตามฐานข้อมูลกฎหมายแรงงาน DOL 2026, ภาษี Tax Foundation, และแบบฟอร์ม 1040-NR ยอดสุทธิจริงอาจแตกต่างกันตามชั่วโมงงานจริง สภาพอากาศ และการประเมินภาษีของ IRS</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 5: COMPREHENSIVE KNOWLEDGE HUB & FAQS (MASTER ENCYCLOPEDIA) -->
+    <!-- ========================================================= -->
+    <section id="tab-content-guide" class="tab-content hidden space-y-6">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800">
+        
+        <!-- Header & Quick Search -->
+        <div class="max-w-4xl mb-6">
+          <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 inline-block mb-2">📚 Work & Travel USA: The Master Encyclopedia</span>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">สารานุกรมความรู้ กฎหมาย วัฒนธรรม & การแก้ปัญหาฉุกเฉิน</h2>
+          <p class="text-sm text-slate-400 mt-1">รวบรวมทุกเรื่องที่เด็กเวิร์กต้องรู้ก่อนบินและขณะใช้ชีวิตในอเมริกา: กฎหมาย DOS, สิทธิภาษี FICA, วัฒนธรรมทิป, การเปิดบัญชี/SSN, กฎกัญชา/แอลกอฮอล์, และคำถามพบบ่อย 15 ข้อ</p>
+        </div>
+
+        <!-- Emergency Hotlines Alert Banner -->
+        <div class="bg-gradient-to-r from-rose-950/40 via-slate-900 to-amber-950/30 border border-rose-500/40 rounded-2xl p-5 mb-8 shadow-xl">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center font-black text-2xl shrink-0 border border-rose-500/30">
+              🚨
+            </div>
+            <div class="space-y-2 flex-1">
+              <h3 class="font-heading font-bold text-base text-rose-300 flex items-center gap-2">
+                <span>สายด่วนฉุกเฉิน 24 ชั่วโมงที่ต้องบันทึกไว้ในโทรศัพท์ทันที (24/7 Emergency Hotlines)</span>
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs pt-1">
+                <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+                  <span class="text-rose-400 font-bold block text-sm">📞 911 (US Emergency)</span>
+                  <span class="text-slate-400 text-[11px]">เหตุด่วนเหตุร้าย ไฟไหม้ ตำรวจ หรืออุบัติเหตุอันตรายถึงชีวิต (โทรฟรีจากทุกเบอร์)</span>
+                </div>
+                <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+                  <span class="text-amber-400 font-bold block text-sm">📞 1-866-283-9090 (DOS J-1)</span>
+                  <span class="text-slate-400 text-[11px]">สายด่วนกระทรวงการต่างประเทศสหรัฐฯ สำหรับผู้ถือวีซ่า J-1 ตลอด 24 ชม. (อีเมล: jvisas@state.gov)</span>
+                </div>
+                <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+                  <span class="text-blue-400 font-bold block text-sm">🇹🇭 สถานทูตไทยในสหรัฐฯ</span>
+                  <span class="text-slate-400 text-[11px]">สถานทูต ณ กรุงวอชิงตัน: +1-202-684-8498 | กงสุล LA / Chicago / New York (พาสปอร์ตหาย/เจ็บป่วยหนัก)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- J-1 Master Timeline & Checklist (August 2026 - 2027/2028 Edition) -->
+        <div class="glass-panel rounded-3xl p-6 sm:p-7 border border-blue-500/40 bg-gradient-to-br from-blue-950/30 via-slate-900 to-indigo-950/30 space-y-5 shadow-2xl mb-6">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="px-3 py-0.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  📍 ปัจจุบัน: สิงหาคม 2569 (Aug 2026) — เปิดรับสมัคร Early Bird
+                </span>
+                <span class="text-xs text-slate-400">โครงการรอบ 2026 - 2027/2028</span>
+              </div>
+              <h3 class="font-heading font-extrabold text-xl sm:text-2xl text-white flex items-center gap-2">
+                <i data-lucide="calendar-check" class="w-6 h-6 text-blue-400"></i>
+                J-1 Master Timeline: ปฏิทินเตรียมตัว 7 ขั้นตอน (Interactive Checklist)
+              </h3>
+              <p class="text-xs text-slate-400 mt-1">ไทม์ไลน์เช็กลิสต์ตั้งแต่เริ่มสมัครจนถึงบินกลับและขอคืนภาษี พร้อมปุ่มติ๊กบันทึกความคืบหน้า</p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="openEmergencySOSModal()" class="py-2.5 px-4 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold text-xs shadow-lg shadow-rose-600/20 flex items-center gap-2 transition-all shrink-0">
+                <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                🪪 การ์ดฉุกเฉิน SOS (Print / Save)
+              </button>
+            </div>
+          </div>
+
+          <!-- 7 Phases Grid / Timeline Accordion -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            
+            <!-- Phase 1: ACTIVE NOW -->
+            <div class="bg-gradient-to-b from-blue-950/60 to-slate-900 p-4 rounded-2xl border-2 border-blue-500/60 relative space-y-2 shadow-lg">
+              <span class="absolute -top-2.5 right-3 px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500 text-slate-950 shadow">
+                🟢 กำลังเปิดรับตอนนี้
+              </span>
+              <div class="flex items-center gap-2 text-blue-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-blue-500/30 text-blue-300 flex items-center justify-center text-xs font-black">1</span>
+                <span>ส.ค. - ต.ค. 2026</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">สมัครรอบ Early Bird & สอบวัดระดับภาษา</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-blue-500"> <span>สมัครโครงการรอบ Early Bird (รับส่วนลด 3,000-5,000฿)</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-blue-500"> <span>สอบสัมภาษณ์วัดระดับภาษาอังกฤษ (Level 1-5)</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-blue-500"> <span>เตรียม Transcript & หนังสือรับรองสภาพนักศึกษา</span></li>
+              </ul>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-purple-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-purple-500/30 text-purple-300 flex items-center justify-center text-xs font-black">2</span>
+                <span>พ.ย. 2026 - ม.ค. 2027</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">เลือกงาน & Job Fair นายจ้างสหรัฐฯ</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-purple-500"> <span>เลือกตำแหน่งงานและอ่านข้อตกลงที่พัก/ค่าแรง</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-purple-500"> <span>สัมภาษณ์ตรงกับนายจ้างผ่าน Zoom / Job Fair</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-purple-500"> <span>เซ็นรับและยืนยันสัญญาจ้าง Job Offer</span></li>
+              </ul>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-amber-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-amber-500/30 text-amber-300 flex items-center justify-center text-xs font-black">3</span>
+                <span>ก.พ. - มี.ค. 2027</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">ออก DS-2019 & สัมภาษณ์วีซ่าสถานทูต</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-amber-500"> <span>รับเอกสารสิทธิ์ DS-2019 และเลข SEVIS ID</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-amber-500"> <span>จ่าย SEVIS $35 + ค่าวีซ่า $185 & กรอกแบบ DS-160</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-amber-500"> <span>ซ้อม Mock Interview และสัมภาษณ์วีซ่าที่สถานทูต</span></li>
+              </ul>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-emerald-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-emerald-500/30 text-emerald-300 flex items-center justify-center text-xs font-black">4</span>
+                <span>เม.ย. - พ.ค. 2027</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">จองตั๋วบิน, ปฐมนิเทศ & แพ็กกระเป๋า</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-emerald-500"> <span>จองตั๋วเครื่องบินไป-กลับ (ยืดหยุ่นวันกลับได้)</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-emerald-500"> <span>เข้าฟังปฐมนิเทศ Pre-departure Orientation</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-emerald-500"> <span>เตรียม Pocket Money ~$800-1,000 และบัตร Travel Card</span></li>
+              </ul>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-cyan-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-cyan-500/30 text-cyan-300 flex items-center justify-center text-xs font-black">5</span>
+                <span>พ.ค. - ส.ค. 2027</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">บินถึงอเมริกา, ทำ SSN & ทำงาน</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-cyan-500"> <span>ทำ Arrival Check-in กับสปอนเซอร์ภายใน 72 ชม.</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-cyan-500"> <span>ไปสำนักงาน SSA ยื่นขอทำบัตร SSN & เปิดบัญชีธนาคาร</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-cyan-500"> <span>ทำงานตามสัญญา & Monthly Check-in ทุก 30 วัน</span></li>
+              </ul>
+            </div>
+
+            <!-- Phase 6 -->
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <div class="flex items-center gap-2 text-rose-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-rose-500/30 text-rose-300 flex items-center justify-center text-xs font-black">6</span>
+                <span>ก.ย. - ต.ค. 2027</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">Grace Period 30 วัน & บินกลับไทย</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-rose-500"> <span>หยุดทำงานตาม End Date ใน DS-2019</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-rose-500"> <span>ท่องเที่ยวภายในสหรัฐฯ (ห้ามออกนอกประเทศ)</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-rose-500"> <span>โอนเงินเก็บกลับไทย & เดินทางกลับตามกำหนด</span></li>
+              </ul>
+            </div>
+
+            <!-- Phase 7 -->
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2 md:col-span-2">
+              <div class="flex items-center gap-2 text-yellow-300 font-bold">
+                <span class="w-6 h-6 rounded-lg bg-yellow-500/30 text-yellow-300 flex items-center justify-center text-xs font-black">7</span>
+                <span>ม.ค. - เม.ย. 2028 (ปีถัดไป)</span>
+              </div>
+              <h4 class="font-bold text-white text-sm">รับเอกสาร Form W-2 & ยื่นขอเงินคืนภาษี (Tax Refund)</h4>
+              <ul class="space-y-1 text-slate-300 text-[11px] leading-relaxed">
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-yellow-500"> <span>รอรับเอกสาร Form W-2 จากนายจ้างทุกแห่งทางอีเมล/ไปรษณีย์ช่วงปลายเดือนมกราคม</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-yellow-500"> <span>ยื่นแบบภาษี Form 1040-NR ต่อ IRS และกรมสรรพากรรัฐ (State Dept of Revenue)</span></li>
+                <li class="flex items-start gap-1.5"><input type="checkbox" class="timeline-chk mt-0.5 accent-yellow-500"> <span>รับเงินคืนภาษี (Tax Refund) โอนเข้าบัญชีธนาคารหรือรับเช็คส่งกลับไทย</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Knowledge Hub Category Navigation Pills -->
+        <div class="flex items-center gap-2 p-2 bg-slate-900/80 rounded-2xl border border-slate-800 overflow-x-auto mb-6">
+          <span class="text-xs font-bold text-slate-400 px-2 shrink-0">📂 เลือกหมวดหมู่:</span>
+          <button onclick="filterKnowledgeCategory('all')" class="kb-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all whitespace-nowrap" data-category="all">🌟 ทั้งหมด (All)</button>
+          <button onclick="filterKnowledgeCategory('legal')" class="kb-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap" data-category="legal">🏛️ 1. กฎหมาย J-1 & สิทธิแรงงาน</button>
+          <button onclick="filterKnowledgeCategory('tax')" class="kb-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap" data-category="tax">💸 2. ภาษี FICA & การเงิน</button>
+          <button onclick="filterKnowledgeCategory('culture')" class="kb-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap" data-category="culture">🇺🇸 3. วัฒนธรรม, ทิป & แอลกอฮอล์</button>
+          <button onclick="filterKnowledgeCategory('lifestyle')" class="kb-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap" data-category="lifestyle">🚴 4. การใช้ชีวิต, SSN & หาหมอ</button>
+          <button onclick="filterKnowledgeCategory('faqs')" class="kb-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition-all whitespace-nowrap" data-category="faqs">❓ 5. 15+ คำถามพบบ่อย & แก้ปัญหา</button>
+        </div>
+
+        <!-- Search in Knowledge Hub -->
+        <div class="relative mb-6">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+          <input 
+            type="text" 
+            id="kb-search-input" 
+            placeholder="ค้นหาในสารานุกรม (เช่น ทิป, กัญชา, โดนตัดชั่วโมง, FICA, SSN, หาหมอ, ประกัน, Grace Period, พาสปอร์ตหาย)..." 
+            class="w-full pl-11 pr-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+            oninput="searchKnowledgeHub(this.value)"
+          />
+        </div>
+
+        <!-- Content Container -->
+        <div id="kb-cards-container" class="space-y-6">
+
+          <!-- SECTION 1: LEGAL -->
+          <div class="kb-item glass-card rounded-2xl p-6 border border-slate-800 space-y-4" data-kb-cat="legal">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+              <span class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-lg border border-blue-500/30">🏛️</span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">หมวดที่ 1: กฎหมาย J-1 สหรัฐฯ, ระบบ SEVIS และสิทธิแรงงาน (22 CFR 62.32)</h3>
+                <p class="text-xs text-slate-400">ข้อบังคับกระทรวงการต่างประเทศสหรัฐฯ (DOS) ที่ผู้ถือวีซ่า J-1 ต้องปฏิบัติตามอย่างเคร่งครัด</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-blue-300 flex items-center gap-1.5">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                  การรายงานตัว SEVIS Check-in (กฎหมายบังคับ)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  • <strong>Arrival Check-in:</strong> ต้องล็อกอินเข้าระบบ Sponsor ภายใน <strong>72 ชั่วโมง</strong> หลังเครื่องลงจอดในอเมริกา เพื่อยืนยันว่าถึงที่หมายแล้ว<br>
+                  • <strong>Monthly Check-in:</strong> ต้องรายงานตัวทุก 30 วันในระบบ เพื่อรักษาสถานะ Active ในระบบ SEVIS ของรัฐบาลสหรัฐฯ<br>
+                  • <strong>การย้ายที่อยู่:</strong> หากย้ายบ้านพัก ต้องแจ้ง Sponsor ภายใน <strong>10 วัน</strong> เสมอ หากฝ่าฝืนมีโทษถูกระงับสถานะวีซ่าทันที
+                </p>
+              </div>
+
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-amber-300 flex items-center gap-1.5">
+                  <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+                  กฎ 30-Day Grace Period (ช่วงท่องเที่ยว 30 วัน)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  • <strong>ห้ามทำงานโดยเด็ดขาดในช่วง Grace Period:</strong> วันทำงานวันสุดท้ายต้องไม่เกินวันที่ระบุในช่อง End Date ของแบบฟอร์ม DS-2019 การทำงานช่วง Grace Period ถือเป็นการทำงานผิดกฎหมาย (Unauthorized Employment)<br>
+                  • <strong>การเดินทางออกนอกประเทศ:</strong> ในช่วง Grace Period ท่องเที่ยวได้ทั่วทั้ง 50 รัฐ + Puerto Rico แต่ **ห้ามข้ามแดนไป Canada/Mexico** เพราะจะไม่สามารถกลับเข้าสหรัฐฯ ด้วยวีซ่า J-1 ได้อีก
+                </p>
+              </div>
+
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-rose-300 flex items-center gap-1.5">
+                  <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-400"></i>
+                  งานต้องห้าม 100% ตามกฎหมาย J-1 (Prohibited Jobs)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  • ❌ <strong>ห้ามขับขี่ยานพาหนะเชิงพาณิชย์:</strong> เช่น ขับรถส่งอาหาร DoorDash, Uber Eats, ขับ Uber/Lyft, ขับรถตู้ส่งของ (เสี่ยงอุบัติเหตุร้ายแรงและผิดเงื่อนไขประกัน)<br>
+                  • ❌ <strong>ห้ามงานดูแลเด็ก/คนชรา:</strong> งาน Au Pair, Babysitter, งานในศูนย์รับเลี้ยงเด็ก<br>
+                  • ❌ <strong>ห้ามงานอันตรายหรือกะดึกเดี่ยว:</strong> งานพนักงานปั๊มน้ำมันกะดึกคนเดียว, งานโรงฆ่าสัตว์, งานก่อสร้าง, งานใช้สารเคมีรุนแรง<br>
+                  • ❌ <strong>ห้ามงานขายของเร่ร่อน:</strong> Door-to-door sales หรือพนักงานขายสินค้าตามทางเท้า
+                </p>
+              </div>
+
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-emerald-300 flex items-center gap-1.5">
+                  <i data-lucide="briefcase" class="w-4 h-4 text-emerald-400"></i>
+                  ขั้นตอนการขออนุมัติ "งานที่สอง (Second Job)"
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  1. ขอเอกสาร <strong>Second Job Offer Form</strong> ให้นายจ้างที่ 2 กรอกข้อมูลค่าแรงและตารางงาน<br>
+                  2. ส่งแบบฟอร์มให้ Sponsor ตรวจสอบความปลอดภัยและประเภทงาน (ใช้เวลา 3-7 วันทำการ)<br>
+                  3. <strong>ห้ามเริ่มงานวันแรกก่อนได้รับอีเมลอนุมัติจาก Sponsor และบันทึกใน SEVIS โดยเด็ดขาด</strong> (การแอบทำผิดกฎหมายร้ายแรง)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: TAXES -->
+          <div class="kb-item glass-card rounded-2xl p-6 border border-slate-800 space-y-4" data-kb-cat="tax">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+              <span class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-lg border border-emerald-500/30">💸</span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">หมวดที่ 2: กฎหมายภาษี FICA, การตรวจสอบ Paystub และการขอคืนภาษี (Tax Refund)</h3>
+                <p class="text-xs text-slate-400">สิทธิประโยชน์ทางภาษีตามประมวลรัษฎากรสหรัฐฯ IRC Section 3121(b)(19) และการยื่นแบบ 1040-NR</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 space-y-2">
+                <h4 class="font-bold text-emerald-300 text-sm flex items-center gap-2">
+                  🛡️ สิทธิยกเว้นภาษี FICA (Social Security 6.2% + Medicare 1.45% = 7.65%)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  นักศึกษา J-1 Summer Work Travel จัดเป็น <strong>Nonresident Alien (NRA)</strong> ภายใต้กฎหมายสหรัฐฯ ได้รับการ <strong>ยกเว้นไม่ต้องจ่ายภาษี FICA ทั้งหมด 7.65%</strong> สำหรับการจ้างงานที่ได้รับอนุมัติ<br>
+                  • <strong>วิธีตรวจสอบ:</strong> ในใบ Paystub สลิปเงินเดือนทุกงวด ให้มองหาช่องภาษี <code>FICA</code>, <code>SS / OASDI</code> หรือ <code>MedFICA</code> จะต้องมียอดหักเป็น <strong>$0.00</strong><br>
+                  • <strong>หากโดนหักผิด:</strong> ให้นำข้อกฎหมาย IRC Sec 3121(b)(19) หรือหนังสือจาก Sponsor ไปยื่นต่อฝ่าย Payroll/HR ของนายจ้างทันที เพื่อให้ปรับปรุงคืนเงินในรอบจ่ายถัดไป หากนายจ้างไม่คืน สามารถยื่น Form 843 และ Form 8316 ขอคืนโดยตรงจาก IRS ได้
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="bg-slate-900/70 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
+                  <span class="font-bold text-blue-300 block">📝 การกรอกแบบฟอร์ม Form W-4</span>
+                  <p class="text-slate-300 leading-relaxed">
+                    เมื่อเริ่มงาน นายจ้างจะให้กรอกแบบฟอร์ม W-4 สำหรับนักเรียน J-1 ให้เลือกสถานะ <strong>Single</strong>, ไม่ใส่ผู้พึ่งพิง (No dependents), และระบุข้อความ "Nonresident Alien" หรือ "NRA" เพื่อให้นายจ้างหักภาษีเงินได้รัฐบาลกลางได้อย่างถูกต้อง
+                  </p>
+                </div>
+
+                <div class="bg-slate-900/70 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
+                  <span class="font-bold text-amber-300 block">📄 เอกสาร Form W-2 (ต้นปีถัดไป)</span>
+                  <p class="text-slate-300 leading-relaxed">
+                    ภายในเดือนมกราคมของปีถัดไป นายจ้างจะส่งเอกสาร <strong>Form W-2 (Wage and Tax Statement)</strong> มาให้ทางอีเมลหรือไปรษณีย์ เอกสารนี้สรุปรายได้และยอดภาษีที่ถูกหักไว้ทั้งหมดเพื่อใช้ในการยื่นขอคืนภาษี
+                  </p>
+                </div>
+
+                <div class="bg-slate-900/70 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
+                  <span class="font-bold text-purple-300 block">💰 การยื่นขอคืนภาษี (Tax Return)</span>
+                  <p class="text-slate-300 leading-relaxed">
+                    ระหว่างเดือน ม.ค. – เม.ย. ของปีถัดไป ให้ยื่นแบบฟอร์ม <strong>Form 1040-NR</strong> (ห้ามยื่นแบบ Resident 1040 ปกติเด็ดขาด) เพื่อขอรับเงินภาษีคืน (Refund) โดยจะโอนเข้าบัญชีธนาคารสหรัฐฯ หรือส่งเป็นเช็คเงินสดมาที่ไทย
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3: CULTURE -->
+          <div class="kb-item glass-card rounded-2xl p-6 border border-slate-800 space-y-4" data-kb-cat="culture">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+              <span class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-lg border border-purple-500/30">🇺🇸</span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">หมวดที่ 3: วัฒนธรรมอเมริกัน, มารยาทการให้ทิป และกฎหมายแอลกอฮอล์/กัญชา</h3>
+                <p class="text-xs text-slate-400">เข้าใจพฤติกรรม มารยาท และสิ่งที่คนไทยมักเข้าใจผิดเพื่อการใช้ชีวิตอย่างปลอดภัยและมีความสุข</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-amber-300 flex items-center gap-1.5">
+                  <i data-lucide="dollar-sign" class="w-4 h-4 text-amber-400"></i>
+                  คู่มือวัฒนธรรมการให้ทิป (Tipping Culture Guide)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  ในอเมริกา พนักงานบริการในร้านอาหารได้รับค่าแรงฐานต่ำมาก เงินทิปคือรายได้หลักของพวกเขา:<br>
+                  • <strong>ร้านอาหารนั่งโต๊ะ (Dine-in):</strong> ทิปมาตรฐาน <strong>15% - 20%</strong> ของยอดก่อนภาษี<br>
+                  • <strong>สั่งอาหารส่งบ้าน (Delivery / DoorDash):</strong> ทิป $3 - $5 หรือ 15% ของค่าอาหาร<br>
+                  • <strong>บาร์เครื่องดื่ม:</strong> $1 - $2 ต่อแก้ว หรือ 15-20% เมื่อปิดบิล<br>
+                  • <strong>แท็กซี่ / Uber / Lyft:</strong> 10% - 15% หากคนขับช่วยยกกระเป๋าหนัก<br>
+                  • <strong>ร้านฟาสต์ฟู้ด / สั่งหน้าเคาน์เตอร์:</strong> ไม่บังคับทิป (สามารถกด Skip ในเครื่องรูดบัตรได้)
+                </p>
+              </div>
+
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-rose-300 flex items-center gap-1.5">
+                  <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-400"></i>
+                  กฎหมายอายุ 21 ปี & Open Container Law
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  • <strong>กฎหมายอายุ 21 ปีบริบูรณ์ (Under 21 Law):</strong> ห้ามซื้อ ห้ามครอบครอง และห้ามดื่มเครื่องดื่มแอลกอฮอล์ทุกชนิดหากอายุยังไม่ถึง 21 ปีเต็ม ร้านค้าจะตรวจพาสปอร์ตหรือบัตรประชาชนเสมอ ห้ามใช้บัตรปลอมเด็ดขาด (Fake ID มีโทษอาญาร้ายแรง)<br>
+                  • <strong>Open Container Law:</strong> ห้ามถือขวดเหล้าหรือกระป๋องเบียร์ที่เปิดฝาแล้วในที่สาธารณะ ทางเท้า สวนสาธารณะ ชายหาด หรือในห้องโดยสารรถยนต์
+                </p>
+              </div>
+
+              <div class="bg-rose-950/20 border border-rose-500/40 p-4 rounded-xl space-y-2 md:col-span-2">
+                <h4 class="font-bold text-rose-300 text-sm flex items-center gap-2">
+                  🚨 คำเตือนเด็ดขาดเรื่อง "กัญชา (Cannabis / Marijuana)"
+                </h4>
+                <p class="text-slate-200 leading-relaxed">
+                  แม้ว่าบางรัฐในสหรัฐฯ จะมีกฎหมายระดับรัฐอนุญาตให้ผู้มีอายุ 21+ ซื้อกัญชาได้ แต่ <strong>กัญชายังคงเป็นสิ่งผิดกฎหมายร้ายแรงระดับรัฐบาลกลาง (Federal Illegal - Schedule I Controlled Substance)</strong><br>
+                  • วีซ่า J-1 เป็นวีซ่าภายใต้กฎหมายระดับชาติ หากถูกจับกุม มีบันทึกคดี หรือตรวจพบสารเสพติดในการตรวจร่างกายหลังจากเกิดอุบัติเหตุ การใช้หรือครอบครองกัญชาเป็นความผิดร้ายแรงภายใต้กฎหมายคนเข้าเมืองสหรัฐฯ (Immigration and Nationality Act - INA) อาจทำให้ถูกเพิกถอนวีซ่า J-1 ทันที และมีผลต่อการปฏิเสธการเข้าเมืองหรือขอวีซ่าสหรัฐฯ ในอนาคต
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4: LIFESTYLE -->
+          <div class="kb-item glass-card rounded-2xl p-6 border border-slate-800 space-y-4" data-kb-cat="lifestyle">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+              <span class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-lg border border-amber-500/30">🚴</span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">หมวดที่ 4: การใช้ชีวิต, บัตร SSN, ธนาคาร และการพบแพทย์เมื่อเจ็บป่วย</h3>
+                <p class="text-xs text-slate-400">วิธีจัดการชีวิตประจำวัน การเปิดบัญชีธนาคาร การเดินทาง และการใช้ประกันสุขภาพอย่างถูกต้อง</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-blue-300 flex items-center gap-1.5">
+                  <i data-lucide="credit-card" class="w-4 h-4 text-blue-400"></i>
+                  การทำบัตรประกันสังคม (Social Security Number - SSN)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  • <strong>ช่วงเวลาที่ควรไป:</strong> ต้องรอให้ Sponsor กด Validate ในระบบ SEVIS ก่อนอย่างน้อย <strong>3-5 วันทำการ</strong> หลังจากเดินทางถึงอเมริกา<br>
+                  • <strong>เอกสารที่ต้องเตรียม:</strong> Passport ตัวจริงพร้อมวีซ่า J-1, แบบฟอร์ม DS-2019, ใบ I-94, และ Job Offer<br>
+                  • <strong>ใบเสร็จ SSN Receipt:</strong> เมื่อยื่นแล้ว จะได้รับใบเสร็จซึ่งสามารถนำไปยื่นให้นายจ้างเพื่อเริ่มทำงานและรับเงินเดือนได้ทันทีระหว่างรอบัตรจริง
+                </p>
+              </div>
+
+              <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-2">
+                <h4 class="font-bold text-rose-300 flex items-center gap-1.5">
+                  <i data-lucide="stethoscope" class="w-4 h-4 text-rose-400"></i>
+                  การพบแพทย์: Urgent Care vs Emergency Room (ER)
+                </h4>
+                <p class="text-slate-300 leading-relaxed">
+                  • <strong>เจ็บป่วยทั่วไป (ไข้หวัด, ปวดท้อง, แผลเย็บเล็กน้อย):</strong> ให้ไปที่ <strong>Urgent Care Clinic</strong> ค่าใช้จ่าย Copay ส่วนเกินเพียง $50 - $100<br>
+                  • <strong>Emergency Room (ER):</strong> สำหรับกรณีฉุกเฉินอันตรายถึงชีวิตเท่านั้น หากไป ER ด้วยอาการไข้หวัด อาจโดนบิลเรียกเก็บ $1,000 - $3,000+<br>
+                  • <strong>รถพยาบาล 911 Ambulance:</strong> มีค่าใช้จ่าย $1,500 - $3,000 ต่อครั้ง ห้ามเรียกรถพยาบาลหากไม่จำเป็นอย่างยิ่ง
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 5: FAQS -->
+          <div class="kb-item glass-card rounded-2xl p-6 border border-slate-800 space-y-4" data-kb-cat="faqs">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+              <span class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 font-bold flex items-center justify-center text-lg border border-indigo-500/30">❓</span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-white">หมวดที่ 5: รวม 15 คำถามที่เด็กเวิร์กสงสัยบ่อยที่สุด & วิธีแก้ปัญหาเฉพาะหน้า</h3>
+                <p class="text-xs text-slate-400">คลิกที่คำถามเพื่อดูคำตอบและแนวทางแก้ไขที่ถูกต้องตามกฎหมายและข้อบังคับโครงการ</p>
+              </div>
+            </div>
+
+            <!-- Accordion FAQ List -->
+            <div class="space-y-3" id="faq-accordion-list">
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q1: โดนตัดชั่วโมงงาน / ชั่วโมงงานไม่ถึง 32-40 ชม. ต่อสัปดาห์ตามสัญญา ทำอย่างไร?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>1. พูดคุยกับผู้จัดการอย่างสุภาพ 2. ถ่ายรูปตารางงานและเก็บ Paystub ไว้เป็นหลักฐาน 3. <strong>ติดต่อ Sponsor ทันที</strong> เพื่อให้ไกล่เกลี่ยหรืออนุมัติให้หางานที่สอง</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q2: นายจ้างขู่จะไล่ออก ยกเลิก DS-2019 หรือส่งกลับไทย นายจ้างทำได้จริงไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p><strong>นายจ้างไม่มีอำนาจยกเลิกวีซ่าหรือส่งคุณกลับไทยได้ด้วยตนเอง!</strong> อำนาจในการดูแลและตัดสินสถานะ SEVIS เป็นขององค์กร Sponsor และกระทรวงการต่างประเทศสหรัฐฯ (DOS) เท่านั้น</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q3: ถ้ามีปัญหากับนายจ้าง หรือที่พักอันตราย ขอย้ายงานได้ไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p><strong>ทำได้ แต่ต้องผ่านความเห็นชอบจาก Sponsor เสมอ:</strong> ห้ามหนีงาน (Walk-off) เองเด็ดขาด เพราะจะทำให้ถูก Termination สถานะ SEVIS ทันที</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q4: บินเข้าอเมริกาก่อนเริ่มงาน หรืออยู่เที่ยวหลังจบโครงการ ได้กี่วัน?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>• เข้าก่อนเริ่มงานได้ล่วงหน้าไม่เกิน <strong>30 วัน</strong> และอยู่ท่องเที่ยวต่อได้ <strong>30 วัน (Grace Period)</strong> หลังวัน End Date ใน DS-2019 (ห้ามทำงานใน 30 วันนี้)</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q5: พาสปอร์ต (Passport) หรือเอกสาร DS-2019 สูญหายหรือถูกขโมย ต้องทำอย่างไร?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>1. แจ้งตำรวจขอ Police Report 2. ขอออก DS-2019 ใบใหม่จาก Sponsor 3. ติดต่อสถานทูต/กงสุลไทยเพื่อขอทำหนังสือเดินทางฉุกเฉิน</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q6: ถ้าบัตร SSN ยังส่งมาไม่ถึงบ้าน นายจ้างสามารถจ่ายเงินเดือนให้ได้ไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p><strong>ทำงานและจ่ายเงินได้ตามกฎหมาย!</strong> สิทธิ์ในการทำงานที่ถูกต้องตามกฎหมายของผู้ถือวีซ่า J-1 มาจากสถานะ J-1 และเอกสาร <strong>Form DS-2019 + I-94</strong> ตั้งแต่วันเริ่มต้นโครงการตามระเบียบ Social Security Administration (SSA) และ IRS โดยไม่จำเป็นต้องรอบัตร SSN ตัวจริงถึงมือก่อน</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q7: ช้อปปิ้งซื้อสินค้าแล้ว ขอคืนภาษี (Tax Refund) ที่สนามบินแบบยุโรปหรือญี่ปุ่นได้ไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p><strong>ไม่ได้!</strong> สหรัฐอเมริกาไม่มีระบบคืนภาษีซื้อที่สนามบิน แนะนำให้ซื้อของใน 5 รัฐปลอดภาษีซื้อ (Oregon, Delaware, Montana, New Hampshire, Alaska)</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q8: สามารถเดินทางไปเที่ยว Hawaii, Puerto Rico, Canada, Mexico ได้ไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>Hawaii & Puerto Rico ไปได้ตลอด | Canada & Mexico ต้องมี Travel Signature บน DS-2019 และห้ามไปช่วง Grace Period</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q9: ทำงานเกิน 40 ชั่วโมง/สัปดาห์ นายจ้างไม่ยอมจ่าย OT 1.5 เท่า ผิดกฎหมายไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>ตามกฎหมายแรงงานสหรัฐฯ (Fair Labor Standards Act - FLSA) นายจ้างทั่วไปต้องจ่ายค่าล่วงเวลา 1.5 เท่าเมื่อทำงานเกิน 40 ชม./สัปดาห์ <strong>แต่มีข้อยกเว้นสำคัญตาม FLSA Section 13(a)(3) Fact Sheet #18 สำหรับธุรกิจตามฤดูกาล/สวนสนุก/รีสอร์ต (Seasonal Amusement & Recreational Establishments)</strong> ที่นายจ้างอาจได้รับการยกเว้นไม่ต้องจ่ายค่า OT 1.5x ดังนั้นควรอ่านรายละเอียดในสัญญา Job Offer ให้ชัดเจนว่าตำแหน่งของคุณได้รับสิทธิ์ OT หรือได้รับการยกเว้น</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q10: เงินทิป (Tips) ที่ได้รับเป็นเงินสด ต้องเสียภาษีไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>ตามกฎหมาย IRS ทิปถือเป็นรายได้ที่ต้องเสียภาษี โดยระบบของร้านจะคำนวณหักภาษีใน Paycheck ประจำงวด</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q11: ป่วยเป็นไข้ บาดเจ็บ หรือปวดฟัน ประกันสุขภาพ J-1 คุ้มครองอะไรบ้าง?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>คุ้มครองอุบัติเหตุและเจ็บป่วยฉุกเฉินใหม่ ไม่คุ้มครองโรคประจำตัวเดิมและการทำฟันทั่วไป ควรเตรียมยาสามัญไปจากไทย</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q12: เมื่อจบโครงการและกลับไทยแล้ว จะยื่นขอเงินคืนภาษี (Tax Refund) อย่างไร?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>รอรับแบบฟอร์ม Form W-2 ในเดือน ม.ค. แล้วยื่น Form 1040-NR ต่อ IRS ทางออนไลน์หรือไปรษณีย์เพื่อรับเงินโอนหรือเช็ค</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q13: ขี่จักรยานไปทำงาน มีกฎหมายและข้อบังคับอะไรที่ต้องระวังบ้าง?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>ห้ามปั่นย้อนศร กลางคืนต้องมีไฟหน้าสีขาวและไฟท้ายสีแดง และใช้กุญแจ U-Lock ล็อคแน่นหนาเสมอ</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q14: การซื้อตั๋วเครื่องบินในประเทศสหรัฐฯ และการจัดการกระเป๋าเดินทางช่วงท่องเที่ยว</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>สายการบิน Southwest โหลดกระเป๋าฟรี 2 ใบ (23 กก./ใบ) | ใช้แอป Bounce หรือ LuggageHero ฝากกระเป๋าในเมืองใหญ่</p>
+                </div>
+              </details>
+
+              <details class="group bg-slate-900/70 p-4 rounded-xl border border-slate-800 text-xs">
+                <summary class="font-bold text-white cursor-pointer flex items-center justify-between text-sm">
+                  <span>Q15: วีซ่า J-1 สามารถขอเปลี่ยนเป็นวีซ่าท่องเที่ยว B1/B2 หรือวีซ่านักเรียน F-1 ในอเมริกาได้ไหม?</span>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <div class="mt-3 text-slate-300 leading-relaxed space-y-1.5 border-t border-slate-800 pt-3">
+                  <p>แนะนำให้เดินทางกลับไทยตามกำหนดเพื่อสร้างประวัติการเข้าเมืองที่ขาวสะอาด (Clean Record) ซึ่งจะทำให้ขอวีซ่าไปสหรัฐฯ ในอนาคตผ่านง่ายที่สุด</p>
+                </div>
+              </details>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 6: AGENCIES REVIEW & MASTER COMPARISON (8+ AGENCIES) -->
+    <!-- ========================================================= -->
+    <section id="tab-content-agencies" class="tab-content hidden space-y-6">
+      
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
+        
+        <!-- Header & Stats Overview -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+          <div class="max-w-3xl">
+            <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 inline-block mb-2">🏢 Thai Work & Travel Agency Comprehensive Audit</span>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">เจาะลึก & เปรียบเทียบ 8 เอเจนซี่ Work & Travel ในไทย</h2>
+            <p class="text-sm text-slate-400 mt-1">วิเคราะห์เชิงลึก 6 มิติ (ชื่อเสียง, คุณภาพงาน, สปอนเซอร์, บริการ, ความโปร่งใสของราคา, ติววีซ่า, รีวิวรุ่นพี่) พร้อมคู่มือเช็คสัญญาณอันตราย (Red Flags)</p>
+          </div>
+
+          <!-- Agency Stats -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-1">
+            <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-800 text-center shrink-0">
+              <span class="text-[10px] text-slate-400 block font-medium">เอเจนซี่ที่วิเคราะห์</span>
+              <span class="font-heading font-extrabold text-sm text-purple-400">8 แห่ง</span>
+            </div>
+            <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-800 text-center shrink-0">
+              <span class="text-[10px] text-slate-400 block font-medium">ระดับ Tier S</span>
+              <span class="font-heading font-extrabold text-sm text-amber-400">2 แห่ง (A+)</span>
+            </div>
+            <div class="bg-slate-900/80 p-3 rounded-2xl border border-slate-800 text-center shrink-0">
+              <span class="text-[10px] text-slate-400 block font-medium">ค่าโครงการเฉลี่ย</span>
+              <span class="font-heading font-extrabold text-sm text-emerald-400">65k - 84k ฿</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6-Dimensional Grading Rubric Info Card -->
+        <div class="bg-gradient-to-r from-purple-950/40 via-slate-900 to-indigo-950/40 p-5 rounded-2xl border border-purple-500/30">
+          <h3 class="font-heading font-bold text-sm text-purple-300 mb-2 flex items-center gap-2">
+            <i data-lucide="award" class="w-4 h-4 text-purple-400"></i>
+            เกณฑ์การประเมินและตัดเกรดเอเจนซี่ 6 มิติ (Agency 6-Dimensional Rubric)
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs pt-1">
+            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+              <span class="font-bold text-slate-200 block text-[11px]">1. ชื่อเสียง & ประสบการณ์</span>
+              <span class="text-[10px] text-slate-400">ประวัติ 15-25+ ปี, ความมั่นคง</span>
+            </div>
+            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+              <span class="font-bold text-slate-200 block text-[11px]">2. คุณภาพ & ความหลากหลายงาน</span>
+              <span class="text-[10px] text-slate-400">พันธมิตร CIEE / Intrax / CCUSA</span>
+            </div>
+            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+              <span class="font-bold text-slate-200 block text-[11px]">3. การดูแล & ตอบแชทฉับไว</span>
+              <span class="text-[10px] text-slate-400">ความช่วยเหลือฉุกเฉิน ไม่ลอยแพ</span>
+            </div>
+            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+              <span class="font-bold text-slate-200 block text-[11px]">4. ความโปร่งใส & นโยบายเงินคืน</span>
+              <span class="text-[10px] text-slate-400">ไม่มีค่าแอบแฝง Refund ชัดเจน</span>
+            </div>
+            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+              <span class="font-bold text-slate-200 block text-[11px]">5. การติวสัมภาษณ์วีซ่า</span>
+              <span class="text-[10px] text-slate-400">Mock Interview & ตรวจ DS-2019</span>
+            </div>
+            <div class="bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+              <span class="font-bold text-slate-200 block text-[11px]">6. รีวิว & ความพึงพอใจรุ่นพี่</span>
+              <span class="text-[10px] text-slate-400">เสียงตอบรับ Pantip / Social</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dual Insight Guide: Job Capacity vs English Proficiency -->
+        <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading font-bold text-sm text-white flex items-center gap-2">
+              <i data-lucide="scale" class="w-4 h-4 text-amber-400"></i>
+              💡 การวิเคราะห์ความสัมพันธ์: ปริมาณงานที่เปิดรับ (Job Quotas) VS ระดับภาษาของผู้สมัคร (English Proficiency)
+            </h3>
+            <span class="text-[10px] text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded border border-amber-800/40">Critical Insight</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80 space-y-1.5">
+              <span class="font-bold text-purple-300 flex items-center gap-1.5 text-xs">
+                <i data-lucide="users" class="w-3.5 h-3.5"></i> 📊 ปริมาณงานและโควตารับ (Job Capacity)
+              </span>
+              <p class="text-slate-300 leading-relaxed">
+                • <strong>Mass Agency (1,500 - 2,500+ คน):</strong> เช่น OEG, Acadex งานเยอะมาก สปอนเซอร์ใหญ่ (CIEE/Intrax) สมัครกลุ่มไปด้วยกันง่าย แต่งานดังๆ คนแย่งกันจองเร็ว<br>
+                • <strong>Medium Agency (400 - 1,000 คน):</strong> เช่น IEE, Higher, New Step โควตางานเฉพาะทาง (อุทยาน/สวนสนุก) กระจายตัวดี ดูแลทั่วถึง<br>
+                • <strong>Boutique Agency (100 - 350 คน):</strong> เช่น ALC, Click, West Coast รับจำกัด เน้นดูแลรายคน (1-on-1) ไม่วุ่นวาย
+              </p>
+            </div>
+
+            <div class="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80 space-y-1.5">
+              <span class="font-bold text-emerald-300 flex items-center gap-1.5 text-xs">
+                <i data-lucide="message-square" class="w-3.5 h-3.5"></i> 🗣️ ความเข้มงวดด้านภาษาอังกฤษ (English Screening)
+              </span>
+              <p class="text-slate-300 leading-relaxed">
+                • <strong>เข้มงวดสูง (B2 - C1):</strong> เช่น OEG สัมภาษณ์คัดภาษาจริงจัง (Level 1-5) เพื่อแมตช์งานบริการ/ทิปหนัก ถ้าภาษาไม่ถึงจะถูกจำกัดงาน<br>
+                • <strong>ปานกลาง-ยืดหยุ่น (B1 - B2):</strong> เช่น Acadex, IEE, Higher มีตำแหน่งงานหลากหลายครอบคลุมทุกระดับภาษา<br>
+                • <strong>มีทีมติวเข้ม / ภาษาเริ่มต้น (A2 - B1):</strong> เช่น New Step (ติว Mock Interview เข้มข้น), ALC (มีงาน Back of House รองรับ)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="space-y-3">
+          <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+            <div class="relative flex-1">
+              <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+              <input 
+                type="text" 
+                id="agency-search-input" 
+                placeholder="ค้นหาชื่อเอเจนซี่ (OEG, Acadex, IEE, Higher...), สปอนเซอร์, ระดับภาษา หรือประเภทงาน..." 
+                class="w-full pl-11 pr-4 py-2.5 rounded-2xl bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                oninput="handleAgencySearch(this.value)"
+              />
+            </div>
+
+            <!-- Tier Filters -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1">
+              <button onclick="filterAgencyTier('all')" class="agency-tier-btn px-3 py-2 rounded-xl text-xs font-bold bg-purple-600 text-white whitespace-nowrap" data-agency-tier="all">เกรดทั้งหมด</button>
+              <button onclick="filterAgencyTier('Tier S')" class="agency-tier-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-tier="Tier S">👑 Tier S (A+)</button>
+              <button onclick="filterAgencyTier('Tier A')" class="agency-tier-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-tier="Tier A">⭐ Tier A</button>
+              <button onclick="filterAgencyTier('Tier B')" class="agency-tier-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-tier="Tier B">Tier B</button>
+            </div>
+          </div>
+
+          <!-- Secondary Filter Pills: English & Job Quota Capacity -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
+            <!-- English Level Filters -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1">
+              <span class="text-[11px] text-slate-400 font-semibold shrink-0">🗣️ ทักษะภาษา:</span>
+              <button onclick="filterAgencyEnglish('all')" class="agency-eng-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-purple-600 text-white whitespace-nowrap" data-agency-eng="all">ทุกระดับ</button>
+              <button onclick="filterAgencyEnglish('advanced')" class="agency-eng-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-eng="advanced">🌟 ภาษาแข็งแรง (B2/C1)</button>
+              <button onclick="filterAgencyEnglish('intermediate')" class="agency-eng-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-eng="intermediate">👍 ปานกลาง (B1/B2)</button>
+              <button onclick="filterAgencyEnglish('beginner_friendly')" class="agency-eng-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-eng="beginner_friendly">🌱 เริ่มต้น / มีทีมติว</button>
+            </div>
+
+            <!-- Job Capacity Filters -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1">
+              <span class="text-[11px] text-slate-400 font-semibold shrink-0">📊 ปริมาณงาน:</span>
+              <button onclick="filterAgencyCapacity('all')" class="agency-cap-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-purple-600 text-white whitespace-nowrap" data-agency-cap="all">ทุกขนาด</button>
+              <button onclick="filterAgencyCapacity('mass')" class="agency-cap-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-cap="mass">🏢 แมส (1,500+ คน)</button>
+              <button onclick="filterAgencyCapacity('medium')" class="agency-cap-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-cap="medium">⭐ ปานกลาง (400-1,000)</button>
+              <button onclick="filterAgencyCapacity('boutique')" class="agency-cap-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 text-slate-300 hover:text-white whitespace-nowrap" data-agency-cap="boutique">🏠 บูทีค (100-350)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agencies Grid View Container -->
+        <div id="agencies-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Injected by JavaScript -->
+        </div>
+
+        <!-- Agency Selection Checklist & Red Flags Alert Box -->
+        <div class="mt-8 bg-gradient-to-r from-amber-950/30 via-slate-900 to-rose-950/30 p-6 rounded-3xl border border-amber-500/40 space-y-4 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center text-lg border border-amber-500/30">
+              ⚠️
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-base text-amber-300">คู่มือเช็คก่อนโอนเงิน: 5 สัญญาณอันตราย (Red Flags) & คำถามสำคัญ</h3>
+              <p class="text-xs text-slate-400">สิ่งที่เด็กเวิร์กต้องตรวจสอบให้แน่ชัดก่อนตัดสินใจเลือกเอเจนซี่และเซ็นสัญญา</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <h4 class="font-bold text-rose-300 flex items-center gap-1.5">
+                <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-400"></i>
+                🚨 5 สัญญาณอันตราย (Red Flags) ห้ามมองข้าม
+              </h4>
+              <ul class="space-y-1.5 text-slate-300 leading-relaxed list-disc list-inside">
+                <li><strong>ไม่ยอมระบุชื่อ US Sponsor ในสัญญา:</strong> Sponsor คือผู้ออก DS-2019 หากเอเจนซี่บ่ายเบี่ยงไม่ยอมแจ้งชื่อ Sponsor ถือว่ามีความเสี่ยงสูง</li>
+                <li><strong>การันตีว่าวีซ่าผ่าน 100%:</strong> ไม่มีใครในโลกการันตีวีซ่าได้ เพราะอำนาจการอนุมัติขึ้นอยู่กับกงสุลสถานทูตสหรัฐฯ แต่เพียงผู้เดียว</li>
+                <li><strong>ไม่มีนโยบายการคืนเงินเป็นลายลักษณ์อักษร:</strong> หากวีซ่าไม่ผ่านหรือยกเลิกโครงการ ต้องมีตารางระบุชัดเจนว่าจะได้เงินคืนเท่าไรในกี่วัน</li>
+                <li><strong>เร่งรัดให้โอนเงินมัดจำทันที:</strong> บีบด้วยคำว่า "โควตาเต็มวันนี้" โดยไม่ให้เวลาอ่านสัญญาอย่างละเอียด</li>
+                <li><strong>ไม่มีประวัติหรือไม่มีที่ตั้งสำนักงานชัดเจน:</strong> ไม่จดทะเบียนพาณิชย์ หรือไม่มีสมาชิกภาพในสมาคมทางการศึกษา เช่น TIECA</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 space-y-2">
+              <h4 class="font-bold text-emerald-300 flex items-center gap-1.5">
+                <i data-lucide="help-circle" class="w-4 h-4 text-emerald-400"></i>
+                ✅ 5 คำถามเด็ดที่ต้องถามเอเจนซี่ก่อนเซ็นสัญญา
+              </h4>
+              <ul class="space-y-1.5 text-slate-300 leading-relaxed list-disc list-inside">
+                <li>1. <strong>"โครงการนี้ใช้ Sponsor อะไรในอเมริกา?"</strong> (เช่น CIEE, Intrax, CCUSA, CHI, IENA)</li>
+                <li>2. <strong>"ถ้าสัมภาษณ์วีซ่าไม่ผ่าน ได้เงินคืนกี่บาท ภายในกี่วันทำการ?"</strong> (ขอเอกสาร Refund Policy)</li>
+                <li>3. <strong>"ถ้าไปถึงแล้ว นายจ้างตัดชั่วโมงงานต่ำกว่าสัญญา เอเจนซี่และ Sponsor มีขั้นตอนช่วยอย่างไร?"</strong></li>
+                <li>4. <strong>"ค่าโครงการนี้ รวมค่าวีซ่า ($185) และค่า SEVIS Fee ($35) หรือยัง?"</strong></li>
+                <li>5. <strong>"มีค่าธรรมเนียมแอบแฝงอื่นๆ อีกไหม เช่น ค่าเปลี่ยนงาน, ค่าออกเอกสารซ้ำ, ค่ามัดจำที่พัก?"</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- AGENCY DETAIL MODAL -->
+  <!-- ========================================================= -->
+  <div id="agency-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all">
+    <div class="glass-panel w-full max-w-4xl max-h-[90vh] rounded-3xl overflow-hidden border border-slate-700 shadow-2xl animate-glow flex flex-col justify-between" id="agency-detail-content">
+      <!-- Injected by JavaScript -->
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  
+  <!-- ========================================================= -->
+  <!-- EMERGENCY SOS PRINTABLE CARD MODAL -->
+  <!-- ========================================================= -->
+  <div id="emergency-sos-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all">
+    <div class="glass-panel w-full max-w-3xl max-h-[90vh] rounded-3xl overflow-hidden border border-rose-500/50 shadow-2xl animate-glow flex flex-col justify-between bg-slate-950" id="emergency-sos-content">
+      <div class="p-6 border-b border-slate-800 flex items-center justify-between bg-gradient-to-r from-rose-950/60 to-slate-900">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-rose-600 text-white font-black flex items-center justify-center text-xl shadow-lg">
+            🚨
+          </div>
+          <div>
+            <h2 class="font-heading font-extrabold text-xl text-white">การ์ดฉุกเฉิน J-1 Emergency SOS Card</h2>
+            <p class="text-xs text-slate-300">พกติดตัว/บันทึกไว้ในมือถือ สำหรับติดต่อขอความช่วยเหลือตลอด 24 ชั่วโมง</p>
+          </div>
+        </div>
+        <button onclick="closeEmergencySOSModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">✕</button>
+      </div>
+
+      <div class="p-6 space-y-5 overflow-y-auto text-xs" id="printable-sos-card">
+        <!-- 24/7 Hotlines Box -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="bg-rose-950/40 p-4 rounded-2xl border border-rose-500/40 space-y-1">
+            <span class="text-rose-400 font-bold text-sm block">📞 911 (US Emergency Hotline)</span>
+            <p class="text-slate-200 text-xs">เหตุด่วนเหตุร้าย ไฟไหม้ ตำรวจ อุบัติเหตุฉุกเฉินคุกคามชีวิต (โทรฟรี 24 ชม.)</p>
+          </div>
+          <div class="bg-amber-950/40 p-4 rounded-2xl border border-amber-500/40 space-y-1">
+            <span class="text-amber-400 font-bold text-sm block">📞 1-866-283-9090 (DOS J-1 Visa Hotline)</span>
+            <p class="text-slate-200 text-xs">สายด่วนกระทรวงการต่างประเทศสหรัฐฯ สำหรับ J-1 โดนเอาเปรียบ/กักขัง/ไม่ปลอดภัย</p>
+          </div>
+        </div>
+
+        <!-- Thai Embassies & Consulates -->
+        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-3">
+          <h4 class="font-bold text-white text-sm flex items-center gap-2">
+            🇹🇭 สถานเอกอัครราชทูตและสถานกงสุลใหญ่ไทยในสหรัฐฯ (Royal Thai Missions in USA)
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-slate-300">
+            <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800/80">
+              <strong class="text-blue-400 block">🏛️ สถานเอกอัครราชทูต ณ กรุงวอชิงตัน</strong>
+              <span>โทร: +1-202-684-8498 | Hotline ฉุกเฉิน: +1-202-999-7690</span>
+            </div>
+            <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800/80">
+              <strong class="text-blue-400 block">🏛️ สถานกงสุลใหญ่ ณ นครนิวยอร์ก</strong>
+              <span>โทร: +1-212-754-1770 | Hotline ฉุกเฉิน: +1-347-596-1309</span>
+            </div>
+            <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800/80">
+              <strong class="text-blue-400 block">🏛️ สถานกงสุลใหญ่ ณ นครลอสแอนเจลิส</strong>
+              <span>โทร: +1-323-962-9574 | Hotline ฉุกเฉิน: +1-323-580-4222</span>
+            </div>
+            <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800/80">
+              <strong class="text-blue-400 block">🏛️ สถานกงสุลใหญ่ ณ นครชิคาโก</strong>
+              <span>โทร: +1-312-664-3129 | Hotline ฉุกเฉิน: +1-773-633-8070</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Essential Rights Summary in English -->
+        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2 text-[11px]">
+          <h4 class="font-bold text-emerald-400 text-xs flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> Your Legal Rights as J-1 Exchange Visitor (Wilberforce Pamphlet):
+          </h4>
+          <ul class="space-y-1 text-slate-300 list-disc list-inside leading-relaxed">
+            <li><strong>You have the right to keep your own passport, DS-2019, and identity documents.</strong> Nobody can withhold them.</li>
+            <li><strong>You have the right to be paid agreed wages</strong> and at least the statutory minimum wage for all hours worked.</li>
+            <li><strong>You have the right to a safe workplace</strong> free from abuse, exploitation, and discrimination.</li>
+            <li><strong>You have the right to contact your Sponsor, DOS (1-866-283-9090), or 911</strong> without retaliation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-slate-800 flex items-center justify-between bg-slate-900">
+        <button onclick="window.print()" class="py-2 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1.5 transition-colors">
+          <i data-lucide="printer" class="w-4 h-4"></i> พิมพ์ / บันทึกเป็น PDF
+        </button>
+        <button onclick="closeEmergencySOSModal()" class="py-2 px-5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs transition-colors">
+          ปิดหน้าต่าง
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATE DETAIL MODAL -->
+  <!-- ========================================================= -->
+  <div id="state-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all">
+    <div class="glass-panel w-full max-w-4xl max-h-[90vh] rounded-3xl overflow-hidden border border-slate-700 shadow-2xl animate-glow flex flex-col justify-between" id="state-detail-content">
+      <!-- Injected by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900/90 border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p class="text-slate-400 font-semibold">🗽 Work & Travel USA: 50 States Guide & Comparison System (Spring & Summer 2026 Edition)</p>
+      <p>สร้างขึ้นเพื่อเป็นแหล่งข้อมูลและเครื่องมือวางแผนที่เป็นประโยชน์สูงสุดสำหรับนักศึกษาไทยทุกคน 🇹🇭🇺🇸</p>
+      <p class="text-[11px] text-slate-600">ข้อมูลอ้างอิง: กระทรวงแรงงานสหรัฐฯ (DOL), Tax Foundation 2026, IRS IRC Sec 3121(b)(19), และ U.S. Department of State 22 CFR 62.32</p>
+    </div>
+  </footer>
+
+  <!-- Data & Application Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
