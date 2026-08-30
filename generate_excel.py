@@ -26,7 +26,7 @@ headers = [
     'Agency ที่ถือสัญญา',
     'ตำแหน่ง (Position / Role)',
     'ค่าแรงฐาน / OT ($/ชม.)',
-    'ทิป (Tips / Bonus)',
+    'ทิป ($/สัปดาห์)',
     'ชั่วโมงทำงานจริง (คิดเผื่อหัว-ท้ายซีซัน)',
     'ค่าที่พัก ($/สัปดาห์)',
     'สวัสดิการ (อาหาร ฟรี หรือ อื่นๆ)'
@@ -39,10 +39,10 @@ rows = [
         'Acadex, OEG, IEE, Higher',
         'Housekeeping / Room Attendant',
         'ฐาน $16.00 / OT $24.00',
-        'ทิปหัวเตียง ~$15 - $30 / สัปดาห์',
+        '$15 - $30',
         '50 – 54 ชม./สัปดาห์ (พีค 58-62 ชม. / หัวท้าย 35-42 ชม.)',
-        '$105 / สัปดาห์',
-        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR ตักไม่อั้น 7 วัน, รถรับส่งพนักงาน, ส่วนลดทัวร์/รถไฟ 50%'
+        '$105',
+        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR ตักไม่อั้น 7 วัน, ทิปหัวเตียง, รถรับส่งพนักงาน, ส่วนลดทัวร์/รถไฟ 50%'
     ],
     [
         'Denali Princess Wilderness Lodge',
@@ -50,9 +50,9 @@ rows = [
         'Acadex, OEG, IEE, Higher',
         'Motor Coach / Fleet Detailer (ล้างรถทัวร์กะดึก)',
         'ฐาน $16.00 / OT $24.00',
-        'ไม่มี ($0)',
+        '-',
         '52 – 56 ชม./สัปดาห์ (กะดึก 21:00-02:00 OT ดกมาก)',
-        '$105 / สัปดาห์',
+        '$105',
         'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, กลางวันว่างนอนพักผ่อนหรือเดินป่าได้ทั้งวัน'
     ],
     [
@@ -61,9 +61,9 @@ rows = [
         'Acadex, OEG, IEE, Higher',
         'Kitchen Stewarding / Dishwasher (ล้างจาน)',
         'ฐาน $16.00 / OT $24.00',
-        'ไม่มี (ได้กินอาหารในครัวฟรี)',
+        '-',
         '50 – 55 ชม./สัปดาห์ (ควงกะค่ำได้ง่าย)',
-        '$105 / สัปดาห์',
+        '$105',
         'อาหารบุฟเฟต์ 3 มื้อใน EDR + เชฟทำสเต๊ก/เบอร์เกอร์เลี้ยงในครัวฟรีทุกกะ'
     ],
     [
@@ -72,10 +72,10 @@ rows = [
         'Acadex, OEG, IEE, Higher',
         'Luggage Handler (พนักงานยกกระเป๋าทัวร์)',
         'ฐาน $15.50 / OT $23.25',
-        '💵 ทิปสดจากทัวร์ ~$40 - $70 / สัปดาห์',
+        '$40 - $70',
         '46 – 52 ชม./สัปดาห์',
-        '$105 / สัปดาห์',
-        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, ได้ทิปเงินสดจากกรุ๊ปทัวร์ผู้สูงอายุ'
+        '$105',
+        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, ทิปเงินสดจากกรุ๊ปทัวร์ผู้สูงอายุ'
     ],
     [
         'Denali Bluffs Hotel',
@@ -83,10 +83,10 @@ rows = [
         'Acadex Thailand',
         'Housekeeping / Laundry',
         'ฐาน $15.00 / OT $22.50',
-        '🎁 โบนัส +$1.00/ชม. ท้ายทริป (ครบสัญญา)',
+        '-',
         '40 – 45 ชม./สัปดาห์ (หัวท้าย 32-38 ชม.)',
-        '$140 / สัปดาห์',
-        'รถชัตเติลบัสขึ้น-ลงเขา Sugarloaf, ส่วนลดอาหารร้าน The Perk, วิวหุบเขาสวย'
+        '$140',
+        'โบนัสพิเศษ +$1.00/ชม. ท้ายทริป (ครบสัญญา), รถชัตเติลบัสขึ้น-ลงเขา Sugarloaf, ส่วนลดอาหารร้าน The Perk'
     ],
     [
         'Grande Denali Lodge',
@@ -94,10 +94,10 @@ rows = [
         'Acadex Thailand',
         'Housekeeping / Public Area Cleaner',
         'ฐาน $15.50 / OT $23.25',
-        '🎁 โบนัส +$1.00/ชม. ท้ายทริป (ครบสัญญา)',
+        '-',
         '42 – 46 ชม./สัปดาห์ (หัวท้าย 35-40 ชม.)',
-        '$140 / สัปดาห์',
-        'โรงแรมหรู 4 ดาวบนยอดเขา, รถชัตเติลบัสรับส่ง, ส่วนลดอาหารห้องอาหาร Alpenglow'
+        '$140',
+        'โบนัสพิเศษ +$1.00/ชม. ท้ายทริป (ครบสัญญา), โรงแรมหรู 4 ดาว, รถชัตเติลบัส, ส่วนลดอาหารห้องอาหาร Alpenglow'
     ],
     [
         'Grande Denali Lodge',
@@ -105,10 +105,10 @@ rows = [
         'Acadex Thailand',
         'Busser / Food Runner (Alpenglow Restaurant)',
         'ฐาน $14.00 / OT $21.00',
-        '💵 Tip Out สด ~$40 - $70 / คืน',
+        '$200 - $350',
         '40 – 45 ชม./สัปดาห์',
-        '$140 / สัปดาห์',
-        'โบนัส +$1.00/ชม. ท้ายทริป, ได้ทิปเงินสดจากแขกไฮเอนด์ร้านอาหารวิวพาโนรามา'
+        '$140',
+        'โบนัสพิเศษ +$1.00/ชม. ท้ายทริป, ทิปเงินสดจากแขกไฮเอนด์ร้านอาหารวิวพาโนรามา ($40-$70/คืน)'
     ],
     [
         'Mt. McKinley Princess Lodge',
@@ -116,10 +116,10 @@ rows = [
         'Higher, OEG, Acadex',
         'Housekeeping / Kitchen / Laundry',
         'ฐาน $16.00 / OT $24.00',
-        'ทิปหัวเตียง ~$10 - $20 / สัปดาห์',
+        '$10 - $20',
         '44 – 48 ชม./สัปดาห์ (หัวท้าย 35-40 ชม.)',
-        '$105 / สัปดาห์',
-        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, ชมวิวยอดเขาเดนาลี บรรยากาศสงบ ไม่กดดัน'
+        '$105',
+        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, รถรับส่งพนักงาน, ชมวิวยอดเขาเดนาลี บรรยากาศสงบ'
     ],
     [
         'Fairbanks Princess Riverside Lodge',
@@ -127,9 +127,9 @@ rows = [
         'IEE, Acadex, Higher',
         'Food Runner / Laundry / Steward',
         'ฐาน $15.50 / OT $23.25',
-        'ทิปเฉพาะ F&B ~$20 - $40 / สัปดาห์',
+        '$20 - $40',
         '36 – 40 ชม./สัปดาห์ (ไม่ค่อยมี OT)',
-        '$105 / สัปดาห์',
+        '$105',
         'หอพักในเมืองแฟร์แบงก์ส + รถชัตเติลบัส, ใกล้ Walmart และร้านอาหารไทย หางาน 2 ง่าย'
     ],
     [
@@ -138,10 +138,10 @@ rows = [
         'Acadex, Higher, OEG, IEE',
         'Housekeeping / Crew Member',
         'ฐาน $17.75 / OT $26.62',
-        'ไม่มี (เน้นค่าแรงฐานสูงสุด)',
+        '-',
         '54 – 60 ชม./สัปดาห์ (พีค 60-64 ชม. / หัวท้าย 40 ชม.)',
-        '$0 (หอพักฟรี!) + ค่าอาหาร EDR $105/wk',
-        'หอพักฟรี 100%, อาหารบุฟเฟต์ 3 มื้อ EDR, ส่วนลดซื้อของ 40%, เข้าอุทยาน Grand Teton & Yellowstone ฟรี'
+        '$0',
+        'หอพักฟรี 100%! + อาหารบุฟเฟต์ 3 มื้อ EDR ($105/wk), ส่วนลดซื้อของ 40%, เข้าอุทยาน Grand Teton & Yellowstone ฟรี'
     ],
     [
         'Grand Teton Lodge Company (GTLC)',
@@ -149,10 +149,10 @@ rows = [
         'Acadex, Higher, OEG, IEE',
         'Kitchen Crew / Dishwasher / Food Prep',
         'ฐาน $17.75 / OT $26.62',
-        'ไม่มี (กินฟรีในครัว)',
+        '-',
         '52 – 58 ชม./สัปดาห์ (ควงกะ Banquet ได้)',
-        '$0 (หอพักฟรี!) + ค่าอาหาร EDR $105/wk',
-        'หอพักฟรี 100%, อาหาร 3 มื้อ EDR + กินฟรีในครัว, สิทธิประโยชน์เครือ Vail Resorts'
+        '$0',
+        'หอพักฟรี 100%! + อาหาร 3 มื้อ EDR + กินฟรีในครัว, สิทธิประโยชน์เครือ Vail Resorts'
     ],
     [
         'Xanterra Yellowstone Lodges',
@@ -160,10 +160,10 @@ rows = [
         'OEG, IEE Thailand',
         'Hospitality Crew / Kitchen / Steward',
         'ฐาน $15.70 / OT $23.55',
-        'ไม่มี ($0)',
+        '-',
         '46 – 52 ชม./สัปดาห์ (หัวท้าย 38-42 ชม.)',
-        '$120 / สัปดาห์ (รวมหอพัก+อาหาร 3 มื้อ)',
-        'หอพักใหม่ Arnica Development + บุฟเฟต์ 3 มื้อ EDR, เที่ยวบ่อน้ำพุร้อนและไกเซอร์ฟรี'
+        '$120',
+        'รวมหอพัก + อาหารบุฟเฟต์ 3 มื้อ EDR, หอพักใหม่ Arnica, เที่ยวบ่อน้ำพุร้อนและไกเซอร์ Yellowstone ฟรี'
     ],
     [
         'Under Canvas Grand Teton / Yellowstone',
@@ -171,10 +171,10 @@ rows = [
         'Higher Education',
         'Housekeeping / Guest Service',
         'ฐาน $16.50 / OT $24.75',
-        '💵 ทิปสด ~$50 - $100 / สัปดาห์',
+        '$50 - $100',
         '42 – 46 ชม./สัปดาห์',
-        '$100 / สัปดาห์',
-        'แคมป์กระโจมซาฟารีหรู, อาหารพนักงาน, แขกไฮเอนด์ ทิปเงินสดดี บรรยากาศเป็นกันเอง'
+        '$100',
+        'แคมป์กระโจมซาฟารีหรู, อาหารพนักงาน, ทิปเงินสดจากแขกไฮเอนด์ บรรยากาศเป็นกันเอง'
     ],
     [
         'Kalahari Resorts & Conventions',
@@ -182,9 +182,9 @@ rows = [
         'OEG, Acadex, Higher',
         'Lifeguard / Housekeeping (งานหลัก)',
         'ฐาน $15.00 / OT $22.50',
-        'ไม่มี ($0)',
+        '-',
         '38 – 44 ชม./สัปดาห์ (เกลี่ยกะ 40 ชม.)',
-        '$105 / สัปดาห์',
+        '$105',
         'หอพัก Kalahari Village, บัตรเล่นสวนน้ำฟรี, เมืองปั่นจักรยาน 100%, หางาน 2 ร้านอาหารง่าย'
     ],
     [
@@ -193,10 +193,10 @@ rows = [
         'Walk-in สมัครเองหน้างาน',
         'Barback / Busser / Runner (งานที่สอง)',
         'ฐาน $12.00 – $14.00',
-        '💵 ทิปสด $50 - $100 / คืน',
+        '$250 - $500',
         '20 – 25 ชม./สัปดาห์ (กะค่ำ 17:30-23:00)',
-        'ทำควบกับงานหลัก',
-        'รับทิปเงินสดทุกคืน ยัดกระเป๋ากลับห้องทันที, อาหารพนักงานในกะ'
+        '-',
+        'รับทิปเงินสดทุกคืน ยัดกระเป๋ากลับห้องทันที ($50-$100/คืน), อาหารพนักงานในกะ (ทำควบกับงานหลัก)'
     ],
     [
         'Dollywood Theme Park & Resorts',
@@ -204,10 +204,10 @@ rows = [
         'New Step, Acadex',
         'Ride Operator / Food Service / Retail',
         'ฐาน $15.00 / OT $22.50',
-        'ไม่มี (ปลอดภาษีรัฐ 0%)',
+        '-',
         '44 – 50 ชม./สัปดาห์ (หัวท้าย 35-40 ชม.)',
-        '$110 / สัปดาห์',
-        'นั่งรถราง Pigeon Forge Trolley $1-$2.50/วัน, บัตรเข้าสวนสนุก Dollywood & Splash Country ฟรี'
+        '$110',
+        'ปลอดภาษีเงินได้รัฐ 0%, นั่งรถราง Pigeon Forge Trolley $1-$2.50/วัน, บัตรเข้าสวนสนุก Dollywood & Splash Country ฟรี'
     ],
     [
         'Premier Aquatics / High Sierra Pools',
@@ -215,10 +215,10 @@ rows = [
         'Acadex, New Step, ALC',
         'Pool Lifeguard',
         'ฐาน $16.00 / OT $24.00',
-        'ไม่มี (เน้นการันตี OT)',
+        '-',
         '50 – 54 ชม./สัปดาห์ (การันตี OT 10-14 ชม.)',
-        '$120 / สัปดาห์',
-        'การันตีชั่วโมง OT สม่ำเสมอ ไม่ผันผวนตามนักท่องเที่ยว, อพาร์ตเมนต์แชร์กับเพื่อน'
+        '$120',
+        'การันตีชั่วโมง OT สม่ำเสมอ 10-14 ชม./สัปดาห์ ไม่ผันผวนตามนักท่องเที่ยว, อพาร์ตเมนต์แชร์กับเพื่อน'
     ],
     [
         'Cedar Point Amusement Park',
@@ -226,9 +226,9 @@ rows = [
         'OEG, IEE Thailand',
         'Ride Operator / Food Service',
         'ฐาน $14.50 / OT $21.75',
-        'ไม่มี ($0)',
+        '-',
         '46 – 52 ชม./สัปดาห์ (หัวท้าย 38-42 ชม.)',
-        '$80 / สัปดาห์',
+        '$80',
         'หอพักราคาถูกมาก ($80/wk), รถบัสรับส่งฟรี, บัตรเล่นเครื่องเล่นสวนสนุกระดับโลกฟรี'
     ]
 ]
@@ -252,10 +252,8 @@ for row_idx, row in enumerate(ws.iter_rows(min_row=2, max_row=len(rows)+1, min_c
         cell.border = thin_border
         if fill.fill_type:
             cell.fill = fill
-        if col_idx in [2, 5, 8]:
+        if col_idx in [2, 5, 6, 8]:
             cell.alignment = Alignment(horizontal='center', vertical='center')
-        elif col_idx in [6, 7]:
-            cell.alignment = Alignment(horizontal='left', vertical='center')
         else:
             cell.alignment = Alignment(horizontal='left', vertical='center')
 
@@ -273,12 +271,14 @@ for col in ws.columns:
 # Freeze top row
 ws.freeze_panes = 'A2'
 
-try:
-    excel_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027.xlsx'
-    wb.save(excel_path)
-    print('Successfully updated original Excel file to:', excel_path)
-except PermissionError:
-    excel_path_fixed = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027_Fixed.xlsx'
-    wb.save(excel_path_fixed)
-    print('Original file is currently open in Excel. Successfully saved fixed version to:', excel_path_fixed)
+paths_to_save = [
+    r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027.xlsx',
+    r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027_Clean.xlsx'
+]
 
+for p in paths_to_save:
+    try:
+        wb.save(p)
+        print('Saved clean workbook to:', p)
+    except PermissionError:
+        print('Could not save to locked path:', p)
