@@ -25,6 +25,7 @@ headers = [
     'รัฐ (State)',
     'Agency ที่ถือสัญญา',
     'ตำแหน่ง (Position / Role)',
+    'เวลาทำงานจริง (ช่วงปกติ / ช่วงพีค)',
     'ค่าแรงฐาน / OT ($/ชม.)',
     'ทิป ($/สัปดาห์)',
     'ชั่วโมงทำงานจริง (คิดเผื่อหัว-ท้ายซีซัน)',
@@ -38,6 +39,7 @@ rows = [
         'Alaska (AK)',
         'Acadex, OEG, IEE, Higher',
         'Housekeeping / Room Attendant',
+        'ปกติ: 07:30 – 15:30 น. (8 ชม.)\nพีค: 07:00 – 17:30 น. (10 ชม. ควงกะ)',
         'ฐาน $16.00 / OT $24.00',
         '$15 - $30',
         '50 – 54 ชม./สัปดาห์ (พีค 58-62 ชม. / หัวท้าย 35-42 ชม.)',
@@ -49,6 +51,7 @@ rows = [
         'Alaska (AK)',
         'Acadex, OEG, IEE, Higher',
         'Kitchen Stewarding / Dishwasher (ล้างจาน)',
+        'ปกติ: 16:00 – 00:00 น. (8 ชม.)\nพีค: 15:00 – 01:30 น. (10.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
         '-',
         '50 – 55 ชม./สัปดาห์ (ควงกะค่ำได้ง่าย)',
@@ -60,6 +63,7 @@ rows = [
         'Alaska (AK)',
         'Acadex, OEG, IEE, Higher',
         'Luggage Handler (พนักงานยกกระเป๋าทัวร์)',
+        'ปกติ: 08:00 – 16:30 น. หรือ 12:00 – 20:30 น.\nพีค: 07:00 – 18:30 น. (ตามรอบรถไฟ)',
         'ฐาน $15.50 / OT $23.25',
         '$40 - $70',
         '46 – 52 ชม./สัปดาห์',
@@ -70,7 +74,8 @@ rows = [
         'Denali Princess Wilderness Lodge',
         'Alaska (AK)',
         'ขอทำเพิ่มหน้างาน (Internal 2nd Job)',
-        'Fleet Detailer (งานเสริมล้างรถทัวร์กะดึก 21:00-01:30)',
+        'Fleet Detailer (งานเสริมล้างรถทัวร์กะดึก)',
+        'ปกติ: 21:00 – 01:30 น. (4.5 ชม.)\nพีค: 21:00 – 02:30 น. (5.5 ชม.)',
         'คิดเรต OT $24.00/ชม. ทันที',
         '-',
         '20 – 25 ชม./สัปดาห์ (ทำควบหลังงานหลักแม่บ้าน)',
@@ -82,6 +87,7 @@ rows = [
         'Alaska (AK)',
         'Acadex Thailand',
         'Housekeeping / Laundry',
+        'ปกติ: 08:00 – 16:00 น. (8 ชม.)\nพีค: 08:00 – 17:00 น. (9 ชม.)',
         'ฐาน $15.00 / OT $22.50',
         '-',
         '40 – 45 ชม./สัปดาห์ (หัวท้าย 32-38 ชม.)',
@@ -93,6 +99,7 @@ rows = [
         'Alaska (AK)',
         'Acadex Thailand',
         'Housekeeping / Public Area Cleaner',
+        'ปกติ: 08:00 – 16:00 น. (8 ชม.)\nพีค: 07:30 – 17:00 น. (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25',
         '-',
         '42 – 46 ชม./สัปดาห์ (หัวท้าย 35-40 ชม.)',
@@ -104,6 +111,7 @@ rows = [
         'Alaska (AK)',
         'Acadex Thailand',
         'Busser / Food Runner (Alpenglow Restaurant)',
+        'ปกติ: 16:30 – 22:30 น. (6 ชม.)\nพีค: 16:00 – 23:30 น. (7.5 ชม.)',
         'ฐาน $14.00 / OT $21.00',
         '$200 - $350',
         '40 – 45 ชม./สัปดาห์',
@@ -115,6 +123,7 @@ rows = [
         'Alaska (AK)',
         'Higher, OEG, Acadex',
         'Housekeeping / Kitchen / Laundry',
+        'ปกติ: 08:00 – 16:00 น. (8 ชม.)\nพีค: 07:30 – 17:00 น. (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
         '$10 - $20',
         '44 – 48 ชม./สัปดาห์ (หัวท้าย 35-40 ชม.)',
@@ -126,6 +135,7 @@ rows = [
         'Alaska (AK)',
         'IEE, Acadex, Higher',
         'Food Runner / Laundry / Steward',
+        'ปกติ: 06:30 – 14:30 น. หรือ 15:00 – 23:00 น.\nพีค: กะสลับตามรอบรถไฟ/เครื่องบิน 8 ชม.',
         'ฐาน $15.50 / OT $23.25',
         '$20 - $40',
         '36 – 40 ชม./สัปดาห์ (ไม่ค่อยมี OT)',
@@ -137,6 +147,7 @@ rows = [
         'Wyoming (WY)',
         'Acadex, Higher, OEG, IEE',
         'Housekeeping / Crew Member',
+        'ปกติ: 08:00 – 16:30 น. (8 ชม.)\nพีค: 07:00 – 17:30 น. (10 ชม. ควงกะ)',
         'ฐาน $17.75 / OT $26.62',
         '-',
         '54 – 60 ชม./สัปดาห์ (พีค 60-64 ชม. / หัวท้าย 40 ชม.)',
@@ -148,6 +159,7 @@ rows = [
         'Wyoming (WY)',
         'Acadex, Higher, OEG, IEE',
         'Kitchen Crew / Dishwasher / Food Prep',
+        'ปกติ: 06:00 – 14:30 น. หรือ 15:00 – 23:00 น.\nพีค: 14:00 – 00:30 น. (ช่วยจัดเลี้ยง Banquet)',
         'ฐาน $17.75 / OT $26.62',
         '-',
         '52 – 58 ชม./สัปดาห์ (ควงกะ Banquet ได้)',
@@ -159,6 +171,7 @@ rows = [
         'Wyoming/MT',
         'OEG, IEE Thailand',
         'Hospitality Crew / Kitchen / Steward',
+        'ปกติ: 07:00 – 15:30 น. หรือ 15:00 – 23:30 น.\nพีค: 06:30 – 16:30 น. (10 ชม.)',
         'ฐาน $15.70 / OT $23.55',
         '-',
         '46 – 52 ชม./สัปดาห์ (หัวท้าย 38-42 ชม.)',
@@ -170,6 +183,7 @@ rows = [
         'Wyoming (WY)',
         'Higher Education',
         'Housekeeping / Guest Service',
+        'ปกติ: 08:30 – 16:30 น. (8 ชม.)\nพีค: 08:00 – 17:30 น. (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75',
         '$50 - $100',
         '42 – 46 ชม./สัปดาห์',
@@ -181,6 +195,7 @@ rows = [
         'Wisconsin (WI)',
         'OEG, Acadex, Higher',
         'Lifeguard / Housekeeping (งานหลัก)',
+        'ปกติ: 09:30 – 18:00 น. หรือ 12:00 – 20:30 น.\nพีค: 09:00 – 19:30 น. (10 ชม.)',
         'ฐาน $15.00 / OT $22.50',
         '-',
         '38 – 44 ชม./สัปดาห์ (เกลี่ยกะ 40 ชม.)',
@@ -192,6 +207,7 @@ rows = [
         'Wisconsin (WI)',
         'Walk-in สมัครเองหน้างาน',
         'Barback / Busser / Runner (งานที่สอง)',
+        'ปกติ: 17:30 – 22:30 น. (5 ชม.)\nพีค: 17:00 – 00:30 น. (7.5 ชม.)',
         'ฐาน $12.00 – $14.00',
         '$250 - $500',
         '20 – 25 ชม./สัปดาห์ (กะค่ำ 17:30-23:00)',
@@ -203,6 +219,7 @@ rows = [
         'Tennessee (TN)',
         'New Step, Acadex',
         'Ride Operator / Food Service / Retail',
+        'ปกติ: 09:30 – 18:00 น. (8 ชม.)\nพีค: 09:00 – 21:30 น. (12 ชม. สวนสนุกเปิดดึก)',
         'ฐาน $15.00 / OT $22.50',
         '-',
         '44 – 50 ชม./สัปดาห์ (หัวท้าย 35-40 ชม.)',
@@ -214,6 +231,7 @@ rows = [
         'Maryland/VA',
         'Acadex, New Step, ALC',
         'Pool Lifeguard',
+        'ปกติ: 10:30 – 19:30 น. (9 ชม.)\nพีค: 10:00 – 20:30 น. (10.5 ชม. สระเปิดยาว)',
         'ฐาน $16.00 / OT $24.00',
         '-',
         '50 – 54 ชม./สัปดาห์ (การันตี OT 10-14 ชม.)',
@@ -225,6 +243,7 @@ rows = [
         'Ohio (OH)',
         'OEG, IEE Thailand',
         'Ride Operator / Food Service',
+        'ปกติ: 10:00 – 18:30 น. (8 ชม.)\nพีค: 09:30 – 22:30 น. (12 ชม. สวนสนุกปิดดึก)',
         'ฐาน $14.50 / OT $21.75',
         '-',
         '46 – 52 ชม./สัปดาห์ (หัวท้าย 38-42 ชม.)',
@@ -252,8 +271,10 @@ for row_idx, row in enumerate(ws.iter_rows(min_row=2, max_row=len(rows)+1, min_c
         cell.border = thin_border
         if fill.fill_type:
             cell.fill = fill
-        if col_idx in [2, 5, 6, 8]:
+        if col_idx in [2, 6, 7, 9]:
             cell.alignment = Alignment(horizontal='center', vertical='center')
+        elif col_idx == 5:
+            cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
         else:
             cell.alignment = Alignment(horizontal='left', vertical='center')
 
@@ -263,9 +284,12 @@ for col in ws.columns:
     col_letter = get_column_letter(col[0].column)
     for cell in col:
         val_str = str(cell.value or '')
-        length = len(val_str.encode('utf-8')) // 2 if any(ord(c) > 127 for c in val_str) else len(val_str)
-        if length > max_len:
-            max_len = length
+        # check each line if multiline
+        lines = val_str.split('\n')
+        for l in lines:
+            length = len(l.encode('utf-8')) // 2 if any(ord(c) > 127 for c in l) else len(l)
+            if length > max_len:
+                max_len = length
     ws.column_dimensions[col_letter].width = max(max_len + 4, 15)
 
 # Freeze top row
@@ -279,6 +303,6 @@ paths_to_save = [
 for p in paths_to_save:
     try:
         wb.save(p)
-        print('Saved clean workbook to:', p)
+        print('Saved clean workbook with shift hours to:', p)
     except PermissionError:
         print('Could not save to locked path:', p)
