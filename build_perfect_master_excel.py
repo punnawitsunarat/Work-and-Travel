@@ -324,7 +324,7 @@ ws1.freeze_panes = 'D2'
 # ==============================================================================
 # 📊 SHEET 2: Tier S-A Summer Jobs & 2nd Options (38 งาน Summer ตรงตาม data.js)
 # ==============================================================================
-ws2 = wb.create_sheet(title='Tier S-A Summer Jobs & Options')
+ws2 = wb.create_sheet(title='Tier S-A Summer Jobs')
 ws2.views.sheetView[0].showGridLines = True
 
 headers2 = [
