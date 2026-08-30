@@ -412,7 +412,7 @@ ws2.freeze_panes = 'D2'
 # ==============================================================================
 # 📊 SHEET 3: Summer 12-Week Cashflow Simulator (7 พ.ค. – 7 ก.ย.)
 # ==============================================================================
-ws3 = wb.create_sheet(title='Summer 12-Wk Simulator (พ.ค-ก.ย)')
+ws3 = wb.create_sheet(title='Summer 12-Week Simulator')
 ws3.views.sheetView[0].showGridLines = True
 
 headers3 = [
