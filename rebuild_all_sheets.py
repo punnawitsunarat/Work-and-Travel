@@ -2,7 +2,12 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
+excel_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027.xlsx'
+excel_clean_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027_Clean.xlsx'
+
 wb = openpyxl.Workbook()
+
+
 
 # Style definitions
 header_fill = PatternFill(start_color='0F172A', end_color='0F172A', fill_type='solid')
