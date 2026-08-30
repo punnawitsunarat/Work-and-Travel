@@ -48,17 +48,6 @@ rows = [
         'Denali Princess Wilderness Lodge',
         'Alaska (AK)',
         'Acadex, OEG, IEE, Higher',
-        'Motor Coach / Fleet Detailer (ล้างรถทัวร์กะดึก)',
-        'ฐาน $16.00 / OT $24.00',
-        '-',
-        '52 – 56 ชม./สัปดาห์ (กะดึก 21:00-02:00 OT ดกมาก)',
-        '$105',
-        'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, กลางวันว่างนอนพักผ่อนหรือเดินป่าได้ทั้งวัน'
-    ],
-    [
-        'Denali Princess Wilderness Lodge',
-        'Alaska (AK)',
-        'Acadex, OEG, IEE, Higher',
         'Kitchen Stewarding / Dishwasher (ล้างจาน)',
         'ฐาน $16.00 / OT $24.00',
         '-',
@@ -76,6 +65,17 @@ rows = [
         '46 – 52 ชม./สัปดาห์',
         '$105',
         'อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR, ทิปเงินสดจากกรุ๊ปทัวร์ผู้สูงอายุ'
+    ],
+    [
+        'Denali Princess Wilderness Lodge',
+        'Alaska (AK)',
+        'ขอทำเพิ่มหน้างาน (Internal 2nd Job)',
+        'Fleet Detailer (งานเสริมล้างรถทัวร์กะดึก 21:00-01:30)',
+        'คิดเรต OT $24.00/ชม. ทันที',
+        '-',
+        '20 – 25 ชม./สัปดาห์ (ทำควบหลังงานหลักแม่บ้าน)',
+        '-',
+        'นับเป็นชั่วโมง OT $24.00 ทั้งหมด, ทำงานในอู่รถบัส Princess, อาหาร EDR 3 มื้อ'
     ],
     [
         'Denali Bluffs Hotel',
