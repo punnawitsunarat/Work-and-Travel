@@ -35,7 +35,7 @@ thin_border = Border(
 headers = [
     'Tier & รัฐ (State)',
     'ชื่องาน / สถานที่ทำงานหลัก (Employer)',
-    'Agency ที่ถือสัญญา',
+    'Agency ที่ถือสัญญา (ครบ 6 แห่ง)',
     'ตำแหน่งงานหลัก (Role)',
     '⏱️ เวลาทำงานหลัก (ปกติ / พีค)',
     'ค่าแรงฐาน / OT ($/ชม.)',
@@ -55,7 +55,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Denali Princess Wilderness Lodge (Denali NP)',
-        'Acadex, OEG, IEE, Higher',
+        'Acadex, OEG, IEE, Higher, IEO',
         'Housekeeping / Room Attendant',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีค: 07:00 – 17:30 (10 ชม. ควงกะ)',
         'ฐาน $16.00 / OT $24.00',
@@ -70,7 +70,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Denali Princess Wilderness Lodge (Denali NP)',
-        'Acadex, OEG, IEE, Higher',
+        'Acadex, OEG, IEE, Higher, IEO',
         'Kitchen Stewarding / Dishwasher',
         'ปกติ: 16:00 – 00:00 (8 ชม.)\nพีค: 15:00 – 01:30 (10.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -85,7 +85,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Grande Denali Lodge & Denali Bluffs Hotel',
-        'Acadex Thailand',
+        'Acadex Thailand, IEO',
         'Housekeeping / Public Area',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -100,7 +100,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Mt. McKinley Princess Lodge (Trapper Creek)',
-        'Higher, OEG, Acadex',
+        'Higher, OEG, Acadex, IEO',
         'Housekeeping / Kitchen',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -115,7 +115,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Fairbanks Princess Riverside Lodge',
-        'IEE, Acadex, Higher',
+        'IEE, Acadex, Higher, IEO',
         'Food Runner / Laundry / Steward',
         'ปกติ: 06:30 – 14:30 หรือ 15:00 – 23:00\nพีค: กะสลับตามรอบรถไฟ 8 ชม.',
         'ฐาน $15.50 / OT $23.25',
@@ -130,7 +130,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Seward Windsong Lodge & Kenai Fjords Tours (Pursuit)',
-        'OEG, Acadex, ALC',
+        'OEG, Acadex, ALC, IEO',
         'Housekeeping / Tour Operations / F&B',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -145,7 +145,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Talkeetna Alaskan Lodge (Pursuit Collection)',
-        'OEG, Acadex, Higher',
+        'OEG, Acadex, Higher, IEO',
         'Housekeeping / Kitchen / Steward',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -160,7 +160,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Alyeska Resort & Hotel Alyeska (Girdwood)',
-        'OEG, Higher',
+        'OEG, Higher, Acadex',
         'Housekeeping / Culinary / Lift Ops',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75',
@@ -175,7 +175,7 @@ rows = [
     [
         'Tier S - Alaska (AK)',
         'Copper River Princess Wilderness Lodge',
-        'Higher, IEE, Acadex',
+        'Higher, IEE, Acadex, IEO',
         'Housekeeping / Kitchen / Laundry',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -194,7 +194,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'Grand Teton Lodge Company - Jackson Lake Lodge',
-        'Acadex, Higher, OEG, IEE',
+        'Acadex, Higher, OEG, IEE, IEO',
         'Housekeeping / Crew Member',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:00 – 17:30 (10 ชม. ควงกะ)',
         'ฐาน $17.75 / OT $26.62',
@@ -209,7 +209,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'Grand Teton Lodge Company - Colter Bay Village',
-        'Acadex, Higher, OEG, IEE',
+        'Acadex, Higher, OEG, IEE, IEO',
         'Cabin Attendant / Grocery Clerk / Marina',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $17.75 / OT $26.62',
@@ -224,7 +224,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'Signal Mountain Lodge (Grand Teton NP - Forever Resorts)',
-        'Higher, Acadex',
+        'Higher, Acadex, IEO',
         'Housekeeping / Front Desk / Marina',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75',
@@ -239,7 +239,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'Xanterra Yellowstone Lodges (Old Faithful / Canyon)',
-        'OEG, IEE Thailand',
+        'OEG, IEE Thailand, IEO',
         'Hospitality Crew / Kitchen Steward',
         'ปกติ: 07:00 – 15:30 หรือ 15:00 – 23:30\nพีค: 06:30 – 16:30 (10 ชม.)',
         'ฐาน $15.70 / OT $23.55',
@@ -254,7 +254,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'Four Seasons Resort & Snake River Lodge (Teton Village)',
-        'OEG, Acadex',
+        'OEG, Acadex, IEO',
         'Housekeeping / Stewarding',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $17.50 / OT $26.25',
@@ -269,7 +269,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'The Wort Hotel & Silver Dollar Bar (Jackson Town)',
-        'Acadex, OEG',
+        'Acadex, OEG, IEO',
         'Housekeeping / Banquet Server / Steward',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $17.00 / OT $25.50',
@@ -284,7 +284,7 @@ rows = [
     [
         'Tier S - Wyoming (WY)',
         'Under Canvas Grand Teton / Yellowstone',
-        'Higher Education',
+        'Higher Education, IEO',
         'Housekeeping / Guest Service',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75',
@@ -303,7 +303,7 @@ rows = [
     [
         'Tier S - Wisconsin (WI)',
         'Kalahari Resorts & Conventions (Wisconsin Dells)',
-        'OEG, Acadex, Higher',
+        'OEG, Acadex, Higher, IEO, New Step',
         'Lifeguard / Housekeeping',
         'ปกติ: 09:30 – 18:00 หรือ 12:00 – 20:30\nพีค: 09:00 – 19:30 (10 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -318,7 +318,7 @@ rows = [
     [
         'Tier S - Wisconsin (WI)',
         'Wilderness Resort & Glacier Canyon Lodge (WI Dells)',
-        'OEG, IEE, Acadex',
+        'OEG, IEE, Acadex, IEO',
         'Waterpark Attendant / Housekeeping',
         'ปกติ: 09:00 – 17:30 (8 ชม.)\nพีค: 08:30 – 19:00 (10 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -333,7 +333,7 @@ rows = [
     [
         'Tier S - Wisconsin (WI)',
         'Mt. Olympus Water & Theme Park (WI Dells)',
-        'New Step, Acadex, Higher',
+        'New Step, Acadex, Higher, IEO',
         'Ride Operator / Housekeeping / Lifeguard',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 21:00 (11.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -348,7 +348,7 @@ rows = [
     [
         'Tier S - Wisconsin (WI)',
         'Noah’s Ark Waterpark (Wisconsin Dells)',
-        'OEG, IEE, New Step',
+        'OEG, IEE, New Step, IEO',
         'Ride Operator / Park Services',
         'ปกติ: 09:00 – 17:30 (8 ชม.)\nพีค: 08:30 – 18:30 (9.5 ชม.)',
         'ฐาน $14.50 / OT $21.75',
@@ -363,7 +363,7 @@ rows = [
     [
         'Tier S - Wisconsin (WI)',
         'Chula Vista Resort & Waterpark (WI Dells)',
-        'Higher, Acadex, IEE',
+        'Higher, Acadex, IEE, IEO',
         'Housekeeping / Lifeguard',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -378,7 +378,7 @@ rows = [
     [
         'Tier S - Wisconsin (WI)',
         'Grand Geneva Resort & Spa (Lake Geneva, WI)',
-        'Acadex, OEG',
+        'Acadex, OEG, IEO',
         'Housekeeping / Banquet / Culinary',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -397,7 +397,7 @@ rows = [
     [
         'Tier S - Tennessee (TN)',
         'Dollywood Theme Park & Splash Country (Pigeon Forge)',
-        'New Step, Acadex',
+        'New Step, Acadex, IEO',
         'Ride Operator / Food Service / Retail',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 21:30 (12 ชม. สวนสนุกเปิดดึก)',
         'ฐาน $15.00 / OT $22.50',
@@ -412,7 +412,7 @@ rows = [
     [
         'Tier S - Tennessee (TN)',
         'The Island in Pigeon Forge (Arcades & Attractions)',
-        'New Step, Acadex',
+        'New Step, Acadex, IEO',
         'Attractions Host / Retail / F&B',
         'ปกติ: 10:00 – 18:00 (8 ชม.)\nพีค: 10:00 – 23:00 (กะดึก)',
         'ฐาน $15.00 / OT $22.50',
@@ -427,7 +427,7 @@ rows = [
     [
         'Tier S - Tennessee (TN)',
         'Wilderness at the Smokies (Sevierville)',
-        'OEG, Acadex, Higher',
+        'OEG, Acadex, Higher, IEO',
         'Lifeguard / Housekeeping',
         'ปกติ: 09:00 – 17:30 (8 ชม.)\nพีค: 08:30 – 19:30 (10.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -442,7 +442,7 @@ rows = [
     [
         'Tier S - Tennessee (TN)',
         'Anakeesta Mountaintop Theme Park (Gatlinburg)',
-        'Higher, IEE',
+        'Higher, IEE, IEO',
         'Guest Host / F&B / Retail',
         'ปกติ: 09:00 – 17:30 (8 ชม.)\nพีค: 08:30 – 20:00 (10.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -457,7 +457,7 @@ rows = [
     [
         'Tier S - Tennessee (TN)',
         'Ober Mountain / Gatlinburg Area Lodges',
-        'IEE, New Step',
+        'IEE, New Step, IEO',
         'Attractions Operator / Retail',
         'ปกติ: 09:00 – 17:00 (8 ชม.)\nพีค: 08:30 – 19:00 (10 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -476,7 +476,7 @@ rows = [
     [
         'Tier S - Texas (TX)',
         'Schlitterbahn Waterpark (New Braunfels / Galveston)',
-        'OEG, Acadex, IEE',
+        'OEG, Acadex, IEE, IEO',
         'Lifeguard / Park Operations',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 19:30 (10 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -491,7 +491,7 @@ rows = [
     [
         'Tier S - Texas (TX)',
         'Kalahari Resorts & Conventions Round Rock (Austin, TX)',
-        'OEG, Acadex',
+        'OEG, Acadex, IEO',
         'Lifeguard / Housekeeping / F&B',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 19:30 (10 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -506,7 +506,7 @@ rows = [
     [
         'Tier S - Texas (TX)',
         'Six Flags Fiesta Texas & SeaWorld San Antonio',
-        'New Step, Higher, IEE',
+        'New Step, Higher, IEE, IEO',
         'Ride Operator / Lifeguard / Culinary',
         'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีค: 09:30 – 21:30 (11.5 ชม.)',
         'ฐาน $14.50 / OT $21.75',
@@ -521,7 +521,7 @@ rows = [
     [
         'Tier S - Texas (TX)',
         'Kemah Boardwalk & Galveston Pleasure Pier',
-        'OEG, New Step',
+        'OEG, New Step, IEO',
         'Ride Operator / Retail / F&B',
         'ปกติ: 10:30 – 18:30 (8 ชม.)\nพีค: 10:00 – 22:30 (12 ชม.)',
         'ฐาน $14.50 / OT $21.75',
@@ -540,7 +540,7 @@ rows = [
     [
         'Tier A - Montana (MT)',
         'Glacier National Park Lodges (Pursuit / Xanterra)',
-        'OEG, Acadex, Higher',
+        'OEG, Acadex, Higher, IEO',
         'Hospitality Crew / Housekeeping',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -555,7 +555,7 @@ rows = [
     [
         'Tier A - Montana (MT)',
         'Many Glacier Hotel & Glacier Park Lodge (East Glacier)',
-        'OEG, Acadex',
+        'OEG, Acadex, IEO',
         'Housekeeping / Dining Room / Steward',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีค: 07:00 – 17:00 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -570,7 +570,7 @@ rows = [
     [
         'Tier A - Montana (MT)',
         'Big Sky Resort / Montage Big Sky',
-        'Acadex, Higher, IEE',
+        'Acadex, Higher, IEE, IEO',
         'Mountain Operations / Housekeeping',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $17.50 / OT $26.25',
@@ -584,12 +584,61 @@ rows = [
     ],
 
     # ==========================================
-    # 🏊 7. MARYLAND & VIRGINIA (Tier A)
+    # 🌴 7. FLORIDA (Tier A - 0% State Tax)
+    # ==========================================
+    [
+        'Tier A - Florida (FL)',
+        'Universal Orlando Resort & Volcano Bay',
+        'OEG, IEE, Acadex, IEO',
+        'Attractions Attendant / Culinary / Lifeguard',
+        'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 22:00 (12 ชม.)',
+        'ฐาน $15.50 / OT $23.25',
+        '-',
+        '42 – 48 ชม./wk',
+        '$130',
+        'สวนสนุกระดับโลก ยูนิเวอร์แซล ออร์แลนโด, ปลอดภาษีเงินได้รัฐ 0%, บัตรเข้าสวนสนุกฟรี',
+        '🎸 Universal CityWalk Eateries: Food Runner/Busser บาร์ดึก 18:30-01:00 น. (ทิปสด $60-$100/คืน)',
+        '🍔 The Cowfish Sushi Burger Bar: ล้างจาน/ผู้ช่วยครัว 19:00-01:00 น. ($15/ชม. + ทิป)',
+        '🍕 Red Oven Pizza Bakery: ผู้ช่วยทำพิซซ่ากะดึก 18:30-00:30 น.'
+    ],
+    [
+        'Tier A - Florida (FL)',
+        'Busch Gardens Tampa Bay & Adventure Island',
+        'New Step, Acadex, IEO',
+        'Ride Operator / Lifeguard / Food Service',
+        'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 21:30 (11.5 ชม.)',
+        'ฐาน $15.00 / OT $22.50',
+        '-',
+        '42 – 48 ชม./wk',
+        '$120',
+        'สวนสนุกโรลเลอร์โคสเตอร์อันดับ 1 ในแทมปาและสวนน้ำ, ปลอดภาษีรัฐ 0%',
+        '🍺 Ybor City Historic Bars (แทมปา): Barback ผับประวัติศาสตร์ 19:00-01:30 น. (ทิปสด $60-$110/คืน)',
+        '🦀 Columbia Restaurant (ร้านสเปนชื่อดังที่สุด): Busser 18:30-23:30 น. (ทิปดี)',
+        '🍔 Portillo’s Hot Dogs Tampa: ครัว/แคชเชียร์รอบดึก 18:30-00:00 น. ($15/ชม.)'
+    ],
+    [
+        'Tier A - Florida (FL)',
+        'Gaylord Palms Resort & Convention Center (Kissimmee)',
+        'OEG, Acadex, Higher',
+        'Housekeeping / Banquet Server / Steward',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00',
+        '$20 - $50',
+        '44 – 50 ชม./wk',
+        '$125',
+        'รีสอร์ตศูนย์ประชุมโดมกระจกยักษ์ระดับ 4 ดาว Marriott, ปลอดภาษีรัฐ 0%',
+        '🥩 Old Hickory Steakhouse (ในรีสอร์ต): Busser ร้านสเต๊กหรู 17:30-23:00 น. (ทิปสด $70-$120)',
+        '🌴 Wreckers Sports Bar (ในรีสอร์ต): Barback ผับกีฬาจอ 2 ชั้น 18:30-00:30 น. (ขอ OT ในรีสอร์ต $24/ชม.)',
+        '🛍️ Disney Springs Eateries: Food Runner ร้านอาหารฝั่งดิสนีย์ 19:00-01:00 น.'
+    ],
+
+    # ==========================================
+    # 🏊 8. MARYLAND & VIRGINIA (Tier A)
     # ==========================================
     [
         'Tier A - Maryland (MD)',
         'Premier Aquatics / High Sierra Pools (Bethesda/Rockville)',
-        'Acadex, New Step, ALC',
+        'Acadex, New Step, ALC, IEO',
         'Pool Lifeguard',
         'ปกติ: 10:30 – 19:30 (9 ชม.)\nพีค: 10:00 – 20:30 (10.5 ชม. สระเปิดยาว)',
         'ฐาน $16.00 / OT $24.00',
@@ -604,7 +653,7 @@ rows = [
     [
         'Tier A - Maryland (MD)',
         'Ocean City Boardwalk Hotels & Resorts',
-        'IEE, New Step, OEG',
+        'IEE, New Step, OEG, IEO',
         'Housekeeping / Ride Operator',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -619,7 +668,7 @@ rows = [
     [
         'Tier A - Maryland (MD)',
         'Jolly Roger Amusement Park & Splash Mountain (Ocean City)',
-        'New Step, IEE',
+        'New Step, IEE, IEO',
         'Ride Operator / Lifeguard / Park Services',
         'ปกติ: 11:00 – 19:00 (8 ชม.)\nพีค: 10:00 – 23:00 (12 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -634,7 +683,7 @@ rows = [
     [
         'Tier A - Virginia (VA)',
         'Busch Gardens Williamsburg & Water Country USA',
-        'New Step, Acadex',
+        'New Step, Acadex, IEO',
         'Ride Operator / Culinary Operations',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีค: 09:00 – 21:30 (12 ชม. สวนสนุกเปิดดึก)',
         'ฐาน $14.50 / OT $21.75',
@@ -649,7 +698,7 @@ rows = [
     [
         'Tier A - Virginia (VA)',
         'Virginia Beach Oceanfront Resorts & Boardwalk',
-        'IEE, New Step, Acadex',
+        'IEE, New Step, Acadex, IEO',
         'Housekeeping / Beach Attendant',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -663,12 +712,31 @@ rows = [
     ],
 
     # ==========================================
-    # 🗿 8. SOUTH DAKOTA (Tier A - 0% State Tax)
+    # 🎡 9. NEW JERSEY (Tier A - ชายหาด & Boardwalk)
+    # ==========================================
+    [
+        'Tier A - New Jersey (NJ)',
+        'Morey’s Piers & Beachfront Waterparks (Wildwood, NJ)',
+        'OEG, IEE, New Step, IEO',
+        'Ride Operator / Lifeguard / Pier Services',
+        'ปกติ: 11:00 – 19:00 (8 ชม.)\nพีค: 10:30 – 23:30 (12 ชม.)',
+        'ฐาน $15.50 / OT $23.25',
+        '-',
+        '45 – 52 ชม./wk',
+        '$120',
+        'สวนสนุกริมสะพานปลาชานหาดที่ใหญ่ที่สุดในฝั่ง East Coast, เล่นเครื่องเล่นฟรี, เมืองจักรยาน',
+        '🍕 Mack’s Pizza / Sam’s Pizza (Boardwalk): ล้างจาน/ทำพิซซ่ากะดึก 19:30-01:30 น. ($15/ชม.)',
+        '🍺 The Wharf Restaurant & Bar: Barback/Busser ร้านอาหารริมน้ำ 19:00-01:00 น. (ทิปสด $70-$120/คืน)',
+        '🍦 Curley’s Fries / Kohr Brothers: แคชเชียร์/ตักไอศกรีม 19:00-23:30 น. ($15.50/ชม.)'
+    ],
+
+    # ==========================================
+    # 🗿 10. SOUTH DAKOTA (Tier A - 0% State Tax)
     # ==========================================
     [
         'Tier A - South Dakota (SD)',
         'Xanterra Mount Rushmore / Keystone Lodges',
-        'OEG, IEE, Higher',
+        'OEG, IEE, Higher, IEO',
         'Retail / Food Service / Housekeeping',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -683,7 +751,7 @@ rows = [
     [
         'Tier A - South Dakota (SD)',
         'Custer State Park Resorts (State Game Lodge / Sylvan)',
-        'Higher, Acadex',
+        'Higher, Acadex, IEO',
         'Guest Service / Housekeeping',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีค: 07:00 – 16:30 (9 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -698,7 +766,7 @@ rows = [
     [
         'Tier A - South Dakota (SD)',
         'Wall Drug Store (Wall, SD)',
-        'IEE, Acadex',
+        'IEE, Acadex, IEO',
         'Retail / Restaurant Staff / Fast Food',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -713,7 +781,7 @@ rows = [
     [
         'Tier A - South Dakota (SD)',
         'Deadwood Historic Hotels & Casinos (The Lodge at Deadwood)',
-        'Higher, New Step',
+        'Higher, New Step, IEO',
         'Housekeeping / Food & Beverage',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -727,12 +795,12 @@ rows = [
     ],
 
     # ==========================================
-    # 🏜️ 9. UTAH (Tier A)
+    # 🏜️ 11. UTAH (Tier A)
     # ==========================================
     [
         'Tier A - Utah (UT)',
         'Zion National Park Lodge (Xanterra Springdale)',
-        'OEG, IEE, Acadex',
+        'OEG, IEE, Acadex, IEO',
         'Hospitality Crew / Housekeeping',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีค: 07:00 – 16:30 (9 ชม.)',
         'ฐาน $16.00 / OT $24.00',
@@ -747,7 +815,7 @@ rows = [
     [
         'Tier A - Utah (UT)',
         'Ruby’s Inn / Bryce Canyon Grand Hotel',
-        'Higher, IEE, Acadex',
+        'Higher, IEE, Acadex, IEO',
         'Housekeeping / Fast Food / Retail',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $15.00 / OT $22.50',
@@ -762,7 +830,7 @@ rows = [
     [
         'Tier A - Utah (UT)',
         'Park City Mountain Resort (Vail Resorts - Park City)',
-        'OEG, Acadex',
+        'OEG, Acadex, IEO',
         'Mountain Host / Housekeeping / F&B',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีค: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $17.50 / OT $26.25',
@@ -776,12 +844,12 @@ rows = [
     ],
 
     # ==========================================
-    # 🦞 10. MAINE (Tier A)
+    # 🦞 12. MAINE (Tier A)
     # ==========================================
     [
         'Tier A - Maine (ME)',
         'Bar Harbor Grand Hotel / Harborside Hotel',
-        'Acadex, OEG, Higher',
+        'Acadex, OEG, Higher, IEO',
         'Housekeeping / Laundry',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75',
@@ -796,7 +864,7 @@ rows = [
     [
         'Tier A - Maine (ME)',
         'Cliff House Maine (Cape Neddick / Ogunquit)',
-        'Higher, Acadex',
+        'Higher, Acadex, IEO',
         'Housekeeping / Culinary / Stewarding',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีค: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $17.00 / OT $25.50',
@@ -811,7 +879,7 @@ rows = [
     [
         'Tier A - Maine (ME)',
         'The Nonantum Resort (Kennebunkport, ME)',
-        'Higher, Acadex',
+        'Higher, Acadex, IEO',
         'Housekeeping / Banquet / F&B',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีค: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75',
@@ -825,12 +893,12 @@ rows = [
     ],
 
     # ==========================================
-    # 🎢 11. OHIO (Tier A - หอพักถูกที่สุด $80/wk)
+    # 🎢 13. OHIO (Tier A - หอพักถูกที่สุด $80/wk)
     # ==========================================
     [
         'Tier A - Ohio (OH)',
         'Cedar Point Amusement Park & Resorts (Sandusky)',
-        'OEG, IEE Thailand',
+        'OEG, IEE Thailand, IEO',
         'Ride Operator / Food Service',
         'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีค: 09:30 – 22:30 (12 ชม. สวนสนุกปิดดึก)',
         'ฐาน $14.50 / OT $21.75',
@@ -845,7 +913,7 @@ rows = [
     [
         'Tier A - Ohio (OH)',
         'Kings Island Amusement Park (Mason / Cincinnati)',
-        'OEG, IEE Thailand',
+        'OEG, IEE Thailand, IEO',
         'Ride Operator / Park Services / Culinary',
         'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีค: 09:30 – 22:30 (12 ชม.)',
         'ฐาน $14.50 / OT $21.75',
@@ -859,12 +927,12 @@ rows = [
     ],
 
     # ==========================================
-    # ⛰️ 12. COLORADO (Tier A)
+    # ⛰️ 14. COLORADO (Tier A)
     # ==========================================
     [
         'Tier A - Colorado (CO)',
         'YMCA of the Rockies (Estes Park Center)',
-        'Higher, IEE, Acadex',
+        'Higher, IEE, Acadex, IEO',
         'Housekeeping / Food Service',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีค: 07:00 – 16:30 (9 ชม.)',
         'ฐาน $15.50 / OT $23.25',
@@ -935,6 +1003,6 @@ ws.freeze_panes = 'C2'
 for p in [excel_path, excel_clean_path]:
     try:
         wb.save(p)
-        print('Successfully saved comprehensive database to:', p)
+        print('Successfully saved comprehensive database with all 6 agencies to:', p)
     except PermissionError:
         print('Locked path:', p)
