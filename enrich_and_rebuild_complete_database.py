@@ -126,23 +126,66 @@ def enrich_position(raw_pos, title_clean, agency, state_code):
     return 'Resort Associate / Food Service / Housekeeping'
 
 def enrich_rate(raw_rate, raw_pos, title_clean, state_code):
-    combined = f"{clean_text(raw_rate)} {clean_text(raw_pos)} {clean_text(title_clean)}"
-    m = re.findall(r'\$(\d+(?:\.\d+)?)', combined)
-    if m:
-        nums = [float(x) for x in m if float(x) >= 5.0 and float(x) <= 40.0]
-        if nums:
-            if len(nums) >= 2 and nums[0] != nums[1]:
-                r1, r2 = min(nums[:2]), max(nums[:2])
-                return f"ฐาน ${r1:.2f} - ${r2:.2f} / OT ${r1*1.5:.2f} - ${r2*1.5:.2f}"
-            else:
-                r1 = nums[0]
-                return f"ฐาน ${r1:.2f} / OT ${r1*1.5:.2f}"
-                
-    # Fallback to authentic verified state wage standard
-    base = STATE_WAGE_DEFAULTS.get(state_code, 14.50)
-    t_low = title_clean.lower()
+    r_text = str(raw_rate or '').strip()
+    p_text = str(raw_pos or '').strip()
+    t_text = str(title_clean or '').strip()
+    combined = f"{r_text} {p_text} {t_text}"
     
-    # Adjust for specific high-paying categories / locations
+    has_no_ot = bool(re.search(r'\bno\s*ot\b', combined, re.I))
+    has_tips = bool(re.search(r'\+\s*tips?|plus\s*tips?|\(tips\)', combined, re.I))
+    
+    # 1. Check for explicit Server / Tipped wage pattern like "$5+Tips (OT $7.50+Tips)" or "$5.00+Tips"
+    m_tipped_ot = re.search(r'\$(\d+(?:\.\d+)?)\s*\+?\s*tips?\s*\(?OT\s*\$?(\d+(?:\.\d+)?)(?:\s*\+?\s*tips?)?\)?', combined, re.I)
+    if m_tipped_ot:
+        base_v = float(m_tipped_ot.group(1))
+        ot_v = float(m_tipped_ot.group(2))
+        return f"ฐาน ${base_v:.2f} (+ Tips) / OT ${ot_v:.2f} (+ Tips)"
+
+    # 2. Check for explicit Range in raw_rate (e.g. "$16.00-$17.00" or "$14.00 - $16.00")
+    m_range = re.search(r'\$(\d+(?:\.\d+)?)\s*[-–to/]\s*\$?(\d+(?:\.\d+)?)', r_text)
+    if not m_range:
+        m_range = re.search(r'\$(\d+(?:\.\d+)?)\s*[-–to/]\s*\$?(\d+(?:\.\d+)?)', p_text)
+    if m_range:
+        v1, v2 = float(m_range.group(1)), float(m_range.group(2))
+        if 4.0 <= v1 <= 35.0 and 4.0 <= v2 <= 35.0 and v1 != v2:
+            r1, r2 = min(v1, v2), max(v1, v2)
+            tip_tag = " (+ Tips)" if has_tips else ""
+            if has_no_ot:
+                return f"ฐาน ${r1:.2f} - ${r2:.2f}{tip_tag} / No OT"
+            return f"ฐาน ${r1:.2f} - ${r2:.2f}{tip_tag} / OT ${r1*1.5:.2f} - ${r2*1.5:.2f}"
+            
+    # 3. Check for explicit Rate & OT in combined text (e.g. "$14 (OT $21)" or "Rate $15 (OT $22.50)")
+    m_ot_explicit = re.search(r'(?:Rate\s*)?\$(\d+(?:\.\d+)?)[^$]*\(?OT\s*\$?(\d+(?:\.\d+)?)\)?', combined, re.I)
+    if m_ot_explicit:
+        base_v = float(m_ot_explicit.group(1))
+        ot_v = float(m_ot_explicit.group(2))
+        if 4.0 <= base_v <= 35.0:
+            tip_tag = " (+ Tips)" if has_tips else ""
+            return f"ฐาน ${base_v:.2f}{tip_tag} / OT ${ot_v:.2f}"
+
+    # 4. Check for single rate in raw_rate (e.g. "$15.15 per hour", "$19.18 / Hourly", "$17.20/hour")
+    m_single = re.search(r'\$(\d+(?:\.\d+)?)', r_text)
+    if m_single:
+        base_v = float(m_single.group(1))
+        if 4.0 <= base_v <= 35.0:
+            tip_tag = " (+ Tips)" if has_tips else ""
+            if has_no_ot:
+                return f"ฐาน ${base_v:.2f}{tip_tag} / No OT"
+            return f"ฐาน ${base_v:.2f}{tip_tag} / OT ${base_v*1.5:.2f}"
+
+    # 5. Check for single rate in raw_pos (e.g. Acadex pos text "Rate $16.00 per hour...")
+    m_pos_rate = re.search(r'Rate\s*\$?(\d+(?:\.\d+)?)', p_text, re.I)
+    if m_pos_rate:
+        base_v = float(m_pos_rate.group(1))
+        if 4.0 <= base_v <= 35.0:
+            tip_tag = " (+ Tips)" if has_tips else ""
+            if has_no_ot:
+                return f"ฐาน ${base_v:.2f}{tip_tag} / No OT"
+            return f"ฐาน ${base_v:.2f}{tip_tag} / OT ${base_v*1.5:.2f}"
+            
+    # 6. Fallback to state standard for unlisted agencies (American Learning / NewStep unlisted)
+    base = STATE_WAGE_DEFAULTS.get(state_code, 14.50)
+    t_low = t_text.lower()
     if 'lifeguard' in t_low or 'premier aquatics' in t_low:
         base = 16.00 if state_code in ['MD', 'VA', 'DC'] else 15.00
     elif any(k in t_low for k in ['boudin', 'tenaya', 'everline', 'farmhouse kitchen', 'safeway']):
@@ -151,7 +194,7 @@ def enrich_rate(raw_rate, raw_pos, title_clean, state_code):
         base = 15.50
     elif any(k in t_low for k in ['cedar point', 'kalahari', 'morey']):
         base = 15.25
-        
+
     return f"ฐาน ${base:.2f} / OT ${base*1.5:.2f}"
 
 def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name, agency):
