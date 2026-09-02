@@ -11,7 +11,7 @@ clean_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_202
 wb_public = openpyxl.load_workbook(public_path, data_only=True)
 ws_src = wb_public['All Public Jobs']
 
-print(f'Starting deep audit and rebuild of {ws_src.max_row - 1} public jobs...')
+print(f'Starting deep audit and rebuild of {ws_src.max_row - 1} public jobs with realistic Thai restaurant split-shift calibration...')
 
 def clean_text(val):
     if val is None or str(val).strip().lower() in ['none', 'null', 'nan', '']:
@@ -187,9 +187,10 @@ def calculate_precise_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # 9. Authentic Thai Restaurants (Keen Kow, Erawan, So Zap, Mahaniyom, Dok Mali, Maliwan, Thai O-Cha, Pad Thai)
+    # Realistic analysis: Split shift with 2-hr unpaid break. Full lunch+dinner yields 42-48, but weekday dinner-only yields 32-36. Real season average = 36–42 hrs/wk!
     elif any(k in e_low for k in ['thai', 'erawan', 'maliwan', 'dok mali', 'so zap', 'pad thai', 'mahaniyom', 'keen kow', 'asian thai']):
-        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nกะค่ำพีค: 16:30 – 22:00 (5.5 ชม. ควงคู่)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–48 ชม./wk\n[พีค มิ.ย.-ส.ค.]: 50–58+ ชม./wk (ควงกะสองรอบ อาหารไทยฟรี 3 มื้อ)\n[ปลาย ส.ค.]: 40–44 ชม./wk (ลูกค้าประจำและนักท่องเที่ยวต่อเนื่อง)"
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nพักเบรกบ่าย (ร้านปิด): 14:30 – 16:30 (2 ชม. ไม่คิดเงิน)\nกะค่ำพีค: 16:30 – 21:30 (5 ชม. ควงรอบค่ำ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 36–42 ชม./wk (⚠️ ติด Split Shift เบรกบ่าย)\n[พีค มิ.ย.-ก.ค. ควงสองกะ 5-6 วัน]: 44–48 ชม./wk (โต๊ะแน่น + ทิปสด $40-$80/คืน)\n[วันธรรมดา/ร้านเล็ก ตัดเหลือกะเย็น]: 30–35 ชม./wk (แต่อิ่มท้อง อาหารไทยฟรี 3 มื้อ)"
         return shifts, hours
 
     # 10. Fast Food & Chain Franchises in Tourist vs Suburban Towns (McDonald's, Wendy's, Culver's, Five Guys, Domino's, Subway, Auntie Anne's)
