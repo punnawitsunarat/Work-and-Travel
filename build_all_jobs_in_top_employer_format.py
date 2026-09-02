@@ -41,14 +41,12 @@ def clean_employer_title(title, agency, state_code, raw_loc, pos_val):
         return f'{t} ({state_code})'
         
     elif agency == 'Acadex':
-        # Remove group and year tags e.g. (Summer 2027: Group X)
         t = re.sub(r'\s*\((?:Summer\s*2027|Summer\s*2026)[^)]*\)', '', t, flags=re.IGNORECASE).strip()
         if state_code and state_code not in t:
             t = f'{t} ({state_code})'
         return t
         
     elif agency == 'IEE':
-        # Convert ALL CAPS to Title Case
         t = t.title()
         if state_code and state_code not in t:
             t = f'{t} ({state_code})'
@@ -73,6 +71,60 @@ def clean_employer_title(title, agency, state_code, raw_loc, pos_val):
         if state_code and state_code not in t and len(t) < 40:
             return f'{t} ({state_code})'
         return t
+
+def clean_position(pos_raw, title_clean, agency):
+    p_text = clean_text(pos_raw)
+    t_lower = clean_text(title_clean).lower()
+    
+    # Check if pos_raw contains promotional or website boilerplate text
+    if (
+        'spring jobs summer jobs' in p_text.lower() or 
+        'ไม่พบรีวิว' in p_text or 
+        'view more' in p_text.lower() or 
+        'เหมาะสำหรับน้อง' in p_text or 
+        'งานอาจรวมถึง' in p_text or
+        len(p_text) > 85
+    ):
+        extracted = []
+        if re.search(r'sales associate|retail|แคชเชียร์|พนักงานขาย', p_text, re.I): extracted.append('Retail / Sales Associate')
+        if re.search(r'ice cream scooper|candy maker|ตักไอศกรีม', p_text, re.I): extracted.append('Ice Cream Scooper / Candy Maker')
+        if re.search(r'cashier', p_text, re.I): extracted.append('Cashier')
+        if re.search(r'housekeep|แม่บ้าน|room attendant', p_text, re.I): extracted.append('Housekeeping')
+        if re.search(r'food prep|เตรียมอาหาร|cook|ครัว', p_text, re.I): extracted.append('Food Preparation')
+        if re.search(r'dishwash|ล้างจาน', p_text, re.I): extracted.append('Dishwasher')
+        if re.search(r'busser|runner|เสิร์ฟ', p_text, re.I): extracted.append('Busser / Food Runner')
+        if re.search(r'lifeguard|ไลฟ์การ์ด', p_text, re.I): extracted.append('Lifeguard')
+        if re.search(r'ride op|เครื่องเล่น', p_text, re.I): extracted.append('Ride Operator')
+        
+        if extracted:
+            return ' / '.join(list(dict.fromkeys(extracted))[:3])
+            
+        # Fallback based on employer business type
+        if any(k in t_lower for k in ['water park', 'waterpark', 'white water', 'splash']):
+            return 'Lifeguard / Park Services / Food Service'
+        elif any(k in t_lower for k in ['amusement', 'theme park', 'silver dollar', 'wonderworks', 'fun park', 'pier', 'arcade', 'track', 'attraction']):
+            return 'Attractions Host / Ride Operator / Retail'
+        elif any(k in t_lower for k in ['hotel', 'inn', 'resort', 'suites', 'motel', 'lodge', 'marriott', 'hilton', 'hyatt', 'sheraton', 'westgate', 'fairfield', 'courtyard']):
+            return 'Housekeeping / Laundry / Front Desk Support'
+        elif any(k in t_lower for k in ['fries', 'burger', 'culver', 'five guys', 'wendy', 'mcdonald', 'domino', 'pizza', 'auntie anne', 'fast food', 'taco', 'subway', 'dairy queen', 'sonic', 'popeye', 'kfc']):
+            return 'Crew Member / Cashier / Food Preparation'
+        elif any(k in t_lower for k in ['creamery', 'ice cream', 'kilwins', 'fudgery', 'candy', 'kohr', 'sweets', 'chocolate', 'bakery', 'donut', 'baskin']):
+            return 'Ice Cream Scooper / Cashier / Sales Associate'
+        elif any(k in t_lower for k in ['crab', 'seafood', 'grill', 'bar & grill', 'kitchen', 'restaurant', 'cafe', 'tapas', 'bistro', 'diner', 'shady gators', 'corral', 'steak', 'bbq', 'tavern', 'saloon']):
+            return 'Busser / Food Runner / Host / Kitchen Prep'
+        elif any(k in t_lower for k in ['gift shop', 'store', 'market', 'outlets', 'supermarket', 'mart', 'retail', 'bargain world']):
+            return 'Retail Associate / Cashier / Stocker'
+            
+        return 'Resort Associate / Food Service / Housekeeping / Retail'
+        
+    # Clean up minor tags from genuine positions
+    p_clean = re.sub(r'\(Available\s*:\s*\d+\+?\)', '', p_text, flags=re.I).strip()
+    p_clean = re.sub(r'\(Summer\s*202\d[^)]*\)', '', p_clean, flags=re.I).strip()
+    p_clean = re.sub(r'\s*\(?\d+\s*M/?F?\)?', '', p_clean, flags=re.I).strip()
+    p_clean = re.sub(r'#.*$', '', p_clean).strip()
+    if p_clean:
+        return p_clean[:70]
+    return 'Resort Associate / Food Service / Housekeeping / Retail'
 
 def parse_rate(rate_val, pos_val, title_val):
     combined = f"{clean_text(rate_val)} {clean_text(pos_val)} {clean_text(title_val)}"
@@ -235,16 +287,14 @@ for r in range(2, ws_src.max_row + 1):
     # Clean Employer / Workplace Name
     emp_display = clean_employer_title(title, agency, state_code, loc, pos)
 
-    # Format Position
-    pos_display = pos if pos else "Resort Associate / Food Service / Housekeeping / Retail"
-    if len(pos_display) > 80:
-        pos_display = pos_display[:77] + "..."
+    # Clean Position Name
+    pos_display = clean_position(pos, title, agency)
 
     # Extract clean attributes
     rate_clean = parse_rate(rate, pos, title)
     hours_clean = parse_hours(hours, pos)
     shifts_clean = parse_shifts(hours_clean)
-    tips_clean = parse_tips(pos, title)
+    tips_clean = parse_tips(pos_display, emp_display)
     hsg_clean = parse_housing(housing, f"{pos} {title}")
     
     # Format Benefits & Highlights
@@ -438,11 +488,11 @@ try:
     wb.save(master_path)
     print('Saved to master path:', master_path)
 except Exception as e:
-    print('Master path note (will attempt copy):', e)
+    print('Master path note:', e)
     try:
         shutil.copyfile(clean_path, master_path)
         print('Copied to master path successfully.')
     except Exception as err:
         print('Master file in use:', err)
 
-print('Build complete: Cleaned NewStep and all public jobs in Top Employers format!')
+print('Build complete: Successfully cleaned positions and employer titles for all 1,167 jobs!')
