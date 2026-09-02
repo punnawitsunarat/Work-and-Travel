@@ -11,7 +11,7 @@ clean_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_202
 wb_public = openpyxl.load_workbook(public_path, data_only=True)
 ws_src = wb_public['All Public Jobs']
 
-print(f'Starting complete discrete per-employer evaluation for {ws_src.max_row - 1} public jobs...')
+print(f'Starting discrete evaluation with Brand Reputation & Fame indicators for {ws_src.max_row - 1} public jobs...')
 
 hap_counter = 0
 hap_locations = [
@@ -160,12 +160,12 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
     # -------------------------------------------------------------
     if 'denali princess wilderness lodge' in e_low or 'denali wilderness lodge' in e_low:
         shifts = "งานหลัก: 07:30 – 17:30 (9.5–10 ชม./วัน 5–6 วัน/wk)\nกะเสริม (Luggage เช้า/ครัวดึก): 05:00–08:30 หรือ 18:00–23:00 (ข้ามแผนกได้)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 50–56 ชม./wk (663 ห้อง - ลอดจ์ใหญ่สุด รถไฟลงทุกวัน)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 55–62+ ชม./wk (Daily OT 1.5x หลัง 8 ชม. ล้นทุกวัน)\n[หากบวกกะเสริม/งานสอง]: 65–75+ ชม./wk (ปลอดภาษีเงินได้ 0% เงินเก็บสูงสุด)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 50–56 ชม./wk (⭐ ลอดจ์อันดับ 1 ใน Denali 663 ห้อง รถไฟ Princess เทียบทุกวัน)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 55–62+ ชม./wk (Daily OT 1.5x หลัง 8 ชม. ล้นทุกวัน)\n[หากบวกกะเสริม/งานสอง]: 65–75+ ชม./wk (ปลอดภาษีเงินได้ 0% เงินเก็บสูงสุด)"
         return shifts, hours
 
     elif 'mckinley chalet' in e_low:
         shifts = "งานหลัก: 08:00 – 17:00 (9 ชม./วัน 5–6 วัน/wk)\nกะเสริมร้านอาหาร Denali Square: 17:30 – 23:00 (งาน F&B และอีเวนต์ดนตรี)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (475 ห้อง + โซน Denali Square ศูนย์รวมร้านอาหาร)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 50–56+ ชม./wk (แขกหนาแน่น Daily OT สม่ำเสมอ)\n[หากบวกกะเสริม Denali Square]: 58–66+ ชม./wk (ทิปสดดีมาก)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (⭐ รีสอร์ต 475 ห้อง + โซน Denali Square แลนด์มาร์กร้านอาหาร)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 50–56+ ชม./wk (แขกหนาแน่น Daily OT สม่ำเสมอ)\n[หากบวกกะเสริม Denali Square]: 58–66+ ชม./wk (ทิปสดดีมาก)"
         return shifts, hours
 
     elif 'mt. mckinley princess' in e_low or 'mt mckinley' in e_low:
@@ -195,30 +195,60 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
 
     elif 'grande denali' in e_low or 'denali bluffs' in e_low:
         shifts = "งานหลัก: 07:30 – 16:30 (8.5–9 ชม./วัน 5–6 วัน/wk)\nกะเสริมห้องอาหาร Alpenglow / Peak: 17:30 – 22:30"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (221 ห้องบนเขา Sugarloaf วิวอลังการ)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–56+ ชม./wk (กรุ๊ปทัวร์เต็มตลอด Daily OT 1.5x)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ โรงแรมหรูวิวพรีเมียม 221 ห้องบนเขา Sugarloaf วิวอลังการ)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–56+ ชม./wk (กรุ๊ปทัวร์เต็มตลอด Daily OT 1.5x)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
         return shifts, hours
 
     elif 'talkeetna alaskan lodge' in e_low:
         shifts = "งานหลัก: 08:00 – 16:30 (8.5 ชม./วัน 5 วัน/wk)\nกะเสริมห้องอาหาร Foraker / Base Camp: 17:00 – 22:30"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (212 ห้อง - จุดชมวิวเทือกเขาอลาสกาและนักปีนเขา)\n[พีค มิ.ย.-ต้น ส.ค.]: 46–52 ชม./wk\n[ปลาย ส.ค.]: 36–40 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (⭐ ลอดจ์แลนด์มาร์ก 212 ห้อง - วิวยอดเขา Denali และนักปีนเขาทั่วโลก)\n[พีค มิ.ย.-ต้น ส.ค.]: 46–52 ชม./wk\n[ปลาย ส.ค.]: 36–40 ชม./wk"
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 2. INDIVIDUAL THAI RESTAURANTS (22 Distinct Realities)
+    # 2. INDIVIDUAL FAMOUS & ICONIC RESTAURANTS (Reputation & Volume)
     # -------------------------------------------------------------
+    elif 'moosejaw' in e_low:
+        shifts = "พ.ค.: 11:30 – 20:30 (พักเบรก)\nมิ.ย.-ส.ค. (พีคคิวยาว): 11:00 – 23:00 (10–11.5 ชม. ควงรอบค่ำ ทิปแน่น)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (⭐ แลนด์มาร์กอันดับ 1 ใน Wisconsin Dells 600 ที่นั่ง / 3 ชั้น)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (โต๊ะแน่น คิวรอ 1-2 ชม. + ทิปสด $80–$150/คืน)\n[ปลาย ส.ค.]: 38–44 ชม./wk"
+        return shifts, hours
+
+    elif 'shady gators' in e_low:
+        shifts = "พ.ค. (เทรนงาน): 12:00 – 20:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีคปาร์ตี้ริมทะเลสาบ): 11:00 – 00:00 (11–13 ชม. ควงกะค่ำ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (⭐ อาณาจักรริมน้ำแลนด์มาร์ก Party Capital of Lake Ozark, MO 500+ ที่นั่ง)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (เรือจอดเทียบแน่น ทิปสด $90–$180/คืน)\n[ปลาย ส.ค.]: 38–44 ชม./wk"
+        return shifts, hours
+
+    elif 'fudpucker' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีคดินเนอร์): 11:00 – 23:00 (10–11 ชม. ควงกะรอบค่ำ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ ร้านอาหารแลนด์มาร์กชื่อดังระดับประเทศ Destin, FL 400 ที่นั่ง + บ่อจระเข้จริง)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–58+ ชม./wk (นักท่องเที่ยวครอบครัวแน่นตลอดวัน ทิปสด $80–$140/คืน)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'paula deen' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีคคิวยาว): 10:30 – 22:30 (10.5 ชม. ควงกะอาหารใต้สไตล์ครอบครัว)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ ร้านอาหารเชฟชื่อดังระดับโลก Paula Deen ใน The Island, TN คิวทะลัก)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–58+ ชม./wk (ทิปสดแน่น ปลอดภาษีเงินได้รัฐ 0% TN)\n[ปลาย ส.ค.]: 38–44 ชม./wk"
+        return shifts, hours
+
+    elif 'buffalo phil' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีค): 11:00 – 22:30 (10–11 ชม. รถไฟจำลองส่งอาหารเสิร์ฟถึงโต๊ะ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (⭐ ร้านอาหารครอบครัวแลนด์มาร์ก 400 ที่นั่ง ใน Dells รถไฟส่งอาหาร)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–56+ ชม./wk (ทิปสด $60–$120/คืน)\n[ปลาย ส.ค.]: 36–42 ชม./wk"
+        return shifts, hours
+
+    elif 'boudin' in e_low:
+        shifts = "เช้า/กลางวัน: 07:30 – 16:00 (8.5 ชม.)\nบ่าย/ค่ำ: 14:00 – 22:30 (8.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (⭐ เบเกอรี่ประวัติศาสตร์ระดับโลก 1849 Sourdough Landmark ที่ Fisherman's Wharf, SF)\n[พีค มิ.ย.-ต้น ส.ค.]: 46–52+ ชม./wk (Daily OT 1.5x หลัง 8 ชม. ตามกฎหมาย CA)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
     elif 'farmhouse kitchen' in e_low:
         shifts = "กะกลางวัน: 11:00 – 15:00 (4 ชม.)\nพักบ่าย (เซ็ตโต๊ะ): 15:00 – 16:30 (1.5 ชม.)\nกะค่ำพีค: 16:30 – 22:30 (6 ชม. ดีเจ+ค็อกเทลแน่น)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (ร้านอาหารไทยขนาดใหญ่ 160 ที่นั่ง Michelin Bib Gourmand, CA)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–54+ ชม./wk (ได้ Daily OT 1.5x หลัง 8 ชม. ตามกฎหมาย CA + ทิปสด $80-$140/คืน)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (⭐ ร้านอาหารไทยหรูชื่อดัง 160 ที่นั่ง Michelin Bib Gourmand, CA)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–54+ ชม./wk (ได้ Daily OT 1.5x หลัง 8 ชม. ตามกฎหมาย CA + ทิปสด $80-$140/คืน)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
         return shifts, hours
 
     elif 'mahaniyom' in e_low:
         shifts = "กะเตรียมวัตถุดิบ/กลางวัน: 11:30 – 15:00 (3.5 ชม.)\nกะค่ำพีค & บาร์ทาปาส: 16:30 – 23:30 (7 ชม. คนต่อคิวยาวทั้งคืน)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (ร้านอาหารไทยยอดฮิตติดชาร์ตระดับประเทศใน Boston, MA 70 ที่นั่ง)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (คิวยาว 2-3 ชม. ควงกะดินเนอร์+บาร์ดึก อาหารไทยฟรี)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ ร้านทาปาสบาร์ยอดฮิตติดชาร์ต Top 50 สหรัฐฯ ใน Boston, MA 70 ที่นั่ง)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (คิวยาว 2-3 ชม. ควงกะดินเนอร์+บาร์ดึก อาหารไทยฟรี)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
         return shifts, hours
 
     elif 'sugar & spice' in e_low:
         shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nพักบ่าย: 14:30 – 16:30 (2 ชม. ไม่คิดเงิน)\nกะค่ำ: 16:30 – 21:30 (5 ชม.)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–44 ชม./wk (120 ที่นั่ง ใกล้ Harvard/Cambridge, MA แขกแน่นสม่ำเสมอ)\n[พีค มิ.ย.-ก.ค.]: 44–50 ชม./wk (บุฟเฟต์กลางวันและดินเนอร์ ทิป $40-$90/คืน)\n[ปลาย ส.ค.]: 36–40 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–44 ชม./wk (⭐ 120 ที่นั่ง ใกล้ Harvard/Cambridge, MA แขกแน่นสม่ำเสมอ)\n[พีค มิ.ย.-ก.ค.]: 44–50 ชม./wk (บุฟเฟต์กลางวันและดินเนอร์ ทิป $40-$90/คืน)\n[ปลาย ส.ค.]: 36–40 ชม./wk"
         return shifts, hours
 
     elif 'real thai' in e_low:
@@ -307,11 +337,77 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 3. MEGA AMUSEMENT & THEME PARKS (Individual Park Dynamics)
+    # 3. HISTORIC & 4-5 DIAMOND LUXURY RESORTS (Prestige & High Spending)
+    # -------------------------------------------------------------
+    elif 'grand hotel' in e_low and 'mackinac' in e_low:
+        shifts = "พ.ค.-มิ.ย. (เปิดเกาะ): 07:30 – 16:30 (8.5–9 ชม.)\nก.ค.-ส.ค. (พีคหรู): 07:00 – 17:30 (10 ชม. 5–6 วัน/wk)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ โรงแรมไม้ประวัติศาสตร์ระดับโลก 1887 เกาะปลอดรถยนต์ 397 ห้อง)\n[พีค ก.ค.-ต้น ส.ค.]: 50–58+ ชม./wk (แขกไฮเอนด์แต่งสูทดินเนอร์ ทิปสดสูงมาก $90-$160/วัน)\n[ปลาย ส.ค.-ก.ย.]: 40–44 ชม./wk (มีกลุ่มประชุมสัมมนาต่อเนื่อง ซีซันยาว)"
+        return shifts, hours
+
+    elif 'stanley hotel' in e_low:
+        shifts = "เช้า/กลางวัน: 08:00 – 16:30 (8.5 ชม.)\nบ่าย/ค่ำ: 15:00 – 23:30 (8.5 ชม. ทัวร์ประวัติศาสตร์และห้องอาหาร Cascades)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ โรงแรมประวัติศาสตร์ระดับโลก 1909 แรงบันดาลใจ The Shining ใน Estes Park, CO)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (นักท่องเที่ยวทัวร์และพักผ่อนแน่นตลอด 24 ชม.)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'omni mount washington' in e_low or 'omni' in e_low:
+        shifts = "พ.ค.-มิ.ย.: 08:00 – 16:30 (8 ชม.)\nก.ค.-ส.ค. (พีค): 07:30 – 17:30 (9.5 ชม. 5–6 วัน/wk)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ รีสอร์ตหรูระดับ 4 ไดมอนด์ 269 ห้อง เทือกเขา White Mountains, NH)\n[พีค ก.ค.-ต้น ส.ค.]: 47–54+ ชม./wk (ทิปสดดีมาก ปลอดภาษีซื้อของ 0% NH)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'tenaya lodge' in e_low:
+        shifts = "พ.ค.-มิ.ย.: 08:00 – 16:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีคโยเซมิตี): 07:30 – 17:30 (9.5 ชม. 5–6 วัน/wk)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–48 ชม./wk (⭐ รีสอร์ตหรู 4 ไดมอนด์ 350+ ห้อง ประตูทางเข้า Yosemite NP, CA)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (ได้ Daily OT 1.5x หลัง 8 ชม. ตามกฎหมายแคลิฟอร์เนีย)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'cliff house' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีค): 07:30 – 17:00 (9.5 ชม. 5–6 วัน/wk)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (⭐ รีสอร์ตหรูระดับท็อปบนหน้าผาริมทะเล Ogunquit / Cape Neddick, ME 226 ห้อง)\n[พีค มิ.ย.-ต้น ส.ค.]: 49–56+ ชม./wk (แขกมหาเศรษฐี ทิปสดสูงมาก)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'trapp family' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีค): 08:00 – 17:00 (9 ชม. 5–6 วัน/wk)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ ลอดจ์ประวัติศาสตร์ The Sound of Music 2,500 เอเคอร์ & โรงเบียร์ใน Stowe, VT)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–54+ ชม./wk (นักท่องเที่ยวทั่วโลกแน่นตลอดซัมเมอร์)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'kiawah island' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีค): 07:30 – 17:00 (9 ชม. 5–6 วัน/wk แขกเล่นกอล์ฟและพักผ่อน)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ รีสอร์ตหรูระดับ 5 ดาว 500+ ยูนิตและวิลล่า South Carolina)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (ทิปสดดีมากจากแขกระดับมหาเศรษฐี)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'roche harbor' in e_low:
+        shifts = "มิ.ย.-ส.ค. (พีคเรือยอชต์): 08:00 – 17:30 (9.5 ชม. 5–6 วัน/wk)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ รีสอร์ตและท่าเรือยอชต์ประวัติศาสตร์ San Juan Island, WA ปลอดภาษี 0% WA)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (เรือยอชต์จอดเต็มอ่าว ทิปสดดีมาก)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'margaritaville' in e_low:
+        shifts = "เช้า/กลางวัน: 08:00 – 16:30 (8.5 ชม.)\nบ่าย/ค่ำ: 15:00 – 23:00 (8 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (⭐ รีสอร์ตแบรนด์ดังระดับโลก Margaritaville บรรยากาศปาร์ตี้คึกคัก)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    # -------------------------------------------------------------
+    # 4. ICONIC CONFECTIONERY & BOARDWALK BRANDS
+    # -------------------------------------------------------------
+    elif 'kohr bros' in e_low:
+        shifts = "กลางวัน: 11:00 – 17:30 (6.5 ชม.)\nค่ำพีคบอร์ดวอล์ก: 17:30 – 00:00 (6.5 ชม. คนต่อแถวยาวตลอดคืน)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 40–45 ชม./wk (⭐ โฟรเซ่นคัสตาร์ดระดับตำนาน 100 ปี บอร์ดวอล์ก DE/NJ คนต่อแถวยาว)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–54+ ชม./wk (แดดร้อนคนซื้อคัสตาร์ดแน่นทั้งวัน)\n[ปลาย ส.ค.]: 32–38 ชม./wk (คนเดินบอร์ดวอล์กลดลงช่วงวันธรรมดา)"
+        return shifts, hours
+
+    elif 'thrasher' in e_low:
+        shifts = "กลางวัน: 11:00 – 17:30 (6.5 ชม.)\nค่ำพีค: 17:30 – 00:00 (6.5 ชม. เฟรนช์ฟรายส์ในตำนาน)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 40–45 ชม./wk (⭐ เฟรนช์ฟรายส์แลนด์มาร์ก 1929 บอร์ดวอล์ก Ocean City / Rehoboth คิวยาวตลอดวัน)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–54+ ชม./wk\n[ปลาย ส.ค.]: 32–38 ชม./wk"
+        return shifts, hours
+
+    elif 'kilwins' in e_low:
+        shifts = "กลางวัน: 10:30 – 17:00 (6.5 ชม.)\nค่ำพีค: 17:00 – 23:30 (6.5 ชม. กวนฟัดจ์สดและตักไอศกรีม)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 39–44 ชม./wk (⭐ ร้านฟัดจ์และไอศกรีมพรีเมียมชื่อดัง 1947 ทั่วเกาะและเมืองตากอากาศ)\n[พีค มิ.ย.-ต้น ส.ค.]: 46–52+ ชม./wk\n[ปลาย ส.ค.]: 32–38 ชม./wk"
+        return shifts, hours
+
+    # -------------------------------------------------------------
+    # 5. MEGA AMUSEMENT & WATERPARKS
     # -------------------------------------------------------------
     elif 'cedar point' in e_low:
         shifts = "พ.ค.: 09:00 – 17:00 (เฉพาะ ส.-อา. 8 ชม.)\nมิ.ย.-ต้น ส.ค. (พีค): 08:30 – 22:00 (11–13 ชม. ควงกะเปิด-ปิดปาร์ค)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (364 เอเคอร์ / เครื่องเล่น 71 ชนิด / ผู้เข้าชม 3.5 ล้านคน)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 54–64+ ชม./wk (OT สัปดาห์ละ 15–25 ชม. ล้นที่สุดในฝั่งสวนสนุก)\n[ปลาย ส.ค. หลังเปิดเทอม]: 35–42 ชม./wk (วันธรรมดาเปิดสั้นลง แต่ ส.-อา. ยังได้ OT เต็ม)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (⭐ เมืองหลวงรถไฟเหาะระดับโลก 364 เอเคอร์ / เครื่องเล่น 71 ชนิด / ผู้เข้าชม 3.5 ล้านคน)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 54–64+ ชม./wk (OT สัปดาห์ละ 15–25 ชม. ล้นที่สุดในฝั่งสวนสนุก)\n[ปลาย ส.ค. หลังเปิดเทอม]: 35–42 ชม./wk (วันธรรมดาเปิดสั้นลง แต่ ส.-อา. ยังได้ OT เต็ม)"
         return shifts, hours
 
     elif 'kings island' in e_low:
@@ -331,7 +427,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
 
     elif 'dollywood' in e_low:
         shifts = "พ.ค.: 09:00 – 18:00 (9 ชม.)\nมิ.ย.-ส.ค. (พีคเทศกาลฤดูร้อน): 08:30 – 21:30 (11–12 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (สวนสนุกอันดับ 1 ในเทนเนสซี คนเที่ยว 3 ล้านคน/ปี)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (ปลอดภาษีเงินได้รัฐ 0% TN รับเงินเต็ม)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ สวนสนุกอันดับ 1 ในเทนเนสซี คนเที่ยว 3 ล้านคน/ปี)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (ปลอดภาษีเงินได้รัฐ 0% TN รับเงินเต็ม)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
         return shifts, hours
 
     elif 'silver dollar city' in e_low:
@@ -341,20 +437,12 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
 
     elif 'morey' in e_low:
         shifts = "พ.ค.: 11:30 – 19:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีค Boardwalk): 10:30 – 00:00 (11–13 ชม. ควงกะสวนน้ำบ่าย+เครื่องเล่นดึก)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (3 ท่าเรือยักษ์ 6 บล็อกริมหาด Wildwood, NJ)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–62+ ชม./wk (คนเดินบอร์ดวอล์กแน่นถึงเที่ยงคืน)\n[ปลาย ส.ค.]: 36–42 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (⭐ 3 ท่าเรือยักษ์ 6 บล็อกริมหาด Wildwood, NJ แลนด์มาร์ก Jersey Shore)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–62+ ชม./wk (คนเดินบอร์ดวอล์กแน่นถึงเที่ยงคืน)\n[ปลาย ส.ค.]: 36–42 ชม./wk"
         return shifts, hours
 
-    elif 'palace playland' in e_low:
-        shifts = "มิ.ย. (เปิดหาด): 11:00 – 19:00 (8 ชม.)\nก.ค.-ต้น ส.ค. (พีค): 10:30 – 23:00 (11 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (สวนสนุกริมหาด Old Orchard Beach, ME)\n[พีค ก.ค.-ต้น ส.ค.]: 48–55+ ชม./wk (นักท่องเที่ยวแคนาดาและนิวอิงแลนด์แน่นหาด)\n[ปลาย ส.ค.]: 34–38 ชม./wk"
-        return shifts, hours
-
-    # -------------------------------------------------------------
-    # 4. MEGA WATERPARK RESORTS (Wisconsin Dells & Poconos)
-    # -------------------------------------------------------------
     elif 'kalahari' in e_low:
         shifts = "พ.ค.: 08:30 – 16:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีคสวนน้ำ): 07:30 – 18:30 (11 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (900+ สวีท / สวนน้ำในร่ม 125,000 ตร.ฟุต + กลางแจ้ง)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (ห้องพักเต็ม 100% ตลอดซัมเมอร์)\n[ปลาย ส.ค.]: 40–45 ชม./wk (มีสวนน้ำในร่มรองรับคนเที่ยวช่วงเปิดเทอม)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (⭐ อาณาจักรสวนน้ำอันดับ 1 ของอเมริกา 900+ สวีท / ในร่ม 125,000 ตร.ฟุต)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (ห้องพักเต็ม 100% ตลอดซัมเมอร์)\n[ปลาย ส.ค.]: 40–45 ชม./wk (มีสวนน้ำในร่มรองรับคนเที่ยวช่วงเปิดเทอม)"
         return shifts, hours
 
     elif 'wilderness resort' in e_low:
@@ -373,71 +461,25 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 5. FAMOUS MEGA RESTAURANTS & PIZZERIAS (300-600 Seats)
-    # -------------------------------------------------------------
-    elif 'moosejaw' in e_low:
-        shifts = "พ.ค.: 11:30 – 20:30 (พักเบรก)\nมิ.ย.-ส.ค. (พีคคิวยาว): 11:00 – 23:00 (10–11.5 ชม. ควงรอบค่ำ ทิปแน่น)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (600 ที่นั่ง / 3 ชั้น / โรงเบียร์และพิซซ่ายอดฮิตเบอร์ 1 ใน Dells)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (โต๊ะแน่น คิวรอ 1-2 ชม. + ทิปสด $80–$150/คืน)\n[ปลาย ส.ค.]: 38–44 ชม./wk"
-        return shifts, hours
-
-    elif 'buffalo phil' in e_low:
-        shifts = "มิ.ย.-ส.ค. (พีค): 11:00 – 22:30 (10–11 ชม. รถไฟจำลองส่งอาหารเสิร์ฟถึงโต๊ะ)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (400 ที่นั่ง / ร้านอาหารครอบครัวยอดฮิตใน Dells)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–56+ ชม./wk (ทิปสด $60–$120/คืน)\n[ปลาย ส.ค.]: 36–42 ชม./wk"
-        return shifts, hours
-
-    elif 'shady gators' in e_low:
-        shifts = "พ.ค. (เทรนงาน): 12:00 – 20:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีคปาร์ตี้ริมทะเลสาบ): 11:00 – 00:00 (11–13 ชม. ควงกะค่ำ)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 46–52 ชม./wk (ร้านอาหารและบาร์ริมน้ำใหญ่สุดใน Lake Ozark, MO 500+ ที่นั่ง)\n[พีค มิ.ย.-ต้น ส.ค.]: 52–60+ ชม./wk (เรือจอดเทียบแน่น ทิปสด $90–$180/คืน)\n[ปลาย ส.ค.]: 38–44 ชม./wk"
-        return shifts, hours
-
-    elif 'fudpucker' in e_low or 'bayou bill' in e_low or 'paula deen' in e_low:
-        shifts = "มิ.ย.-ส.ค. (พีคดินเนอร์): 11:30 – 23:00 (10–11 ชม. ควงกะรอบค่ำ)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (ร้านอาหารแลนด์มาร์ก 350–500 ที่นั่ง คิวยาวตลอดคืน)\n[พีค มิ.ย.-ต้น ส.ค.]: 50–56+ ชม./wk (ทิปสด $70–$130/คืน)\n[ปลาย ส.ค.]: 36–42 ชม./wk"
-        return shifts, hours
-
-    # -------------------------------------------------------------
-    # 6. LUXURY HISTORIC 4-5 DIAMOND RESORTS (Grand Hotel, Omni, Tenaya)
-    # -------------------------------------------------------------
-    elif 'grand hotel' in e_low and 'mackinac' in e_low:
-        shifts = "พ.ค.-มิ.ย. (เปิดเกาะ): 07:30 – 16:30 (8.5–9 ชม.)\nก.ค.-ส.ค. (พีคหรู): 07:00 – 17:30 (10 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (397 ห้อง - โรงแรมไม้ประวัติศาสตร์ระดับโลก เกาะปลอดรถยนต์)\n[พีค ก.ค.-ต้น ส.ค.]: 48–56+ ชม./wk (แขกไฮเอนด์แต่งสูทดินเนอร์ ทิปสดสูงมาก)\n[ปลาย ส.ค.-ก.ย.]: 40–44 ชม./wk (มีกลุ่มประชุมสัมมนาต่อเนื่อง ซีซันยาว)"
-        return shifts, hours
-
-    elif 'omni mount washington' in e_low or 'omni' in e_low:
-        shifts = "พ.ค.-มิ.ย.: 08:00 – 16:30 (8 ชม.)\nก.ค.-ส.ค. (พีค): 07:30 – 17:30 (9.5 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (269 ห้อง - รีสอร์ตหรูระดับ 4 ไดมอนด์ เทือกเขา White Mountains, NH)\n[พีค ก.ค.-ต้น ส.ค.]: 47–54+ ชม./wk (ทิปสดดีมาก ปลอดภาษีซื้อของ 0% NH)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
-        return shifts, hours
-
-    elif 'tenaya lodge' in e_low:
-        shifts = "พ.ค.-มิ.ย.: 08:00 – 16:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีคโยเซมิตี): 07:30 – 17:30 (9.5 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–48 ชม./wk (350+ ห้องและค็อทเทจ ประตูทางเข้า Yosemite NP, CA)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (ได้ Daily OT 1.5x หลัง 8 ชม. ตามกฎหมายแคลิฟอร์เนีย)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
-        return shifts, hours
-
-    elif 'kiawah island' in e_low:
-        shifts = "มิ.ย.-ส.ค. (พีค): 07:30 – 17:00 (9 ชม. 5–6 วัน/wk แขกเล่นกอล์ฟและพักผ่อน)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (500+ ยูนิตและวิลล่าหรูระดับ 5 ดาว South Carolina)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (ทิปสดดีมากจากแขกระดับมหาเศรษฐี)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
-        return shifts, hours
-
-    # -------------------------------------------------------------
-    # 7. NATIONAL PARK LODGES (Xanterra Yellowstone / Grand Teton GTLC)
+    # 6. NATIONAL PARK CONCESSIONAIRES (Xanterra Yellowstone & GTLC)
     # -------------------------------------------------------------
     elif 'xanterra' in e_low or 'yellowstone' in e_low:
         shifts = "พ.ค. (เปิดถนนอุทยาน): 07:30 – 16:00 (8 ชม.)\nมิ.ย.-ส.ค. (พีคสุด): 07:00 – 17:30 (10 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (สัมปทานใหญ่สุดใน Yellowstone นักท่องเที่ยว 4 ล้านคน)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 50–56+ ชม./wk (จองล่วงหน้า 1 ปีเต็ม 100% ตารางเสถียร ไม่ตัดกะ)\n[ปลาย ส.ค.]: 40–44 ชม./wk (อาหาร EDR ฟรี 3 มื้อ ปลอดภาษีเงินได้ 0% WY)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ สัมปทานใหญ่สุดใน Yellowstone นักท่องเที่ยว 4 ล้านคน จองเต็ม 1 ปี)\n[พีค มิ.ย.-ต้น ส.ค. งานหลักเพียวๆ]: 50–56+ ชม./wk (ตารางเสถียร ไม่ตัดกะ)\n[ปลาย ส.ค.]: 40–44 ชม./wk (อาหาร EDR ฟรี 3 มื้อ ปลอดภาษีเงินได้ 0% WY)"
         return shifts, hours
 
     elif 'gtlc' in e_low or 'grand teton lodge' in e_low or 'signal mountain' in e_low:
         shifts = "พ.ค.-มิ.ย. (เปิดลอดจ์): 07:30 – 16:30 (8.5 ชม.)\nก.ค.-ส.ค. (พีค): 07:00 – 17:30 (10 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (Jackson Lake Lodge / Colter Bay ริมเทือกเขา Grand Teton)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–56+ ชม./wk (วิวธรรมชาติระดับโลก ชั่วโมงงานแน่นอน)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 44–49 ชม./wk (⭐ Jackson Lake Lodge / Colter Bay ริมเทือกเขา Grand Teton)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–56+ ชม./wk (วิวธรรมชาติระดับโลก ชั่วโมงงานแน่นอน)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
         return shifts, hours
 
     elif 'glacier national' in e_low:
         shifts = "มิ.ย. (เปิดถนน Going-to-the-Sun): 08:00 – 16:30 (8 ชม.)\nก.ค.-ส.ค. (พีคสั้นแต่แน่นมาก): 07:00 – 18:00 (10.5 ชม. 5–6 วัน/wk)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (Glacier NP, MT - ซีซันเปิดแค่ 3 เดือน แขกทะลัก)\n[พีค ก.ค.-ต้น ส.ค.]: 50–58+ ชม./wk (ควงกะแน่น ปลอดภาษีซื้อของ 0% MT)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (⭐ Glacier NP, MT - ซีซันเปิดแค่ 3 เดือน แขกทะลัก)\n[พีค ก.ค.-ต้น ส.ค.]: 50–58+ ชม./wk (ควงกะแน่น ปลอดภาษีซื้อของ 0% MT)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 8. SMALL ROADSIDE MOTELS & BOUTIQUE INNS (30-60 Rooms)
+    # 7. SMALL ROADSIDE MOTELS & BOUTIQUE INNS (30-60 Rooms)
     # -------------------------------------------------------------
     elif any(k in e_low for k in ['motel 6', 'eureka inn', 'sea latch', 'cherry tree', 'brighton', 'super 8', 'days inn', 'travelodge', 'econolodge', 'budget inn', 'comfort inn', 'beluga lake lodge', 'bidarka inn', 'anchor inn', 'aviator suites', 'crows nest', 'rainbow rv']):
         shifts = "จันทร์-พฤหัส (แขกน้อย): 09:00 – 14:00 (5 ชม. ทำเสร็จไว)\nศุกร์-อาทิตย์ (เทิร์นห้อง): 08:30 – 16:30 (8 ชม.)"
@@ -445,7 +487,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 9. MID-SCALE STANDARD HOTELS (100-250 Rooms)
+    # 8. MID-SCALE STANDARD HOTELS (100-250 Rooms)
     # -------------------------------------------------------------
     elif any(k in e_low for k in ['marriott', 'hilton', 'westgate', 'fairfield', 'courtyard', 'holiday inn', 'hyatt', 'sheraton', 'suites', 'best western', 'claridge', 'harbor 360', 'fountainhead']):
         shifts = "วันธรรมดา: 08:30 – 15:30 (7 ชม.)\nศุกร์-อาทิตย์: 08:00 – 17:00 (9 ชม. แขกหมุนเวียน)"
@@ -453,7 +495,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 10. FAST FOOD & CASUAL CHAINS (Wendy's, Five Guys, Subway)
+    # 9. FAST FOOD & CASUAL CHAINS (Wendy's, Five Guys, Subway)
     # -------------------------------------------------------------
     elif any(k in e_low for k in ['burger', 'culver', 'five guys', 'wendy', 'mcdonald', 'domino', 'pizza', 'auntie anne', 'fast food', 'taco', 'subway', 'dairy queen', 'sonic', 'popeye', 'kfc']):
         shifts = "กะเช้า: 07:00 – 15:30 (8.5 ชม.)\nกะบ่าย/ดึก: 15:30 – 00:00 (8.5 ชม. เลือกกะได้)"
@@ -461,15 +503,15 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 11. ICE CREAM, FUDGE, CANDY & RETAIL SHOPS
+    # 10. ICE CREAM, FUDGE, CANDY & RETAIL SHOPS
     # -------------------------------------------------------------
-    elif any(k in e_low for k in ['creamery', 'ice cream', 'kilwins', 'fudgery', 'candy', 'kohr', 'sweets', 'chocolate', 'bakery', 'donut', 'baskin', 'gift shop', 'bargain world', 'general store', 'polar bear', 'island brew', 'snow city']):
+    elif any(k in e_low for k in ['creamery', 'ice cream', 'fudgery', 'candy', 'sweets', 'chocolate', 'bakery', 'donut', 'baskin', 'gift shop', 'bargain world', 'general store', 'polar bear', 'island brew', 'snow city']):
         shifts = "กลางวัน: 10:30 – 17:00 (6.5 ชม.)\nค่ำพีค: 17:00 – 23:30 (6.5 ชม. คนต่อแถวซื้อขนม)"
         hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–43 ชม./wk (ร้านขนมและของฝาก)\n[พีค มิ.ย.-ต้น ส.ค.]: 46–52+ ชม./wk (แดดร้อนคนซื้อไอศกรีมแน่นทั้งวัน)\n[ปลาย ส.ค.]: 32–38 ชม./wk (คนเดินถนนลดลง ปิดร้านเร็วขึ้นช่วงวันธรรมดา)"
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 12. BEACH TOWNS & ISLAND RESORT PLACEMENTS
+    # 11. BEACH TOWNS & ISLAND RESORT PLACEMENTS
     # -------------------------------------------------------------
     elif any(k in e_low for k in ['put-in-bay', 'mackinac', 'outer banks', 'ocean city', 'myrtle beach', 'virginia beach', 'wildwood', 'cape cod', 'rehoboth', 'destin', 'panama city', 'hilton head']):
         shifts = "พ.ค. (ก่อน Memorial Day): 09:00 – 16:30 (7.5 ชม.)\nมิ.ย.-ส.ค. (หน้าร้อนชายหาด): 08:00 – 18:30 (10.5 ชม. ควงกะ)"
@@ -477,7 +519,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 13. DEFAULT PRECISE LOCAL PLACEMENT
+    # 12. DEFAULT PRECISE LOCAL PLACEMENT
     # -------------------------------------------------------------
     else:
         shifts = "พ.ค. (เริ่มงาน): 08:30 – 16:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีค): 08:00 – 17:30 (9.5 ชม. 5 วัน/wk)"
@@ -486,9 +528,14 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
 
 def parse_tips(pos_str, title_str):
     combined = f"{clean_text(pos_str)} {clean_text(title_str)}".lower()
+    if any(k in combined for k in ['shady gators', 'moosejaw', 'fudpucker', 'paula deen', 'grand hotel', 'cliff house', 'kiawah']):
+        if any(k in combined for k in ['server', 'waiter', 'bartender', 'barback', 'busser', 'runner', 'food runner']):
+            return "$60 - $150"
     if any(k in combined for k in ['server', 'waiter', 'bartender', 'barback', 'busser', 'runner', 'food runner']):
         return "$40 - $100"
     if any(k in combined for k in ['housekeep', 'room attendant', 'clean', 'maid']):
+        if any(k in combined for k in ['grand hotel', 'cliff house', 'kiawah', 'tenaya', 'omni', 'stanley']):
+            return "$25 - $50"
         return "$15 - $35"
     if any(k in combined for k in ['cook', 'kitchen', 'dish', 'prep', 'steward', 'lifeguard', 'ride op', 'cashier', 'retail', 'stocker']):
         return "-"
@@ -540,19 +587,26 @@ def generate_benefits_and_housing(emp_name, state_name, state_code, pos_name, ra
     perks = []
     highlights = []
     
-    # 1. Primary Meals / Workplace Perks
-    if any(k in e_low for k in ['thai', 'erawan', 'maliwan', 'dok mali', 'so zap', 'pad thai', 'mahaniyom', 'keen kow', 'asian thai', 'siam cuisine', 'thaihouse']):
+    # 1. Primary Meals / Workplace Perks & Fame Badges
+    if any(k in e_low for k in ['mahaniyom', 'farmhouse kitchen']):
+        perks.append("อาหารไทยฟรีทุกมื้อ")
+        highlights.append("ร้านระดับมิชลิน/รางวัลระดับประเทศ บรรยากาศพรีเมียม")
+    elif any(k in e_low for k in ['thai', 'erawan', 'maliwan', 'dok mali', 'so zap', 'pad thai', 'keen kow', 'asian thai', 'siam cuisine', 'thaihouse']):
         perks.append("อาหารไทยฟรีทุกมื้อ")
         highlights.append("เจ้าของคนไทยดูแลอบอุ่นเป็นกันเอง บรรยากาศปลอดภัย")
     elif any(k in e_low for k in ['xanterra', 'princess', 'holland america', 'hap', 'gtlc', 'grand teton lodge', 'glacier national', 'yosemite', 'crater lake', 'zion', 'grand canyon', 'interlochen', 'ymca', 'lake junaluska', 'signal mountain', 'pursuit']):
         perks.append("อาหารบุฟเฟต์ 3 มื้อฟรีใน EDR ตักไม่อั้น 7 วัน")
         perks.append("เข้าอุทยานแห่งชาติฟรีและส่วนลดทัวร์ 50%")
         highlights.append("วิวธรรมชาติระดับโลก อากาศบริสุทธิ์")
-    elif any(k in e_low for k in ['pizza', 'burger', 'mcdonald', 'wendy', 'five guys', 'culver', 'domino', 'auntie anne', 'subway', 'dairy queen', 'bakery', 'fudgery', 'pancake', 'moosejaw', 'buffalo phil']):
+    elif any(k in e_low for k in ['moosejaw', 'shady gators', 'fudpucker', 'paula deen', 'boudin', 'buffalo phil']):
+        perks.append("ฟรีอาหารประจำกะ")
+        perks.append("ทิปสดเงินสดแน่นรายวัน")
+        highlights.append("ร้านแลนด์มาร์กชื่อดังอันดับ 1 คนแน่นตลอดซัมเมอร์")
+    elif any(k in e_low for k in ['pizza', 'burger', 'mcdonald', 'wendy', 'five guys', 'culver', 'domino', 'auntie anne', 'subway', 'dairy queen', 'bakery', 'fudgery', 'pancake']):
         perks.append("ฟรีอาหาร/พิซซ่า/เบอร์เกอร์ประจำกะ")
         perks.append("ส่วนลดพนักงาน 50%")
         highlights.append("เพื่อนร่วมงานวัยรุ่นสนุกสนาน ได้ฝึกภาษาอังกฤษตลอดวัน")
-    elif any(k in e_low for k in ['seafood', 'crab', 'steak', 'grill', 'bistro', 'diner', 'restaurant', 'cafe', 'shady gators', 'clam', 'lobster', 'crush bistro', 'south restaurant', 'spenard']):
+    elif any(k in e_low for k in ['seafood', 'crab', 'steak', 'grill', 'bistro', 'diner', 'restaurant', 'cafe', 'clam', 'lobster', 'crush bistro', 'south restaurant', 'spenard']):
         perks.append("อาหารพนักงานราคาพิเศษ/ฟรีประจำกะ")
         perks.append("ทิปสดเงินสดแน่นรายวัน")
         highlights.append("ร้านอาหารยอดนิยม คนแน่นตลอดซัมเมอร์")
@@ -563,9 +617,12 @@ def generate_benefits_and_housing(emp_name, state_name, state_code, pos_name, ra
         highlights.append("ศูนย์รวมความบันเทิงระดับประเทศ บรรยากาศคึกคัก ชั่วโมงงานเยอะ")
 
     # 3. Luxury Resort Perks
-    if any(k in e_low for k in ['four seasons', 'stanley hotel', 'grand hotel', 'omni', 'cliff house', 'tenaya', 'sagamore', 'kiawah', 'trapp', 'hyatt', 'sheraton', 'hilton', 'marriott', 'westgate', 'nonantum', 'claridge']):
+    if any(k in e_low for k in ['grand hotel', 'stanley hotel', 'omni', 'cliff house', 'tenaya', 'trapp', 'kiawah', 'roche harbor']):
         perks.append("ใช้สิ่งอำนวยความสะดวกโรงแรม/สระว่ายน้ำฟรี")
-        highlights.append("โรงแรมหรูระดับ 4-5 ดาว แขกไฮเอนด์ ทิปสดดีมาก")
+        highlights.append("โรงแรมหรูประวัติศาสตร์ระดับ 4-5 ดาว แขกไฮเอนด์ ทิปสดสูงมาก")
+    elif any(k in e_low for k in ['four seasons', 'sagamore', 'hyatt', 'sheraton', 'hilton', 'marriott', 'westgate', 'nonantum', 'claridge', 'margaritaville']):
+        perks.append("ใช้สิ่งอำนวยความสะดวกโรงแรม/สระว่ายน้ำฟรี")
+        highlights.append("โรงแรมหรูระดับ 4 ดาว แขกไฮเอนด์ ทิปสดดีมาก")
 
     if not perks:
         perks.append("ส่วนลดพนักงาน 20-50% และสิ่งอำนวยความสะดวกครบ")
@@ -863,4 +920,4 @@ except Exception as e:
     except Exception as err:
         print('Master file in use:', err)
 
-print('Execution complete: True discrete per-employer evaluation implemented for all 1,167 jobs!')
+print('Execution complete: Fame and Brand Prestige successfully integrated into all 1,167 jobs!')
