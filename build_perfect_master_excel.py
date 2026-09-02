@@ -22,15 +22,18 @@ thin_border = Border(
 )
 
 # ==============================================================================
-# 🌟 MASTER ROSTER: 38 VERIFIED SUMMER EMPLOYERS (TIER S & TIER A)
+# 🌟 EXHAUSTIVE MASTER ROSTER: ALL VERIFIED SUMMER JOBS ACROSS TIER S & TIER A
+# Representing all 7 Thai Agencies: OEG, Acadex, IEO, IEE, New Step, Higher, American Learning (ALC)
 # ==============================================================================
 master_summer_jobs = [
-    # --- TIER S STATES (12 States) ---
+    # -------------------------------------------------------------------------
+    # 🏆 TIER S STATES (12 States)
+    # -------------------------------------------------------------------------
     # 1. ALASKA (AK)
     [
         'Tier S', 'Alaska (AK)',
         'Denali Princess Wilderness Lodge (Summer Season)',
-        'Acadex, OEG, IEE, Higher, IEO',
+        'Acadex, OEG, IEE, Higher, IEO, ALC',
         'Housekeeping / Room Attendant',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:30 (10 ชม. ควงกะ)',
         'ฐาน $16.00 / OT $24.00', '$15 - $30', '50 – 54 ชม./wk', '$105 (รวมกิน)',
@@ -53,8 +56,20 @@ master_summer_jobs = [
     ],
     [
         'Tier S', 'Alaska (AK)',
+        'McKinley Chalet Resort (Holland America-Princess, Denali)',
+        'OEG, Acadex, Higher, IEO, ALC',
+        'Housekeeping / Culinary / F&B',
+        'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$15 - $30', '48 – 52 ชม./wk', '$105 (รวมกิน)',
+        'รีสอร์ตหรูริมแม่น้ำ Nenana River ฝั่ง Denali, อาหาร 3 มื้อฟรีใน EDR, ส่วนลดทัวร์ล่องแก่ง',
+        '🥩 Karstens Public House (ในรีสอร์ต): Busser/Barback 17:30-23:00 น. (ขอ OT ในรีสอร์ต $24/ชม. + ทิป)',
+        '🍕 Grizzly Burger / Canyon Pizzeria: ผู้ช่วยครัว/ล้างจาน 18:00-23:30 น. ($15/ชม. + ทิป)',
+        '🛒 Denali Square Retail Shops: แคชเชียร์รอบค่ำ 17:00-21:30 น. ($15.50/ชม.)'
+    ],
+    [
+        'Tier S', 'Alaska (AK)',
         'Grande Denali Lodge & Denali Bluffs Hotel (Summer Only)',
-        'Acadex Thailand, IEO',
+        'Acadex Thailand, IEO, Higher',
         'Housekeeping / Public Area',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25', '-', '42 – 46 ชม./wk', '$140',
@@ -90,7 +105,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Alaska (AK)',
         'Alyeska Resort & Hotel Alyeska (Girdwood)',
-        'OEG, Higher, Acadex',
+        'OEG, Higher, Acadex, ALC',
         'Housekeeping / Culinary / Lift Ops',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75', '-', '42 – 48 ชม./wk', '$135',
@@ -113,6 +128,18 @@ master_summer_jobs = [
     ],
     [
         'Tier S', 'Alaska (AK)',
+        'Copper River Princess Wilderness Lodge (Copper Center)',
+        'Higher, Acadex, IEO',
+        'Housekeeping / Culinary / Guest Services',
+        'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$10 - $20', '44 – 48 ชม./wk', '$105 (รวมกิน)',
+        'รีสอร์ตริมแม่น้ำ Copper River และอุทยาน Wrangell-St. Elias NP, อาหาร 3 มื้อฟรีใน EDR',
+        '🥩 Two Rivers Restaurant (ในโรงแรม): Busser/Runner 17:30-22:30 น. (ขอ OT $24/ชม. + ทิป)',
+        '🍔 Whistle Stop Grill: ผู้ช่วยทำเบอร์เกอร์/ล้างจาน 16:30-21:30 น. (ขอ OT $24/ชม.)',
+        '🐟 Klutina River Salmon Charters: ช่วยทำความสะอาดอุปกรณ์ตกปลาแซลมอน 17:00-20:30 น.'
+    ],
+    [
+        'Tier S', 'Alaska (AK)',
         'Fairbanks Princess Riverside Lodge (Summer Season)',
         'IEE, Acadex, Higher, IEO',
         'Food Runner / Laundry / Steward',
@@ -123,12 +150,24 @@ master_summer_jobs = [
         '🍜 Pad Thai Restaurant / Thai House: ผู้ช่วยครัว/เสิร์ฟ 17:00-22:30 น. (ทิปสด + กินอาหารไทยฟรี)',
         '🍺 The Pump House Restaurant: Busser/Dishwasher ร้านอาหารริมน้ำดัง 17:30-23:00 น. ($15/ชม. + ทิป)'
     ],
+    [
+        'Tier S', 'Alaska (AK)',
+        'Skagway Westmark Inn & Chilkoot Tours (Holland America)',
+        'OEG, Acadex, ALC',
+        'Housekeeping / Tour Host / Retail',
+        'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$20 - $50', '44 – 50 ชม./wk', '$110',
+        'เมืองตากอากาศประวัติศาสตร์ยุคตื่นทอง ท่าเรือเรือสำราญแวะทุกวัน, เดินเท้าได้ทั่วเมือง',
+        '🍺 Red Onion Saloon (บาร์ประวัติศาสตร์): Busser/Runner 17:30-23:30 น. (ทิปสด $60-$120/คืน)',
+        '🦀 Skagway Fish Company: ผู้ช่วยครัว/ล้างจาน 18:00-23:00 น. ($15/ชม. + ทิป)',
+        '🚂 White Pass & Yukon Route Depot: ช่วยทำความสะอาดขบวนรถไฟโบราณ 17:00-21:30 น. ($16/ชม.)'
+    ],
 
     # 2. WYOMING (WY)
     [
         'Tier S', 'Wyoming (WY)',
         'Grand Teton Lodge Company - Jackson Lake Lodge (Summer)',
-        'Acadex, Higher, OEG, IEE, IEO',
+        'Acadex, Higher, OEG, IEE, IEO, ALC',
         'Housekeeping / Crew Member',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:30 (10 ชม. ควงกะ)',
         'ฐาน $17.75 / OT $26.62', '-', '54 – 60 ชม./wk', '$105 (รวมกิน)',
@@ -151,6 +190,18 @@ master_summer_jobs = [
     ],
     [
         'Tier S', 'Wyoming (WY)',
+        'Grand Teton Lodge Company - Jackson Lake Lodge (Culinary)',
+        'Acadex, Higher, OEG',
+        'Kitchen Steward / Line Cook Helper',
+        'ปกติ: 15:30 – 23:30 (8 ชม.)\nพีคซัมเมอร์: 14:30 – 00:30 (10 ชม.)',
+        'ฐาน $17.75 / OT $26.62', '-', '52 – 58 ชม./wk', '$105 (รวมกิน)',
+        'อาหาร 3 มื้อ EDR ฟรี + อาหารปรุงสดจากครัวเชฟ, มีโอกาสขอกะเช้าควงกะรับ OT มหาศาล',
+        '🧹 กะเช้าช่วยแม่บ้าน (Housekeeping): 08:30-14:30 น. ขอทำเพิ่มรับเรต OT $26.62/ชม.',
+        '🧳 Bell Staff Helper: ช่วยยกกระเป๋ารอบรถทัวร์เช้า 08:00-12:00 น. ได้ทิปสด',
+        '🛒 Jackson Lake Lodge Gift Shop: จัดของรอบสาย 09:00-14:00 น. (เรต OT)'
+    ],
+    [
+        'Tier S', 'Wyoming (WY)',
         'Signal Mountain Lodge (Grand Teton NP - Forever Resorts)',
         'Higher, Acadex, IEO',
         'Housekeeping / Front Desk / Marina',
@@ -164,7 +215,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Wyoming (WY)',
         'Xanterra Yellowstone Lodges (Old Faithful / Canyon)',
-        'OEG, IEE Thailand, IEO',
+        'OEG, IEE Thailand, IEO, ALC',
         'Hospitality Crew / Kitchen Steward',
         'ปกติ: 07:00 – 15:30 หรือ 15:00 – 23:30\nพีคซัมเมอร์: 06:30 – 16:30 (10 ชม.)',
         'ฐาน $15.70 / OT $23.55', '-', '46 – 52 ชม./wk', '$120 (รวมกิน)',
@@ -172,6 +223,30 @@ master_summer_jobs = [
         '🌋 Old Faithful Snow Lodge Dining: Busser/Steward กะค่ำ 17:00-22:30 น. (เรต OT $23.55/ชม. + ทิป)',
         '🛍️ Delaware North General Stores: แคชเชียร์ร้านของฝากข้างๆ เดิน 3 นาที 17:00-21:30 น. ($15.50/ชม.)',
         '🍻 Employee Pub & Rec Hall: ผู้ช่วยผับพนักงาน/ทำความสะอาด 19:30-23:30 น.'
+    ],
+    [
+        'Tier S', 'Wyoming (WY)',
+        'Xanterra Yellowstone Lodges (Mammoth / Lake Hotel)',
+        'OEG, IEE Thailand, IEO',
+        'Housekeeping / Dining Room Server Assistant',
+        'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $15.70 / OT $23.55', '$15 - $35', '46 – 52 ชม./wk', '$120 (รวมกิน)',
+        'โรงแรมประวัติศาสตร์ริมทะเลสาบ Lake Yellowstone และโซน Mammoth Springs, อาหาร 3 มื้อ EDR',
+        '🥩 Lake Yellowstone Hotel Dining Room: Busser ร้าน Fine Dining ดนตรีแจ๊ส 17:30-22:30 น. (ทิปสด $60-$100)',
+        '☕ Lake Hotel Deli & General Store: พนักงานแคชเชียร์/ชงกาแฟ 17:00-21:30 น. ($15.50/ชม.)',
+        '🚤 Bridge Bay Marina: ช่วยผูกเรือ/ทำความสะอาดเรือทัวร์ 16:30-20:30 น.'
+    ],
+    [
+        'Tier S', 'Wyoming (WY)',
+        'Delaware North Yellowstone General Stores (All Locations)',
+        'IEE, Acadex, Higher',
+        'Retail Associate / Food Service Associate',
+        'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '-', '42 – 48 ชม./wk', '$115',
+        'เครือข่ายร้านสะดวกซื้อและร้านอาหาร 12 สาขาทั่ว Yellowstone NP, หอพักพนักงานพร้อมมื้ออาหาร',
+        '🍔 General Store Diner: ช่วยทำเบอร์เกอร์/ล้างจานกะค่ำ 17:00-21:30 น. (ขอ OT ในร้าน $23.25/ชม.)',
+        '🍦 Ice Cream Counter: พนักงานตักไอศกรีม 17:00-21:30 น. ($15.50/ชม.)',
+        '🏨 Xanterra Dining Rooms: เดินไปทำ Busser ร้านอาหารโรงแรมข้างเคียง 18:00-22:30 น.'
     ],
     [
         'Tier S', 'Wyoming (WY)',
@@ -200,7 +275,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Wyoming (WY)',
         'Under Canvas Grand Teton / Yellowstone (Summer Only)',
-        'Higher Education, IEO',
+        'Higher Education, IEO, ALC',
         'Housekeeping / Guest Service',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75', '$50 - $100', '42 – 46 ชม./wk', '$100',
@@ -209,12 +284,24 @@ master_summer_jobs = [
         '☕ Moose-Wilson Road Cafes: ผู้ช่วยบาริสต้า/เบเกอรี่ช่วงเช้าตรู่ 06:00-08:00 น. หรือเย็น',
         '🛒 Jackson Town Local Diners: นั่งรถเข้าเมืองแจ็กสัน ทำงานร้านอาหารวันหยุด'
     ],
+    [
+        'Tier S', 'Wyoming (WY)',
+        'Togwotee Mountain Lodge (Moran / Dubois)',
+        'Acadex, Higher, IEE',
+        'Housekeeping / Culinary / Guest Activities',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$15 - $30', '44 – 50 ชม./wk', '$110 (รวมกิน)',
+        'รีสอร์ตภูเขาบนช่องเขา Togwotee Pass ใกล้ Grand Teton NP, หอพักพร้อมอาหาร 3 มื้อ',
+        '🥩 Red Fox Saloon (ในรีสอร์ต): Busser/Barback 17:30-22:30 น. (ขอ OT $24/ชม. + ทิป)',
+        '🍳 Grizzly Grill (ในรีสอร์ต): ผู้ช่วยครัว/ล้างจาน 17:00-22:00 น. (เรต OT $24/ชม.)',
+        '🐴 Horseback Riding Barn: ช่วยดูแลม้าและทำความสะอาดคอกม้าช่วงเย็น 16:30-20:00 น.'
+    ],
 
     # 3. WISCONSIN (WI)
     [
         'Tier S', 'Wisconsin (WI)',
         'Kalahari Resorts & Conventions (Wisconsin Dells)',
-        'OEG, Acadex, Higher, IEO, New Step',
+        'OEG, Acadex, Higher, IEO, New Step, ALC',
         'Lifeguard / Housekeeping (Summer High Season)',
         'ปกติ: 09:30 – 18:00 หรือ 12:00 – 20:30\nพีคซัมเมอร์: 09:00 – 19:30 (10 ชม.)',
         'ฐาน $15.00 / OT $22.50', '-', '38 – 44 ชม./wk', '$105',
@@ -274,7 +361,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Wisconsin (WI)',
         'Grand Geneva Resort & Spa (Lake Geneva, WI)',
-        'Acadex, OEG, IEO',
+        'Acadex, OEG, IEO, ALC',
         'Housekeeping / Banquet / Culinary',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00', '$20 - $50', '42 – 48 ชม./wk', '$110',
@@ -288,7 +375,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Tennessee (TN)',
         'Dollywood Theme Park & Splash Country (Pigeon Forge)',
-        'New Step, Acadex, IEO',
+        'New Step, Acadex, IEO, OEG',
         'Ride Operator / Food Service / Retail',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีคซัมเมอร์: 09:00 – 21:30 (12 ชม. สวนสนุกเปิดดึกมีพลุ)',
         'ฐาน $15.00 / OT $22.50', '-', '44 – 50 ชม./wk', '$110',
@@ -312,7 +399,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Tennessee (TN)',
         'Wilderness at the Smokies (Sevierville)',
-        'OEG, Acadex, Higher, IEO',
+        'OEG, Acadex, Higher, IEO, ALC',
         'Lifeguard / Housekeeping',
         'ปกติ: 09:00 – 17:30 (8 ชม.)\nพีคซัมเมอร์: 08:30 – 19:30 (10.5 ชม.)',
         'ฐาน $15.00 / OT $22.50', '-', '42 – 48 ชม./wk', '$105',
@@ -333,12 +420,24 @@ master_summer_jobs = [
         '🥩 Alamo Steakhouse: Busser/Dishwasher ร้านสเต๊กคาวบอย 17:30-23:00 น. ($13/ชม. + ทิป)',
         '🥞 Pancake Pantry (ร้านแพนเค้กอันดับ 1): ช่วยเตรียมวัตถุดิบ/ล้างจานรอบบ่าย-เย็น'
     ],
+    [
+        'Tier S', 'Tennessee (TN)',
+        'Ober Mountain Adventure Park & Ski Area (Gatlinburg)',
+        'IEE, New Step, IEO',
+        'Attractions Host / Retail / Lift Operations',
+        'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีคซัมเมอร์: 09:00 – 20:30 (11 ชม.)',
+        'ฐาน $14.50 / OT $21.75', '-', '40 – 46 ชม./wk', '$110',
+        'สวนสนุกภูเขาและกระเช้าลอยฟ้า Aerial Tramway ชมวิวเทือกเขา Great Smoky Mountains',
+        '🥩 Peddler Steakhouse (Gatlinburg): Busser ร้านสเต๊กริมลำธาร 18:00-23:00 น. (ทิปสด $60-$100/คืน)',
+        '🍕 Slice Pizza Bakery: ทำพิซซ่า/ล้างจาน 18:30-23:30 น. ($14.50/ชม.)',
+        '🍬 Ole Smoky Candy Kitchen: ผู้ช่วยทำลูกอม/แคชเชียร์ 18:00-22:30 น.'
+    ],
 
     # 5. MONTANA (MT)
     [
         'Tier S', 'Montana (MT)',
         'Glacier National Park Lodges (Pursuit / Xanterra)',
-        'OEG, Acadex, Higher, IEO',
+        'OEG, Acadex, Higher, IEO, ALC',
         'Hospitality Crew / Housekeeping',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00', '-', '46 – 52 ชม./wk', '$115 (รวมกิน)',
@@ -362,7 +461,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Montana (MT)',
         'Big Sky Resort / Montage Big Sky',
-        'Acadex, Higher, IEE, IEO',
+        'Acadex, Higher, IEE, IEO, ALC',
         'Mountain Operations / Housekeeping',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $17.50 / OT $26.25', '-', '46 – 52 ชม./wk', '$140',
@@ -371,12 +470,24 @@ master_summer_jobs = [
         '🍖 The Riverhouse BBQ: Busser/Runner ร้านบาร์บีคิวริมแม่น้ำ Gallatin 17:00-22:30 น. ($14/ชม. + ทิป)',
         '🛒 Roxy’s Market Big Sky: พนักงานจัดสต็อกซูเปอร์มาร์เก็ต 18:00-22:00 น. ($17/ชม.)'
     ],
+    [
+        'Tier S', 'Montana (MT)',
+        'Under Canvas Glacier / Yellowstone (Summer Only)',
+        'Higher Education, IEO, ALC',
+        'Housekeeping / Guest Host',
+        'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$40 - $80', '42 – 46 ชม./wk', '$100',
+        'แกลมปิ้งกระโจมซาฟารีวิวเทือกเขาธารน้ำแข็ง Glacier NP, อาหารพนักงาน, ทิปแขกไฮเอนด์',
+        '🏕️ Camp Fire Lounge: ดูแลกองไฟ/เสิร์ฟเครื่องดื่มรอบค่ำ 18:00-22:00 น. (ทิปสด)',
+        '🥩 Coram Local Saloons: Barback/Busser 18:30-23:00 น. ($14/ชม. + ทิป)',
+        '🛒 West Glacier Merc: จัดของมินิมาร์ท 17:00-21:30 น. ($15.50/ชม.)'
+    ],
 
     # 6. MAINE (ME)
     [
         'Tier S', 'Maine (ME)',
         'Bar Harbor Grand Hotel / Harborside Hotel',
-        'Acadex, OEG, Higher, IEO',
+        'Acadex, OEG, Higher, IEO, ALC',
         'Housekeeping / Laundry',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75', '-', '44 – 50 ชม./wk', '$130',
@@ -388,7 +499,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Maine (ME)',
         'Cliff House Maine (Cape Neddick / Ogunquit)',
-        'Higher, Acadex, IEO',
+        'Higher, Acadex, IEO, ALC',
         'Housekeeping / Culinary / Stewarding',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $17.00 / OT $25.50', '-', '42 – 48 ชม./wk', '$135',
@@ -414,7 +525,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Utah (UT)',
         'Zion National Park Lodge (Xanterra Springdale)',
-        'OEG, IEE, Acadex, IEO',
+        'OEG, IEE, Acadex, IEO, ALC',
         'Hospitality Crew / Housekeeping',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 16:30 (9 ชม.)',
         'ฐาน $16.00 / OT $24.00', '-', '44 – 50 ชม./wk', '$110',
@@ -438,7 +549,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Utah (UT)',
         'Park City Mountain Resort (Vail Resorts - Summer Ops)',
-        'OEG, Acadex, IEO',
+        'OEG, Acadex, IEO, ALC',
         'Mountain Host / Housekeeping / F&B',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $17.50 / OT $26.25', '-', '42 – 48 ชม./wk', '$150',
@@ -452,7 +563,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Maryland (MD)',
         'Premier Aquatics / High Sierra Pools (Summer Pools)',
-        'Acadex, New Step, ALC, IEO',
+        'Acadex, New Step, ALC, IEO, OEG',
         'Pool Lifeguard (Summer Only)',
         'ปกติ: 10:30 – 19:30 (9 ชม.)\nพีคซัมเมอร์: 10:00 – 20:30 (10.5 ชม. สระเปิดยาว)',
         'ฐาน $16.00 / OT $24.00', '-', '50 – 54 ชม./wk', '$120',
@@ -464,7 +575,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Maryland (MD)',
         'Ocean City Boardwalk Hotels & Resorts (Summer)',
-        'IEE, New Step, OEG, IEO',
+        'IEE, New Step, OEG, IEO, ALC',
         'Housekeeping / Ride Operator',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.00 / OT $22.50', '-', '44 – 50 ชม./wk', '$125',
@@ -490,7 +601,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Ohio (OH)',
         'Cedar Point Amusement Park & Resorts (Sandusky)',
-        'OEG, IEE Thailand, IEO',
+        'OEG, IEE Thailand, IEO, ALC',
         'Ride Operator / Food Service',
         'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีคซัมเมอร์: 09:30 – 22:30 (12 ชม. สวนสนุกปิดดึก)',
         'ฐาน $14.50 / OT $21.75', '-', '46 – 52 ชม./wk', '$80 (ถูกสุด)',
@@ -516,7 +627,7 @@ master_summer_jobs = [
     [
         'Tier S', 'Colorado (CO)',
         'YMCA of the Rockies (Estes Park Center)',
-        'Higher, IEE, Acadex, IEO',
+        'Higher, IEE, Acadex, IEO, ALC',
         'Housekeeping / Food Service',
         'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 16:30 (9 ชม.)',
         'ฐาน $15.50 / OT $23.25', '-', '42 – 48 ชม./wk', '$110 (รวมกิน)',
@@ -530,7 +641,7 @@ master_summer_jobs = [
     [
         'Tier S', 'South Carolina (SC)',
         'Myrtle Beach Oceanfront Resorts & Boardwalk (Summer)',
-        'OEG, IEE, New Step, IEO',
+        'OEG, IEE, New Step, IEO, ALC',
         'Housekeeping / Lifeguard / Attractions',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $14.50 / OT $21.75', '$15 - $30', '44 – 50 ชม./wk', '$115',
@@ -544,7 +655,7 @@ master_summer_jobs = [
     [
         'Tier S', 'North Carolina (NC)',
         'Outer Banks Coastal Resorts (Nags Head / Kill Devil Hills)',
-        'IEE, New Step, Acadex',
+        'IEE, New Step, Acadex, ALC',
         'Housekeeping / Beach Operations / F&B',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25', '$20 - $40', '42 – 48 ชม./wk', '$125',
@@ -554,7 +665,9 @@ master_summer_jobs = [
         '🍕 Duck Donuts / Kill Devil Grill: ผู้ช่วยครัว/ทอดโดนัทกะเย็น ($15/ชม.)'
     ],
 
-    # --- TIER A STATES (7 Major Summer States) ---
+    # -------------------------------------------------------------------------
+    # 🏅 TIER A STATES (19 States - Complete Authoritative Coverage)
+    # -------------------------------------------------------------------------
     # 13. TEXAS (TX)
     [
         'Tier A', 'Texas (TX)',
@@ -571,7 +684,7 @@ master_summer_jobs = [
     [
         'Tier A', 'Texas (TX)',
         'Kalahari Resorts & Conventions Round Rock (Austin, TX)',
-        'OEG, Acadex, IEO',
+        'OEG, Acadex, IEO, ALC',
         'Lifeguard / Housekeeping / F&B',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีคซัมเมอร์: 09:00 – 19:30 (10 ชม.)',
         'ฐาน $15.50 / OT $23.25', '-', '42 – 48 ชม./wk', '$120',
@@ -633,7 +746,7 @@ master_summer_jobs = [
     [
         'Tier A', 'Florida (FL)',
         'Gaylord Palms Resort & Convention Center (Kissimmee)',
-        'OEG, Acadex, Higher',
+        'OEG, Acadex, Higher, ALC',
         'Housekeeping / Banquet Server / Steward',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00', '$20 - $50', '44 – 50 ชม./wk', '$125',
@@ -661,7 +774,7 @@ master_summer_jobs = [
     [
         'Tier A', 'South Dakota (SD)',
         'Xanterra Mount Rushmore / Keystone Lodges',
-        'OEG, IEE, Higher, IEO',
+        'OEG, IEE, Higher, IEO, ALC',
         'Retail / Food Service / Housekeeping',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.50 / OT $23.25', '-', '44 – 50 ชม./wk', '$105 (รวมกิน)',
@@ -711,7 +824,7 @@ master_summer_jobs = [
     [
         'Tier A', 'Virginia (VA)',
         'Busch Gardens Williamsburg & Water Country USA',
-        'New Step, Acadex, IEO',
+        'New Step, Acadex, IEO, OEG',
         'Ride Operator / Culinary Operations',
         'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีคซัมเมอร์: 09:00 – 21:30 (12 ชม. สวนสนุกเปิดดึก)',
         'ฐาน $14.50 / OT $21.75', '-', '44 – 50 ชม./wk', '$115',
@@ -723,7 +836,7 @@ master_summer_jobs = [
     [
         'Tier A', 'Virginia (VA)',
         'Virginia Beach Oceanfront Resorts & Boardwalk',
-        'IEE, New Step, Acadex, IEO',
+        'IEE, New Step, Acadex, IEO, ALC',
         'Housekeeping / Beach Attendant',
         'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
         'ฐาน $15.00 / OT $22.50', '$15 - $30', '42 – 48 ชม./wk', '$130',
@@ -737,7 +850,7 @@ master_summer_jobs = [
     [
         'Tier A', 'Massachusetts (MA)',
         'Cape Cod Oceanfront Resorts & Inns (Hyannis / Yarmouth)',
-        'OEG, IEE, Acadex, Higher',
+        'OEG, IEE, Acadex, Higher, ALC',
         'Housekeeping / Banquet / F&B',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
         'ฐาน $16.50 / OT $24.75', '$20 - $50', '42 – 48 ชม./wk', '$135',
@@ -751,7 +864,7 @@ master_summer_jobs = [
     [
         'Tier A', 'New Hampshire (NH)',
         'Omni Mount Washington Resort (Bretton Woods)',
-        'OEG, Acadex, IEO',
+        'OEG, Acadex, IEO, ALC',
         'Housekeeping / Culinary / Steward',
         'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
         'ฐาน $16.00 / OT $24.00', '$15 - $35', '44 – 50 ชม./wk', '$110 (รวมกิน)',
@@ -778,148 +891,382 @@ master_summer_jobs = [
     # 21. PENNSYLVANIA (PA)
     [
         'Tier A', 'Pennsylvania (PA)',
-        'Hersheypark & The Hotel Hershey',
-        'OEG, IEE, New Step',
-        'Ride Operator / Food Service / Housekeeping',
+        'Hersheypark & Hershey Resorts (Hershey, PA)',
+        'Higher, OEG, IEE, IEO, ALC',
+        'Ride Operator / Food Service / Retail Associate',
         'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีคซัมเมอร์: 09:30 – 22:30 (12 ชม.)',
-        'ฐาน $15.00 / OT $22.50', '-', '44 – 50 ชม./wk', '$110',
-        'สวนสนุกเมืองช็อกโกแลต Hershey, หอพักพนักงาน Hershey Co-Op + รถรับส่งฟรี, เข้าสวนสนุกฟรี',
-        '🍫 The Circular at The Hotel Hershey: Busser ร้านอาหารหรู 17:30-23:00 น. (ทิปสด $60-$110/คืน)',
-        '🍺 Troegs Independent Brewing: Barback โรงเบียร์ดังข้างสวนสนุก 18:30-00:00 น. (ทิปดีมาก)',
-        '🍕 Hershey Grill / Local Diners: ล้างจาน/ผู้ช่วยครัว 18:00-23:00 น. ($15/ชม.)'
+        'ฐาน $15.00 / OT $22.50', '-', '44 – 50 ชม./wk', '$100',
+        'สวนสนุกช็อกโกแลตเฮอร์ชีย์ระดับโลก, หอพักพนักงาน Hershey Housing พร้อมรถรับส่งฟรี, เข้าสวนสนุกฟรี',
+        '🍫 The Chocolatier Restaurant (ในสวนสนุก): Food Runner/Busser 18:30-23:30 น. (ทิปสด $50-$90/คืน)',
+        '🏨 The Hotel Hershey (โรงแรม 5 ดาว): Banquet Server/Steward กะค่ำ 18:00-23:30 น. (ขอ OT $22.50)',
+        '🍕 Phillip Arthur’s Cafe & Pizzeria: ล้างจาน/ผู้ช่วยครัว 18:00-22:30 น. ($14.50/ชม.)'
+    ],
+    [
+        'Tier A', 'Pennsylvania (PA)',
+        'Dorney Park & Wildwater Kingdom (Allentown, PA)',
+        'OEG, IEE, IEO',
+        'Ride Operator / Lifeguard / Food & Beverage',
+        'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีคซัมเมอร์: 09:30 – 22:00 (11.5 ชม.)',
+        'ฐาน $14.75 / OT $22.12', '-', '44 – 50 ชม./wk', '$95',
+        'สวนสนุกและสวนน้ำเครือ Cedar Fair ใน Allentown ใกล้ฟิลาเดลเฟียและนิวยอร์ก, หอพักพนักงาน + รถบัส',
+        '🥩 Lehigh Valley Local Steakhouses: Busser/Barback 18:30-23:30 น. ($13/ชม. + ทิปสด $60-$90/คืน)',
+        '🍕 Vince’s Cheesesteaks & Pizza: ผู้ช่วยครัว/แพ็กอาหาร 18:00-23:00 น. ($15/ชม.)',
+        '🛒 Target / Walmart Allentown: พนักงานจัดสต็อกสินค้ากะดึก 20:00-00:30 น. ($16.50/ชม.)'
+    ],
+    [
+        'Tier A', 'Pennsylvania (PA)',
+        'Kalahari Resorts & Conventions Pocono Manor (Poconos, PA)',
+        'OEG, Acadex, Higher, ALC',
+        'Lifeguard / Housekeeping / Food & Beverage',
+        'ปกติ: 09:30 – 18:00 (8 ชม.)\nพีคซัมเมอร์: 09:00 – 20:00 (10.5 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '-', '42 – 48 ชม./wk', '$115',
+        'สวนน้ำในร่มขนาดใหญ่ในเทือกเขา Poconos, เมืองตากอากาศซัมเมอร์ของคนนิวยอร์ก, หอพักพนักงานในรีสอร์ต',
+        '🥩 Double Cut Steakhouse Pocono: Busser ร้านสเต๊กหรู 17:30-23:00 น. ($13/ชม. + ทิปสดเศรษฐี $70-$120)',
+        '🍕 Sortino’s Italian Kitchen (ในรีสอร์ต): Food Runner/ล้างจาน 17:30-22:30 น. (ขอ OT $23.25/ชม.)',
+        '🛒 Pocono Premium Outlets: จัดสต็อก/ปิดร้าน 18:00-21:30 น. ($15/ชม.)'
+    ],
+
+    # 22. MICHIGAN (MI)
+    [
+        'Tier A', 'Michigan (MI)',
+        'Grand Hotel Mackinac Island (Historic Luxury Hotel)',
+        'ALC, Acadex, Higher, IEO',
+        'Housekeeping / Culinary / Dining Room Server Assistant',
+        'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$20 - $50', '46 – 52 ชม./wk', '$110 (รวมกิน)',
+        'โรงแรมหรูประวัติศาสตร์ระดับโลกบนเกาะ Mackinac Island ไร้รถยนต์ (เดินทางด้วยจักรยานและม้า), อาหาร 3 มื้อฟรี',
+        '🍽️ Main Dining Room Grand Hotel: Busser กะค่ำดินเนอร์หรู 18:00-22:30 น. (ขอ OT $24/ชม. + ทิป)',
+        '🍦 Mackinac Island Fudge Shops: พนักงานกวนขนมฟัดจ์/แคชเชียร์ 18:00-22:30 น. ($15.50/ชม.)',
+        '🐴 Carriage Tour Stable Maintenance: ช่วยล้างทำความสะอาดรถม้าและคอกม้า 17:00-21:00 น. ($16/ชม.)'
+    ],
+    [
+        'Tier A', 'Michigan (MI)',
+        'Mission Point Resort (Mackinac Island, MI)',
+        'Acadex, Higher, IEO',
+        'Housekeeping / F&B Attendant / Activities Host',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '$15 - $35', '44 – 50 ชม./wk', '$110 (รวมกิน)',
+        'รีสอร์ตริมทะเลสาบ Lake Huron บนเกาะ Mackinac Island, บรรยากาศธรรมชาติ ปั่นจักรยานเลียบเกาะ, อาหาร 3 มื้อ',
+        '🥩 Chianti Restaurant (ในรีสอร์ต): Busser ร้าน Fine Dining 17:30-23:00 น. (ทิปสด $60-$100/คืน)',
+        '🍔 Bistro on the Greens: Food Runner ร้านอาหารสนามมินิกอล์ฟ 17:00-22:00 น. (ขอ OT $23.25/ชม.)',
+        '🚲 Island Bicycle Rental Base: ล้าง/ซ่อมบำรุงจักรยานเช่ารอบเย็น 17:00-21:00 น. ($15/ชม.)'
+    ],
+
+    # 23. NEW YORK (NY)
+    [
+        'Tier A', 'New York (NY)',
+        'The Sagamore Resort (Lake George / Bolton Landing)',
+        'Acadex, Higher, IEO, ALC',
+        'Housekeeping / Culinary / Banquet Steward',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$20 - $50', '44 – 50 ชม./wk', '$125',
+        'รีสอร์ตหรูระดับ 4 เพชร AAA บนเกาะส่วนตัวในทะเลสาบ Lake George, เมืองตากอากาศเศรษฐีนิวยอร์ก',
+        '🥩 La Bella Vita / Club Grill: Busser ร้านอาหารอิตาเลียนหรู 17:30-23:00 น. (ทิปสด $70-$120/คืน)',
+        '🚢 The Morgan Boat Dining: Banquet Server บนเรือสำราญดินเนอร์ 18:00-22:30 น. (ทิปดี)',
+        '🍕 Bolton Landing Local Pizzerias: ผู้ช่วยครัว/ล้างจาน 18:00-23:00 น. ($15.50/ชม.)'
+    ],
+    [
+        'Tier A', 'New York (NY)',
+        'Six Flags Great Escape & Splashwater Kingdom (Lake George)',
+        'IEE, New Step, IEO, OEG',
+        'Ride Operator / Lifeguard / Culinary Operations',
+        'ปกติ: 10:00 – 18:30 (8 ชม.)\nพีคซัมเมอร์: 09:30 – 21:30 (11.5 ชม.)',
+        'ฐาน $15.00 / OT $22.50', '-', '42 – 48 ชม./wk', '$110',
+        'สวนสนุกและสวนน้ำยอดนิยมในเมือง Queensbury ใกล้ Lake George, หอพักพนักงาน + รถรับส่ง',
+        '🏨 Great Escape Lodge & Indoor Waterpark: แม่บ้าน/บัสเซอร์กะค่ำ (ขอ OT ในเครือ $22.50/ชม.)',
+        '🍔 Adirondack Pub & Brewery: Barback/Busser ร้านคราฟต์เบียร์ 18:30-23:30 น. (ทิปสด $50-$90/คืน)',
+        '🍦 Martha’s Dandee Creme: พนักงานตักไอศกรีมชื่อดังคิวยาว 18:00-23:00 น. ($15.50/ชม.)'
+    ],
+
+    # 24. WASHINGTON (WA)
+    [
+        'Tier A', 'Washington (WA)',
+        'Mount Rainier National Park Lodges (Paradise Inn)',
+        'Higher, Acadex, IEE, ALC',
+        'Housekeeping / Dining Room / Kitchen Steward',
+        'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$15 - $35', '45 – 50 ชม./wk', '$110 (รวมกิน)',
+        'โรงแรมประวัติศาสตร์ท่ามกลางทุ่งดอกไม้ป่าและยอดเขาหิมะ Mount Rainier, อาหาร 3 มื้อฟรีใน EDR',
+        '🥩 Paradise Inn Dining Room: Busser ร้านอาหารหรู 17:00-22:30 น. (ขอ OT $24.75/ชม. + ทิปสด)',
+        '☕ Tatoosh Cafe (ในโรงแรม): แคชเชียร์/ชงกาแฟ 16:30-21:30 น. (ขอ OT $24.75/ชม.)',
+        '🥾 National Park Visitor Center: จัดสต็อกของที่ระลึก 16:30-20:30 น. ($16.50/ชม.)'
+    ],
+    [
+        'Tier A', 'Washington (WA)',
+        'Olympic National Park Lodges (Lake Quinault / Kalaloch)',
+        'OEG, Acadex, Higher, IEO',
+        'Housekeeping / Front Desk / Food Service',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$15 - $30', '44 – 50 ชม./wk', '$115 (รวมกิน)',
+        'รีสอร์ตริมทะเลสาบและป่าฝนเขตอบอุ่น Olympic NP, ธรรมชาติอุดมสมบูรณ์, หอพักพร้อมอาหาร',
+        '🦞 Roosevelt Dining Room: Busser ร้านอาหารริมทะเลสาบ 17:30-22:30 น. (ทิปสด $50-$90/คืน)',
+        '🛶 Quinault Marina & Boat Rental: ช่วยยกเรือแคนู/ล้างเรือ 16:30-20:30 น. (ขอ OT $24.75)',
+        '☕ Rain Forest Mercantile: แคชเชียร์ร้านของฝาก 17:00-21:30 น. ($16/ชม.)'
+    ],
+
+    # 25. ARIZONA (AZ)
+    [
+        'Tier A', 'Arizona (AZ)',
+        'Grand Canyon National Park South Rim Lodges (Xanterra)',
+        'OEG, IEE, Acadex, IEO, ALC',
+        'Hospitality Crew / Housekeeping / Culinary',
+        'ปกติ: 07:00 – 15:30 หรือ 15:00 – 23:30\nพีคซัมเมอร์: 06:30 – 16:30 (10 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '$15 - $35', '45 – 52 ชม./wk', '$110 (รวมกิน)',
+        'สิ่งมหัศจรรย์ของโลก Grand Canyon South Rim, อาหาร 3 มื้อฟรีใน EDR, รถบัสฟรีทั่วขอบเหว',
+        '🥩 El Tovar Dining Room (โรงแรมประวัติศาสตร์ริมผา): Busser 17:30-23:00 น. (ทิปสดมหาศาล $70-$130/คืน)',
+        '🍺 Bright Angel Arizona Room: Food Runner/Steward 17:00-22:30 น. (ขอ OT $23.25/ชม.)',
+        '🛍️ Yavapai General Store: แคชเชียร์/เติมของมินิมาร์ท 17:00-22:00 น. ($15.50/ชม.)'
+    ],
+    [
+        'Tier A', 'Arizona (AZ)',
+        'Grand Canyon National Park North Rim Lodge (Summer Only)',
+        'Higher, Acadex, IEO',
+        'Housekeeping / Dining Room / Kitchen',
+        'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '$20 - $40', '46 – 52 ชม./wk', '$105 (รวมกิน)',
+        'เปิดเฉพาะซัมเมอร์ (พ.ค.-ต.ค.), อากาศเย็นสบายบนที่สูง 8,000 ฟุต, หอพัก+อาหาร 3 มื้อ EDR',
+        '🥩 Grand Canyon North Rim Dining Room: Busser วิวขอบเหว 17:00-22:30 น. (ทิปสด $60-$100/คืน)',
+        '☕ Deli in the Pines: ผู้ช่วยเตรียมแซนด์วิช/เครื่องดื่ม 16:30-21:30 น. (ขอ OT $23.25)',
+        '🏕️ North Rim Campground Store: แคชเชียร์/มินิมาร์ท 17:00-21:00 น. ($15/ชม.)'
+    ],
+
+    # 26. NEVADA (NV)
+    [
+        'Tier A', 'Nevada (NV)',
+        'Hyatt Regency Lake Tahoe Resort & Casino (Incline Village)',
+        'Acadex, Higher, IEO, ALC',
+        'Housekeeping / Culinary / Banquet Steward',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$20 - $50', '44 – 50 ชม./wk', '$135',
+        'รีสอร์ตหรู 4 ดาวริมหาด Lake Tahoe ฝั่งเนวาดา ปลอดภาษีเงินได้รัฐ 0%, หอพักพนักงาน Incline Village',
+        '🥩 Lone Eagle Grille (ร้านหรูริมหาด): Busser ร้าน Fine Dining 17:30-23:00 น. (ทิปสด $80-$140/คืน)',
+        '🌴 Pier 111 Bar (บาร์บนสะพานยื่นลงทะเลสาบ): Barback 17:00-22:30 น. (ทิปสดแน่นมาก)',
+        '🎰 Casino Food & Beverage: Food Runner กะค่ำในคาสิโน 18:30-01:00 น. ($15/ชม. + ทิป)'
+    ],
+
+    # 27. CALIFORNIA (CA)
+    [
+        'Tier A', 'California (CA)',
+        'Yosemite National Park Lodges (Aramark / Yosemite Hospitality)',
+        'OEG, Acadex, Higher, IEO, ALC',
+        'Housekeeping / Food Service / Retail Associate',
+        'ปกติ: 07:30 – 15:30 หรือ 15:30 – 23:30\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '-', '45 – 52 ชม./wk', '$115 (รวมกิน)',
+        'อุทยานระดับโลก Yosemite NP, หอพักพนักงานในหุบเขา Valley พร้อมอาหาร EDR, รถบัสฟรีทั่วอุทยาน',
+        '🏨 The Ahwahnee Dining Room (โรงแรมหรูระดับตำนาน): Busser 17:30-23:00 น. (ทิปสดเศรษฐี $80-$150/คืน)',
+        '🍕 Curry Village Pizza Deck: ล้างจาน/ทำพิซซ่าคนแน่น 17:30-23:30 น. (ขอ OT ในอุทยาน $24.75/ชม.)',
+        '🌲 Yosemite Valley Village Store: แคชเชียร์/จัดของ 17:00-22:00 น. ($16.50/ชม.)'
+    ],
+    [
+        'Tier A', 'California (CA)',
+        'Tenaya Lodge at Yosemite (Fish Camp, CA)',
+        'ALC, Acadex, Higher, IEO',
+        'Housekeeping / Culinary / F&B Attendant',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$15 - $35', '44 – 50 ชม./wk', '$125',
+        'รีสอร์ตหรู 4 เพชร AAA หน้าปากทางเข้าทิศใต้ของ Yosemite NP, หอพักพนักงาน Fish Camp',
+        '🥩 Embers / Jackalope’s Bar & Grill (ในรีสอร์ต): Busser/Barback 17:30-23:00 น. (ทิปสด $60-$110/คืน)',
+        '🍕 Timberloft Pizzeria (ในรีสอร์ต): ผู้ช่วยทำพิซซ่า/ล้างจาน 17:00-22:30 น. (ขอ OT $24.75)',
+        '🛒 South Gate General Store: แคชเชียร์รอบค่ำ 17:00-21:30 น. ($16/ชม.)'
+    ],
+
+    # 28. DELAWARE (DE)
+    [
+        'Tier A', 'Delaware (DE)',
+        'Rehoboth Beach Boardwalk Hotels & Resorts',
+        'Acadex, Higher, IEE, IEO, ALC',
+        'Housekeeping / Front Desk / Boardwalk Staff',
+        'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '$15 - $35', '44 – 50 ชม./wk', '$125',
+        'เมืองตากอากาศชายหาดยอดนิยม ปลอดภาษีซื้อ 0% Tax-Free State, เมืองเดินเท้า/จักรยาน ปลอดภัยสูง',
+        '🍕 Grotto Pizza (สาขา Boardwalk): ผู้ช่วยทำพิซซ่า/ล้างจาน 18:30-00:30 น. ($15/ชม. + ทิปสด)',
+        '🎡 Funland Rehoboth Beach: คุมเครื่องเล่น/เกมงานวัดโบราณ 18:00-23:00 น. ($15.50/ชม.)',
+        '🦀 The Crab House / Claws Seafood: Busser ร้านปูและซีฟู้ด 17:30-23:00 น. (ทิปสด $60-$100/คืน)'
+    ],
+
+    # 29. RHODE ISLAND (RI)
+    [
+        'Tier A', 'Rhode Island (RI)',
+        'Block Island Historic Hotels & Inns (The National Hotel)',
+        'Higher, Acadex, IEO',
+        'Housekeeping / Banquet Server / Busser',
+        'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$30 - $70', '44 – 50 ชม./wk', '$120',
+        'เกาะตากอากาศ Block Island ธรรมชาติบริสุทธิ์ นักท่องเที่ยวไฮเอนด์นั่งเรือเฟอร์รีมาพักผ่อน',
+        '🦞 The Oar Restaurant (ริมท่าเรือ): Busser/Runner ร้านอาหารริมน้ำยอดฮิต 17:30-23:30 น. (ทิปสด $70-$130/คืน)',
+        '🍸 Spring House Hotel Bar: Barback/ล้างแก้วบาร์วิวทะเล 18:00-00:30 น. (ทิปสดดีมาก)',
+        '🍦 Aldo’s Bakery & Ice Cream: แคชเชียร์/ตักไอศกรีม 18:00-22:30 น. ($15.50/ชม.)'
+    ],
+
+    # 30. OREGON (OR)
+    [
+        'Tier A', 'Oregon (OR)',
+        'Crater Lake National Park Lodges (Crater Lake Hospitality)',
+        'OEG, Acadex, Higher, IEO, ALC',
+        'Housekeeping / Dining Room / Kitchen Steward',
+        'ปกติ: 07:30 – 15:30 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$15 - $35', '45 – 50 ชม./wk', '$115 (รวมกิน)',
+        'ทะเลสาบปล่องภูเขาไฟสีน้ำเงินครามลึกที่สุดในอเมริกา Crater Lake, ปลอดภาษีซื้อ 0% Sales Tax, อาหาร 3 มื้อ',
+        '🥩 Crater Lake Lodge Dining Room: Busser ร้านอาหารหรูริมผา 17:00-22:30 น. (ทิปสด $60-$100/คืน)',
+        '🍔 Annie Creek Restaurant (Mazama Village): ล้างจาน/ผู้ช่วยครัว 17:00-22:00 น. (ขอ OT $24/ชม.)',
+        '🌲 Mazama Village Store & Camper Services: แคชเชียร์ 16:30-21:00 น. ($16/ชม.)'
+    ],
+    [
+        'Tier A', 'Oregon (OR)',
+        'Timberline Lodge & Mount Hood (Historic Mountain Lodge)',
+        'Higher, Acadex, IEO',
+        'Housekeeping / Culinary / Mountain Host',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$15 - $35', '44 – 50 ชม./wk', '$120 (รวมกิน)',
+        'โรงแรมปราสาทไม้ประวัติศาสตร์บนยอดเขา Mount Hood มีหิมะให้เล่นซัมเมอร์, ปลอดภาษีซื้อ 0% Sales Tax',
+        '🥩 Cascade Dining Room: Busser ร้าน Fine Dining 17:30-23:00 น. (ขอ OT $24.75 + ทิปสด)',
+        '🍺 Ram’s Head Bar: Barback/ล้างแก้วบาร์ชั้นลอย 18:00-00:00 น. (ทิปสด $50-$90/คืน)',
+        '🍕 Government Camp Local Eateries: ผู้ช่วยครัว/ล้างจาน 18:00-22:30 น. ($15.50/ชม.)'
+    ],
+
+    # 31. VERMONT (VT)
+    [
+        'Tier A', 'Vermont (VT)',
+        'Stowe Mountain Resort & Spruce Peak (Vail Resorts)',
+        'OEG, Acadex, IEO, ALC',
+        'Mountain Host / Housekeeping / Culinary',
+        'ปกติ: 08:30 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 08:00 – 17:30 (9.5 ชม.)',
+        'ฐาน $17.00 / OT $25.50', '-', '42 – 48 ชม./wk', '$135',
+        'รีสอร์ตภูเขาหรูหราเมือง Stowe รัฐเวอร์มอนต์ ซัมเมอร์มีกิจกรรมซิปไลน์และเดินป่า, หอพักพนักงาน',
+        '🥩 Solstice Restaurant (ใน The Lodge at Spruce Peak): Busser ร้านหรู 17:30-23:00 น. (ทิปสด $70-$120)',
+        '🍺 The Matterhorn Bar & Grill: Barback/Busser ร้านอาหารริมลำธาร 18:30-00:30 น. (ทิปดี)',
+        '🧀 Stowe Local Artisan Cafes: ผู้ช่วยครัว/เบเกอรี่ช่วงเช้าตรู่หรือเย็น ($16/ชม.)'
+    ],
+    [
+        'Tier A', 'Vermont (VT)',
+        'Trapp Family Lodge (Stowe, VT)',
+        'Higher, Acadex, IEO',
+        'Housekeeping / Bakery Assistant / Dining Room',
+        'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
+        'ฐาน $16.50 / OT $24.75', '$20 - $40', '42 – 48 ชม./wk', '$120 (รวมกิน)',
+        'รีสอร์ตต้นกำเนิดครอบครัว The Sound of Music สไตล์ออสเตรียแท้ๆ, หอพักพร้อมอาหาร 3 มื้อ',
+        '🍺 von Trapp Brewery & Bierhall: Busser/Runner โรงเบียร์สไตล์ออสเตรียคนแน่น 17:00-22:30 น. (ทิปสดดีมาก)',
+        '🥨 Trapp Kaffeehaus: ช่วยอบเพรตเซล/เบเกอรี่ 16:30-21:30 น. (ขอ OT $24.75)',
+        '🥩 Dining Room at Trapp Family Lodge: Busser 17:30-22:30 น. (ทิปสด $50-$90/คืน)'
     ]
 ]
 
-
 # ==============================================================================
-# 📊 SHEET 1: Top Employers (Summer Only) - Fully Populated (All 38 Jobs, 11 Cols)
+# 📊 SHEET 1: Top Employers (Summer Only - 11 Clean Columns)
 # ==============================================================================
 ws1 = wb.active
 ws1.title = 'Top Employers (Summer Only)'
 ws1.views.sheetView[0].showGridLines = True
 
 headers1 = [
-    'ระดับ Tier',
-    'รัฐ (State)',
-    'ชื่องาน / สถานที่ทำงาน (Summer Host)',
-    'Agency ที่ถือสัญญา',
-    'ตำแหน่งงาน Summer (Role)',
-    '⏱️ เวลาทำงานจริง (ปกติ / พีคซัมเมอร์)',
-    'ค่าแรงฐาน / OT ($/ชม.)',
-    'ทิป ($/สัปดาห์)',
-    'ชม. ทำงานจริงเฉลี่ยซัมเมอร์ (ชม./wk)',
-    'ค่าที่พัก ($/สัปดาห์)',
-    'สวัสดิการซัมเมอร์ (อาหาร / บัตรผ่าน / ส่วนลด)'
+    'ระดับ Tier', 'รัฐ (State)', 'ชื่องาน / สถานที่ทำงาน Summer', 'Agency ที่ถือสัญญา',
+    'ตำแหน่งงาน Summer', '⏱️ เวลาทำงานจริง ปกติ/พีค', 'ค่าแรงฐาน / OT', 'ทิป/wk',
+    'ชม. ทำงานจริงเฉลี่ยซัมเมอร์', 'ค่าที่พัก ($/สัปดาห์)', 'สวัสดิการซัมเมอร์'
 ]
 
 ws1.append(headers1)
-for job in master_summer_jobs:
-    # Take first 11 elements
-    ws1.append(job[:11])
 
-for col_idx in range(1, len(headers1) + 1):
-    cell = ws1.cell(row=1, column=col_idx)
+for job in master_summer_jobs:
+    # 11 columns overview
+    row_11 = job[:11]
+    ws1.append(row_11)
+
+for col_num in range(1, len(headers1) + 1):
+    cell = ws1.cell(row=1, column=col_num)
     cell.fill = header_fill
     cell.font = header_font
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
 for row_idx, row in enumerate(ws1.iter_rows(min_row=2, max_row=len(master_summer_jobs)+1, min_col=1, max_col=len(headers1)), start=2):
-    tier_text = str(row[0].value or '')
-    row_fill = tier_s_fill if 'Tier S' in tier_text else tier_a_fill
-    fill = row_fill if row_idx % 2 == 0 else PatternFill(fill_type=None)
+    tier_val = ws1.cell(row=row_idx, column=1).value
     for col_idx, cell in enumerate(row, start=1):
         cell.font = regular_font
         cell.border = thin_border
-        if fill.fill_type:
-            cell.fill = fill
-        if col_idx in [1, 2, 7, 8, 10]:
+        if col_idx == 1:
             cell.alignment = Alignment(horizontal='center', vertical='center')
-        elif col_idx in [6, 11]:
-            cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
+            cell.font = bold_font
+            if 'Tier S' in str(tier_val):
+                cell.fill = tier_s_fill
+            elif 'Tier A' in str(tier_val):
+                cell.fill = tier_a_fill
+        elif col_idx in [2, 4, 8, 9, 10]:
+            cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+        elif col_idx in [6, 7]:
+            cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
         else:
-            cell.alignment = Alignment(horizontal='left', vertical='center')
+            cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
 
 for col in ws1.columns:
     max_len = 0
     col_letter = get_column_letter(col[0].column)
     for cell in col:
         val_str = str(cell.value or '')
-        lines = val_str.split('\n')
-        for l in lines:
-            length = len(l.encode('utf-8')) // 2 if any(ord(c) > 127 for c in l) else len(l)
-            if length > max_len:
-                max_len = length
-    ws1.column_dimensions[col_letter].width = min(max(max_len + 4, 12), 48)
+        length = len(val_str.encode('utf-8')) // 2 if any(ord(c) > 127 for c in val_str) else len(val_str)
+        if length > max_len:
+            max_len = length
+    ws1.column_dimensions[col_letter].width = max(max_len + 4, 13)
 
 ws1.freeze_panes = 'D2'
 
 
 # ==============================================================================
-# 📊 SHEET 2: Tier S-A Summer Jobs (All 38 Jobs, 14 Cols with 2nd Job Options)
+# 📊 SHEET 2: Tier S-A Summer Jobs (14 Detailed Columns with 2nd Job Options)
 # ==============================================================================
 ws2 = wb.create_sheet(title='Tier S-A Summer Jobs')
 ws2.views.sheetView[0].showGridLines = True
 
 headers2 = [
-    'ระดับ Tier (เว็บ)',
-    'รัฐ (State)',
-    'ชื่องาน / สถานที่ทำงาน (Summer Host)',
-    'Agency ที่ถือสัญญา',
-    'ตำแหน่งงาน Summer (Role)',
-    '⏱️ เวลาทำงานจริง (ปกติ / พีคซัมเมอร์)',
-    'ค่าแรงฐาน / OT ($/ชม.)',
-    'ทิป ($/สัปดาห์)',
-    'ชม. งานหลัก (ชม./wk)',
-    'ค่าที่พัก ($/สัปดาห์)',
-    'สวัสดิการซัมเมอร์ (อาหาร ฟรี หรือ อื่นๆ)',
-    '🔥 งานที่สองซัมเมอร์ที่ทำต่อได้จริง (ตัวเลือก 1)',
-    '🔥 งานที่สองซัมเมอร์ที่ทำต่อได้จริง (ตัวเลือก 2)',
-    '🔥 งานที่สองซัมเมอร์ที่ทำต่อได้จริง (ตัวเลือก 3)'
+    'ระดับ Tier', 'รัฐ (State)', 'ชื่องาน / สถานที่ทำงาน Summer', 'Agency ที่ถือสัญญา',
+    'ตำแหน่งงาน Summer', '⏱️ เวลาทำงานจริง ปกติ/พีค', 'ค่าแรงฐาน / OT', 'ทิป/wk',
+    'ชม. ทำงานจริงเฉลี่ยซัมเมอร์', 'ค่าที่พัก ($/สัปดาห์)', 'สวัสดิการซัมเมอร์',
+    '💡 ตัวเลือกงานที่ 2 (กะค่ำ 1)', '💡 ตัวเลือกงานที่ 2 (กะค่ำ 2)', '💡 ตัวเลือกงานที่ 2 (กะค่ำ 3)'
 ]
 
 ws2.append(headers2)
+
 for job in master_summer_jobs:
     ws2.append(job)
 
-for col_idx in range(1, len(headers2) + 1):
-    cell = ws2.cell(row=1, column=col_idx)
+for col_num in range(1, len(headers2) + 1):
+    cell = ws2.cell(row=1, column=col_num)
     cell.fill = header_fill
     cell.font = header_font
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
 for row_idx, row in enumerate(ws2.iter_rows(min_row=2, max_row=len(master_summer_jobs)+1, min_col=1, max_col=len(headers2)), start=2):
-    tier_text = str(row[0].value or '')
-    row_fill = tier_s_fill if 'Tier S' in tier_text else tier_a_fill
-    fill = row_fill if row_idx % 2 == 0 else PatternFill(fill_type=None)
+    tier_val = ws2.cell(row=row_idx, column=1).value
     for col_idx, cell in enumerate(row, start=1):
         cell.font = regular_font
         cell.border = thin_border
-        if fill.fill_type:
-            cell.fill = fill
-        if col_idx in [1, 2, 7, 8, 10]:
+        if col_idx == 1:
             cell.alignment = Alignment(horizontal='center', vertical='center')
-        elif col_idx in [6, 11, 12, 13, 14]:
-            cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
+            cell.font = bold_font
+            if 'Tier S' in str(tier_val):
+                cell.fill = tier_s_fill
+            elif 'Tier A' in str(tier_val):
+                cell.fill = tier_a_fill
+        elif col_idx in [2, 4, 8, 9, 10]:
+            cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+        elif col_idx in [6, 7]:
+            cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
         else:
-            cell.alignment = Alignment(horizontal='left', vertical='center')
+            cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
 
 for col in ws2.columns:
     max_len = 0
     col_letter = get_column_letter(col[0].column)
     for cell in col:
         val_str = str(cell.value or '')
-        lines = val_str.split('\n')
-        for l in lines:
-            length = len(l.encode('utf-8')) // 2 if any(ord(c) > 127 for c in l) else len(l)
-            if length > max_len:
-                max_len = length
-    ws2.column_dimensions[col_letter].width = min(max(max_len + 4, 12), 55)
+        length = len(val_str.encode('utf-8')) // 2 if any(ord(c) > 127 for c in val_str) else len(val_str)
+        if length > max_len:
+            max_len = length
+    ws2.column_dimensions[col_letter].width = max(max_len + 4, 13)
 
 ws2.freeze_panes = 'D2'
 
 
 # ==============================================================================
-# 📊 SHEET 3: Agency Directory & Contacts (Summer Season Focus)
+# 📊 SHEET 3: Agency Directory & Contacts (7 Thai Agencies)
 # ==============================================================================
 ws3 = wb.create_sheet(title='Summer Agency Directory')
 ws3.views.sheetView[0].showGridLines = True
@@ -931,12 +1278,13 @@ headers3 = [
 ]
 
 data3 = [
-    ['OEG (Overseas Ed Group)', 'Tier S (Mass)', '106,900 - 111,900 ฿', 'CIEE (อันดับ 1 สหรัฐฯ), Spirit', 'Grand Teton (WY), Yellowstone (WY), Denali (AK), Kalahari (WI), Schlitterbahn (TX)', '02-263-3666', '@oegworkandtravel', 'อาคารสินธร ทาวเวอร์ 1 ชั้น 7 ถ.วิทยุ กทม. & เชียงใหม่', 'สปอนเซอร์ CIEE มั่นคงที่สุด ระบบติวสัมภาษณ์และดูแลมาตรฐานสูงสุดช่วง Summer'],
-    ['Acadex Thailand', 'Tier S (Boutique)', '69,000 - 82,000 ฿', 'Intrax, CCUSA, CHI, IENA', 'Grand Teton (WY), Denali Princess & Bluffs (AK), Kalahari (WI), Dollywood (TN), Lifeguards (MD)', '086-390-0333', '@AcadexThailand', 'อาคาร ซี.ซี.ที. (CCT Bldg) ชั้น 12A ถ.สุรวงศ์ บางรัก กทม.', 'พอร์ตงานอลาสกาและไวโอมิงครบที่สุด มีทั้ง Princess และ Bluffs ค่าโครงการคุ้มค่า'],
-    ['IEE Thailand', 'Tier S (Boutique)', '68,000 - 78,000 ฿', 'CCUSA, InterExchange, GeoVisions', 'Xanterra Yellowstone (WY), Mount Rushmore (SD), Chula Vista (WI), Gatlinburg (TN), Cedar Point (OH)', '02-612-9511', '@IEEThailand', 'อาคารพญาไทพลาซ่า ชั้น 12 ถ.พญาไท ราชเทวี กทม.', 'ค่าโครงการย่อมเยา เครือข่ายสปอนเซอร์ CCUSA แน่นแฟ้นกับงานอุทยานและรีสอร์ตช่วง Summer'],
-    ['IEO Abroad (I.E.O.)', 'Tier S (Boutique)', '68,000 - 79,000 ฿', 'CIEE, Intrax, InterExchange', 'Denali (AK), Yellowstone (WY), Kalahari (WI), Dollywood (TN), Morey’s Piers (NJ), Universal (FL)', '061-426-2299', '@ieoworkandtravel', 'อาคาร K.A.N Place ซ.นราธิวาสราชนครินทร์ 8 สาทร กทม.', 'พอร์ตงานหลากหลาย มีงานสวนสนุกและรีสอร์ตทั้งฝั่งตะวันตกและตะวันออก'],
-    ['Higher Education (Higher)', 'Tier S (Boutique)', '66,000 - 76,000 ฿', 'IENA, Spirit, Janus', 'Grand Teton (WY), Under Canvas (WY/MT), Mt. McKinley (AK), Custer State Park (SD), Estes Park (CO)', '02-054-9544', '@HigherEducation', 'อาคารจัตุรัสจามจุรี (Chamchuri Square) ชั้น 24 ปทุมวัน กทม.', 'ดูแลนักศึกษาใกล้ชิดเป็นกันเอง ตอบแชทเร็ว ค่าโครงการสบายกระเป๋า'],
-    ['New Step Thailand', 'Tier S (Boutique)', '67,000 - 79,000 ฿', 'Intrax, CHI, AWA', 'Dollywood (TN), The Island (TN), Busch Gardens (VA/FL), Ocean City (MD), Six Flags (TX)', '063-535-9463', '@newstepworktravel', 'อาคาร SiamScape ชั้น 19 ห้อง 1910 สยามสแควร์ กทม.', 'เชี่ยวชาญงานสายสวนสนุกและงานชายฝั่งทะเล ออฟฟิศสยามเดินทางสะดวก']
+    ['OEG (Overseas Ed Group)', 'Tier S (Mass)', '106,900 - 111,900 ฿', 'CIEE (อันดับ 1 สหรัฐฯ), Spirit', 'Grand Teton (WY), Yellowstone (WY), Denali (AK), Kalahari (WI/PA/TX), Cedar Point (OH), Yosemite (CA), Schlitterbahn (TX)', '02-263-3666', '@oegworkandtravel', 'อาคารสินธร ทาวเวอร์ 1 ชั้น 7 ถ.วิทยุ กทม. & เชียงใหม่', 'สปอนเซอร์ CIEE มั่นคงที่สุดในอเมริกา ระบบติวสัมภาษณ์และดูแลมาตรฐานสูงสุดช่วง Summer'],
+    ['Acadex Thailand', 'Tier S (Boutique)', '69,000 - 82,000 ฿', 'Intrax, CCUSA, CHI, IENA', 'Grand Teton (WY), Denali Princess & Bluffs (AK), Kalahari (WI), Dollywood (TN), Lifeguards (MD), Cape Cod (MA), Grand Hotel (MI)', '086-390-0333', '@AcadexThailand', 'อาคาร ซี.ซี.ที. (CCT Bldg) ชั้น 12A ถ.สุรวงศ์ บางรัก กทม.', 'พอร์ตงานอลาสกา ไวโอมิง และแคลิฟอร์เนียครบที่สุด มีทั้ง Princess และ Bluffs ค่าโครงการคุ้มค่า'],
+    ['IEE Thailand', 'Tier S (Boutique)', '68,000 - 78,000 ฿', 'CCUSA, InterExchange, GeoVisions', 'Xanterra Yellowstone (WY), Mount Rushmore (SD), Chula Vista (WI), Gatlinburg (TN), Cedar Point (OH), Morey’s Piers (NJ), Grand Canyon (AZ)', '02-612-9511', '@IEEThailand', 'อาคารพญาไทพลาซ่า ชั้น 12 ถ.พญาไท ราชเทวี กทม.', 'ค่าโครงการย่อมเยา เครือข่ายสปอนเซอร์ CCUSA แน่นแฟ้นกับงานอุทยานและรีสอร์ตช่วง Summer'],
+    ['IEO Abroad (I.E.O.)', 'Tier S (Boutique)', '68,000 - 79,000 ฿', 'CIEE, Intrax, InterExchange', 'Denali (AK), Yellowstone (WY), Kalahari (WI), Dollywood (TN), Morey’s Piers (NJ), Universal (FL), Lake George (NY), Yosemite (CA)', '061-426-2299', '@ieoworkandtravel', 'อาคาร K.A.N Place ซ.นราธิวาสราชนครินทร์ 8 สาทร กทม.', 'พอร์ตงานหลากหลาย มีงานสวนสนุกและรีสอร์ตทั้งฝั่งตะวันตกและตะวันออก'],
+    ['Higher Education (Higher)', 'Tier S (Boutique)', '66,000 - 76,000 ฿', 'IENA, Spirit, Janus', 'Grand Teton (WY), Under Canvas (WY/MT), Mt. McKinley (AK), Custer State Park (SD), Estes Park (CO), Hersheypark (PA), Rehoboth (DE)', '02-054-9544', '@HigherEducation', 'อาคารจัตุรัสจามจุรี (Chamchuri Square) ชั้น 24 ปทุมวัน กทม.', 'ดูแลนักศึกษาใกล้ชิดเป็นกันเอง ตอบแชทเร็ว ค่าโครงการสบายกระเป๋า เชี่ยวชาญงานอุทยานและแกลมปิ้ง'],
+    ['New Step Thailand', 'Tier S (Boutique)', '67,000 - 79,000 ฿', 'Intrax, CHI, AWA', 'Dollywood (TN), The Island (TN), Busch Gardens (VA/FL), Ocean City (MD), Six Flags (TX/NJ/MO), Morey’s Piers (NJ)', '063-535-9463', '@newstepworktravel', 'อาคาร SiamScape ชั้น 19 ห้อง 1910 สยามสแควร์ กทม.', 'เชี่ยวชาญงานสายสวนสนุกและงานชายฝั่งทะเล ออฟฟิศสยามเดินทางสะดวก'],
+    ['American Learning (ALC)', 'Tier S (Boutique)', '69,000 - 81,000 ฿', 'Intrax, Spirit, CCUSA', 'Premier Aquatics Lifeguard (MD/VA), Great Wolf Lodge (PA), Grand Hotel Mackinac (MI), Tenaya Lodge Yosemite (CA), Grand Canyon (AZ)', '02-619-8800', '@americanlearning', 'อาคารพหลโยธินเพลส ชั้น 39 (BTS อารีย์ ทางออก 4) พญาไท กทม.', 'เด่นงาน Lifeguard การันตีชั่วโมง OT และงานรีสอร์ทระดับพรีเมียมในรัฐยอดฮิต']
 ]
 
 ws3.append(headers3)
@@ -970,10 +1318,10 @@ for col in ws3.columns:
 
 ws3.freeze_panes = 'B2'
 
-# Save
+# Save both files
 for p in [excel_path, excel_clean_path]:
     try:
         wb.save(p)
-        print('Successfully updated Sheet 1 and saved unified Master Excel to:', p)
+        print('Successfully saved unified Master Excel to:', p)
     except PermissionError:
         print('Locked path:', p)
