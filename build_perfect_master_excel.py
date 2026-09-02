@@ -68,15 +68,39 @@ master_summer_jobs = [
     ],
     [
         'Tier S', 'Alaska (AK)',
-        'Grande Denali Lodge & Denali Bluffs Hotel (Summer Only)',
+        'Grande Denali Lodge (Denali National Park, AK)',
         'Acadex Thailand, IEO, Higher',
-        'Housekeeping / Public Area',
+        'General Cleaning / Hostess / Bussing Tables / Crew Member',
         'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
-        'ฐาน $15.50 / OT $23.25', '-', '42 – 46 ชม./wk', '$140',
-        'โบนัส Summer Bonus +$1.00/ชม. ท้ายทริป, โรงแรมหรู 4 ดาวบนยอดเขา, รถชัตเติลบัส, ส่วนลดอาหาร',
+        'ฐาน $14.00 - $15.00 / OT $21.00 - $22.50', '-', '42 – 46 ชม./wk', '$140',
+        'โบนัส Summer Bonus +$1.00/ชม. ท้ายทริป, โรงแรมหรู 4 ดาวบนยอดเขาชมวิวอุทยาน Denali, รถชัตเติลบัสรับส่ง',
         '🍷 Alpenglow Restaurant (ในโรงแรม): Busser 17:00-23:00 น. ($14/ชม. + ทิปสดเศรษฐี $50-$80/คืน)',
         '🥪 Subway Denali / The Black Bear: นั่งชัตเติลลงเขาไปทำกะเย็น 17:00-22:00 น. ($15/ชม.)',
         '🍽️ Denali Princess Kitchens: เดินลงเขา 15 นาที ล้างจานกะค่ำ 18:00-00:00 น. ($16/ชม.)'
+    ],
+    [
+        'Tier S', 'Alaska (AK)',
+        'Denali Bluffs Hotel (Denali National Park, AK)',
+        'Acadex Thailand, IEO, Higher',
+        'General Cleaning / Hostess / Bussing Tables / Crew Member',
+        'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
+        'ฐาน $15.00 / OT $22.50', '-', '42 – 46 ชม./wk', '$140',
+        'โบนัส Summer Bonus +$1.00/ชม. ท้ายทริป, โรงแรมสไตล์กระท่อมไม้บนเนินเขา Denali Canyon, รถชัตเติลบัส',
+        '🥩 Mountaineer Grill (ในโรงแรม): Busser/Runner 17:00-22:30 น. (ขอ OT $22.50/ชม. + ทิป)',
+        '🍕 Prospectors Pizzeria: เดิน 5 นาที ล้างจาน/บัสเซอร์กะค่ำ 18:30-00:30 น. ($15/ชม. + ทิป)',
+        '☕ Moose-A.K.A. Espresso: แคชเชียร์/ผู้ช่วยบาริสต้า 06:30-10:30 น.'
+    ],
+    [
+        'Tier S', 'Alaska (AK)',
+        'Mountain High Pizza Pie (Talkeetna, Alaska)',
+        'Acadex Thailand, Higher, OEG',
+        'Food Preparation / Dishwashing / Crew Member (May & June Arrival)',
+        'ปกติ: 11:00 – 19:30 (8 ชม.)\nพีคซัมเมอร์: 10:30 – 22:30 (11 ชม.)',
+        'ฐาน $13.00 / OT $19.50', '$20 - $50', '40 – 46 ชม./wk', '$100',
+        'ร้านพิซซ่าเตาฟืนชื่อดังที่สุดในเมือง Talkeetna คนแน่นตลอดซัมเมอร์, เจ้าของร้านใจดีมาก, หอพักเคบินพนักงาน',
+        '🍺 Denali Brewing Company (Talkeetna Pub): Barback กะค่ำ 18:30-00:30 น. ($14/ชม. + ทิปสด $60-$100/คืน)',
+        '🏨 Talkeetna Alaskan Lodge: ขอกะเช้าช่วยแม่บ้าน 08:00-12:00 น. ($16/ชม.)',
+        '🥐 Talkeetna Roadhouse: ช่วยเตรียมเบเกอรี่/ล้างจานช่วงเช้าตรู่ ($14.50/ชม.)'
     ],
     [
         'Tier S', 'Alaska (AK)',
