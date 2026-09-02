@@ -152,15 +152,39 @@ master_summer_jobs = [
     ],
     [
         'Tier S', 'Alaska (AK)',
-        'Skagway Westmark Inn & Chilkoot Tours (Holland America)',
-        'OEG, Acadex, ALC',
-        'Housekeeping / Tour Host / Retail',
-        'ปกติ: 08:00 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:00 (9.5 ชม.)',
-        'ฐาน $16.00 / OT $24.00', '$20 - $50', '44 – 50 ชม./wk', '$110',
-        'เมืองตากอากาศประวัติศาสตร์ยุคตื่นทอง ท่าเรือเรือสำราญแวะทุกวัน, เดินเท้าได้ทั่วเมือง',
-        '🍺 Red Onion Saloon (บาร์ประวัติศาสตร์): Busser/Runner 17:30-23:30 น. (ทิปสด $60-$120/คืน)',
-        '🦀 Skagway Fish Company: ผู้ช่วยครัว/ล้างจาน 18:00-23:00 น. ($15/ชม. + ทิป)',
-        '🚂 White Pass & Yukon Route Depot: ช่วยทำความสะอาดขบวนรถไฟโบราณ 17:00-21:30 น. ($16/ชม.)'
+        'Keen Kow Thai Food (Ninilchik, Alaska)',
+        'OEG, Acadex, Higher',
+        'Food Preparation / Dishwashing / Crew Member',
+        'ปกติ: 10:30 – 19:30 (8 ชม.)\nพีคซัมเมอร์: 10:00 – 21:00 (10 ชม.)',
+        'ฐาน $14.00 / OT $21.00', '$20 - $50', '42 – 48 ชม./wk', '$90 (รวมกิน)',
+        'ร้านอาหารไทยยอดฮิตในเมืองตากอากาศตกปลาแซลมอน Ninilchik (Kenai Peninsula), ทานอาหารไทยฟรีทุกมื้อ, เจ้าของคนไทยใจดี',
+        '🐟 Deep Creek Halibut & Salmon Charters: ช่วยล้างทำความสะอาดเรือตกปลา 18:00-21:30 น. ($16/ชม. + ทิปปลาสด)',
+        '🏕️ Ninilchik Cabins & RV Park: ผู้ช่วยดูแลความสะอาดแคมป์ 07:00-09:30 น. ($15/ชม.)',
+        '🛒 Ninilchik General Store: แคชเชียร์รอบค่ำ 18:30-22:00 น. ($15/ชม.)'
+    ],
+    [
+        'Tier S', 'Alaska (AK)',
+        '49th State Brewing Company (Healy & Anchorage, AK)',
+        'OEG, Acadex, IEO, ALC',
+        'Dishwasher / Line Cook / Server Assistant (Busser)',
+        'ปกติ: 11:00 – 19:30 (8 ชม.)\nพีคซัมเมอร์: 10:30 – 23:00 (11.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$30 - $70', '46 – 52 ชม./wk', '$110',
+        'โรงเบียร์คราฟต์และร้านอาหารชื่อดังที่สุดในอลาสกา สาขา Healy (หน้าทางเข้า Denali NP) มีรถเมล์ Into the Wild, ทิปสดแน่น',
+        '🥩 49th State Outdoor Beer Garden: Busser/Runner โซนลานเบียร์กลางแจ้ง 17:30-23:30 น. (ทิปสด $60-$110/คืน)',
+        '🍕 Otto’s Healy Pizzeria: ผู้ช่วยทำพิซซ่า/ล้างจาน 18:00-23:30 น. ($15/ชม.)',
+        '🚌 Denali Park Transit Helper: ช่วยตรวจตั๋วรถบัสอุทยานรอบเช้า 07:00-10:00 น.'
+    ],
+    [
+        'Tier S', 'Alaska (AK)',
+        'Four Points by Sheraton Anchorage Downtown (Alaska)',
+        'OEG, Acadex, Higher',
+        'Housekeeping / Busser / Front Desk Support',
+        'ปกติ: 08:00 – 16:30 (8 ชม.)\nพีคซัมเมอร์: 07:30 – 17:30 (9.5 ชม.)',
+        'ฐาน $15.50 / OT $23.25', '$15 - $35', '42 – 48 ชม./wk', '$125',
+        'โรงแรมใจกลางเมืองแองเคอเรจ (เมืองใหญ่ที่สุดในอลาสกา), มีรถเมล์ People Mover เดินทางสะดวก หางานสองง่ายที่สุด',
+        '🦀 Glacier Brewhouse (ร้านซีฟู้ดอันดับ 1 ในเมือง): Busser/Dishwasher 18:00-00:30 น. (ทิปสด $70-$130/คืน)',
+        '🍜 Thai Kitchen Anchorage: ผู้ช่วยครัว/เสิร์ฟ 17:30-22:30 น. (ทิปสด + กินอาหารไทยฟรี)',
+        '🛒 Anchorage 5th Avenue Mall: พนักงานร้านค้า/ปิดร้าน 18:00-21:30 น. ($16/ชม.)'
     ],
 
     # 2. WYOMING (WY)
@@ -370,6 +394,18 @@ master_summer_jobs = [
         '🍕 Popeye’s on Lake Geneva: Busser/Dishwasher ร้านอาหารริมทะเลสาบดัง 18:00-23:30 น. (ทิปดี)',
         '🍺 The Bottle Shop / Local Pubs: Barback ร้านคราฟต์เบียร์ 18:30-00:00 น.'
     ],
+    [
+        'Tier S', 'Wisconsin (WI)',
+        'University of Wisconsin-Madison (Housing Facilities & Dining)',
+        'OEG, Acadex, Higher',
+        'Facilities Crew / Food Service / Dining Associate',
+        'ปกติ: 07:30 – 16:00 (8 ชม.)\nพีคซัมเมอร์: 07:00 – 17:00 (9.5 ชม.)',
+        'ฐาน $15.00 / OT $22.50', '-', '40 – 45 ชม./wk', '$100',
+        'มหาวิทยาลัยชั้นนำใจกลางเมือง Madison, หอพักนักศึกษาพร้อมสิ่งอำนวยความสะดวกครบครัน, รถเมล์ฟรีทั่วเมือง',
+        '🍕 Ian’s Pizza on State (สาขาดัง Madison): ผู้ช่วยทำพิซซ่า/ล้างจาน 18:00-00:30 น. ($15/ชม. + ทิป)',
+        '🍺 State Street Brats: Barback/Busser ร้านเบอร์เกอร์และเบียร์ชื่อดัง 18:30-01:00 น. (ทิปสดดี)',
+        '🍜 Asian Sweet Bakery & Local Eateries: แคชเชียร์/ผู้ช่วยครัว 17:30-22:00 น. ($15/ชม.)'
+    ],
 
     # 4. TENNESSEE (TN)
     [
@@ -407,6 +443,18 @@ master_summer_jobs = [
         '🍏 Applewood Farmhouse Restaurant: Busser ร้านอาหารดังคนแน่น 18:00-22:30 น. (ทิปสด $60-$100/คืน)',
         '🥩 Hidden Trail Restaurant (ในรีสอร์ต): ล้างจาน/Busser กะค่ำ 18:00-22:30 น. (ขอ OT ในรีสอร์ต $22.50/ชม.)',
         '🛍️ Tanger Outlets Sevierville: จัดสต็อกสินค้า/ปิดร้าน 18:00-21:30 น. ($15/ชม.)'
+    ],
+    [
+        'Tier S', 'Tennessee (TN)',
+        'Westgate Smoky Mountain Resort & Waterpark (Gatlinburg)',
+        'OEG, Acadex, Higher',
+        'Food & Beverage / Lifeguard / Activities Host',
+        'ปกติ: 09:00 – 17:30 (8 ชม.)\nพีคซัมเมอร์: 08:30 – 19:30 (10.5 ชม.)',
+        'ฐาน $16.00 / OT $24.00', '$15 - $35', '42 – 48 ชม./wk', '$115',
+        'รีสอร์ตสวนน้ำและสปาขนาดใหญ่บนไหล่เขา Gatlinburg ปลอดภาษีรัฐ 0%, หอพักพนักงาน Westgate',
+        '🥩 Southern Comfort Restaurant (ในรีสอร์ต): Busser/Food Runner 17:30-23:00 น. (ขอ OT $24/ชม. + ทิป)',
+        '🍺 Roaring Fork Snack Bar (ริมสระ): แคชเชียร์/ผู้ช่วยครัว 16:30-21:30 น. (ขอ OT $24/ชม.)',
+        '🥞 Log Cabin Pancake House: ผู้ช่วยครัว/ล้างจานรอบบ่าย-เย็น 17:00-22:00 น. ($15/ชม.)'
     ],
     [
         'Tier S', 'Tennessee (TN)',
