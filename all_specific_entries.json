@@ -1,0 +1,3014 @@
+{
+  "grand canyon lodge at north grand canyon rim": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "squire inn resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "the grand hotel xanterra": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "ban ban burger": [
+    "Crew Member / Food Prep / Cashier",
+    16.5,
+    135,
+    false
+  ],
+  "dnc at kings canyon national park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    16.5,
+    135,
+    false
+  ],
+  "delaware north at tenaya lodge at yosemite": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.5,
+    85,
+    true
+  ],
+  "eureka inn": [
+    "Housekeeping / Room Attendant",
+    16.5,
+    135,
+    false
+  ],
+  "everline resort & spa": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.5,
+    135,
+    false
+  ],
+  "farmhouse kitchen thai cuisine": [
+    "Kitchen Prep / Food Runner",
+    16.5,
+    95,
+    true
+  ],
+  "toss noodle bar": [
+    "Kitchen Prep / Food Runner",
+    16.5,
+    95,
+    true
+  ],
+  "travel traders – bearshine cafe": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "xanterra oasis at death valley": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "anaheim majestic garden hotel": [
+    "Housekeeping / Room Attendant",
+    16.5,
+    135,
+    false
+  ],
+  "camp richardson resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.5,
+    135,
+    false
+  ],
+  "margaritaville resort lake tahoe": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.5,
+    135,
+    false
+  ],
+  "safeway at north lake tahoe": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "safeway at south lake tahoe": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "lakeshore resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.5,
+    135,
+    false
+  ],
+  "motel 6 (south)": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "motel 6": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "brighton suites": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "delaware north at grand canyon": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "delaware north at sequoia national park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "food lion- delaware": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "the blue crab of bethany beach": [
+    "Busser / Food Runner / Kitchen Helper",
+    15.0,
+    110,
+    false
+  ],
+  "kohr bros": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "thrasher’s french fries": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "busch gardens tampa": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "flora-bama yacht club": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "seaworld orlando": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "::: discover higher….discover your higher purpose……ค้นหาสิ่งที่เหนือกว่าในตัวคุณ :::": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "auntie anne's": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "bargain world lake buena vista": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "bayou bill's crab house": [
+    "Busser / Food Runner / Kitchen Helper",
+    14.0,
+    105,
+    false
+  ],
+  "celebration gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "courtyard by marriott": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "culver's": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "domino’s pizza": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "dream world gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "estefan kitchen orlando": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "fairfield inn & suites by marriott fort walton beach": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "firecraft seafood": [
+    "Busser / Food Runner / Kitchen Helper",
+    14.0,
+    105,
+    false
+  ],
+  "five guys": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "fudpucker's beachside bar & grill": [
+    "Busser / Food Runner / Host",
+    14.0,
+    105,
+    false
+  ],
+  "golden corral": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "green parrot gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "holiday inn resort panama city beach by ihg": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "island house south beach hotel": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "jungle falls gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "kilwins": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "la crema tapas & chocolate": [
+    "Busser / Food Runner / Host",
+    14.0,
+    105,
+    false
+  ],
+  "lake buena vista gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "magic castle gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "marble slab creamery": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "mcdonald's (beal)": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "mcdonald's (eglin)": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "mcdonald's (สาขา 895 หรือ 12830)": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "mcdonald's": [
+    "Crew Member / Food Prep / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "mcdonald’s": [
+    "Crew Member / Food Prep / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "mermaid gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "osaka japanese hibachi steakhouse & sushi bar": [
+    "Busser / Food Runner / Host",
+    14.0,
+    105,
+    false
+  ],
+  "race city": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "ruby slipper": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "shrimp basket (perdido key)": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "shrimp basket": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "shuttle gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "smiles beach photo": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "st. joe": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "studio east gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "studio west gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "subway": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "sunsations (สาขา 12700 หรือ 17292)": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "sunsations (สาขา 960 หรือ 20011)": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "surf style": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "surfing deer": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "taco bell (beal)": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "taco bell (eglin)": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "taco bell": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "the citizen / fonville press": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "thomas donut and snack shop": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "waffle house": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "westgate blue tree resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "winn-dixie": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "wyndham garden": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "knox trail inn": [
+    "Housekeeping / Room Attendant",
+    15.5,
+    130,
+    false
+  ],
+  "mcdonald’s cape cod": [
+    "Crew Member / Food Prep / Cashier",
+    15.5,
+    130,
+    false
+  ],
+  "sea crest beach hotel": [
+    "Housekeeping / Room Attendant",
+    15.5,
+    130,
+    false
+  ],
+  "shaw’s massachusetts": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.5,
+    130,
+    false
+  ],
+  "sister ship": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.5,
+    130,
+    false
+  ],
+  "stop & shop": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.5,
+    130,
+    false
+  ],
+  "stop and shop nantucket": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.5,
+    130,
+    false
+  ],
+  "stop&shop edgartown": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.5,
+    130,
+    false
+  ],
+  "stop and shop supermarket at mashpee 87": [
+    "Retail Sales Associate / Cashier / Stocker",
+    15.5,
+    130,
+    false
+  ],
+  "bubba gump shrimp co.": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "crystal mountain resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "great wolf lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "inn at bay harbor": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "interlochen center for the arts": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "the grand hotel-michigan": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "beachy’s bar & grill": [
+    "Busser / Food Runner / Host",
+    14.0,
+    105,
+    false
+  ],
+  "el patron grill": [
+    "Busser / Food Runner / Host",
+    14.0,
+    105,
+    false
+  ],
+  "real thai cuisine": [
+    "Kitchen Prep / Food Runner",
+    14.0,
+    95,
+    true
+  ],
+  "tom's food market": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "camden resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "chateau on the lake": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "lodge of the ozarks": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "mcdonald’s-branson": [
+    "Crew Member / Food Prep / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "steak ‘n shake": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "grand country resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "joe’s crab shack branson": [
+    "Busser / Food Runner / Kitchen Helper",
+    13.5,
+    95,
+    false
+  ],
+  "shady gators": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "silver dollar city": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "wendy's": [
+    "Crew Member / Food Prep / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "westgate branson lakes resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "westgate branson woods resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "white water park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "wonderworks": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "carson valley inn": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "aquarius casino & resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "bally's lake tahoe": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "circus circus hotel & casino las vegas": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "edgewater": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "golden nugget lake tahoe": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "harrah’s and caesars republic lake tahoe": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "round hill pines beach resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "tropicana": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "carson valley inn casino": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "dnc at sheraton nashua": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "story land theme park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "the margate resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "the shirt facotry of hampton beach": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "wendy’s": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "mountain view grand resort & spa": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "pizza etc.": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "ships inn hotel": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "the shirt factory of hamton beach": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "bandanas mexican grille": [
+    "Busser / Food Runner / Host",
+    15.13,
+    125,
+    false
+  ],
+  "gateway 26 casino arcade": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "george’s candy": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    15.13,
+    125,
+    false
+  ],
+  "gigi’s new your style pizza": [
+    "Pizza Cook / Food Runner / Cashier",
+    15.13,
+    125,
+    false
+  ],
+  "six flags great adventure": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "treasure hut": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "bally's atlantic city hotel & casino": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "casino beach pier breakwater beach": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "dunkin' donuts": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "golden nugget atlantic city hotel, casino & marina": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "harrah's resort atlantic city": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.13,
+    125,
+    false
+  ],
+  "lopresti's pizza & grill": [
+    "Busser / Food Runner / Host",
+    15.13,
+    125,
+    false
+  ],
+  "resorts atlantic city": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.13,
+    125,
+    false
+  ],
+  "rita's italian ice atlantic city": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "a & lp foods": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "aa heart of wildwood motels": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "athens ii motor inn, wildwood, nj": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "avalon brew pub": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "beach terrace motor inn": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "blue water motel": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "boardwalk's best gift & variety": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "coastal blue oceanside bar & grill": [
+    "Busser / Food Runner / Host",
+    15.13,
+    125,
+    false
+  ],
+  "crystal springs resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.13,
+    125,
+    false
+  ],
+  "dogtooth bar & grill": [
+    "Busser / Food Runner / Host",
+    15.13,
+    125,
+    false
+  ],
+  "dunkin'": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "fractured prune": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "hotel icona diamond beach": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "icona golden inn": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "mudhen brewing company": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "poppi's brick oven pizza": [
+    "Pizza Cook / Food Runner / Cashier",
+    15.13,
+    125,
+    false
+  ],
+  "russo's market": [
+    "Retail Sales Associate / Cashier / Stocker",
+    15.13,
+    125,
+    false
+  ],
+  "sal's pizza": [
+    "Pizza Cook / Food Runner / Cashier",
+    15.13,
+    125,
+    false
+  ],
+  "sightseer trams": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "st. george beach outlet": [
+    "Retail Sales Associate / Cashier / Stocker",
+    15.13,
+    125,
+    false
+  ],
+  "stuey's juice bar & bistro": [
+    "Busser / Food Runner / Host",
+    15.13,
+    125,
+    false
+  ],
+  "superkarts": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "surf haven motel": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "the fish factory": [
+    "Busser / Food Runner / Kitchen Helper",
+    15.13,
+    125,
+    false
+  ],
+  "the original hot spot": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "the vibes hotel": [
+    "Housekeeping / Room Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "thundering surf waterpark": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    15.13,
+    125,
+    false
+  ],
+  "yassin's goodies": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.13,
+    125,
+    false
+  ],
+  "marie eiffel market": [
+    "Retail Sales Associate / Cashier / Stocker",
+    16.0,
+    120,
+    false
+  ],
+  "turning stone resort and casino": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.0,
+    120,
+    false
+  ],
+  "century country club": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.0,
+    120,
+    false
+  ],
+  "the palms hotel fire island": [
+    "Housekeeping / Room Attendant",
+    16.0,
+    120,
+    false
+  ],
+  "the queensbury hotel": [
+    "Housekeeping / Room Attendant",
+    16.0,
+    120,
+    false
+  ],
+  "turning stone resort casino": [
+    "Resort Attendant / Housekeeping / F&B",
+    16.0,
+    120,
+    false
+  ],
+  "bobacat tea house": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "hyatt-portland": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "sunriver resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "motel 6 (north)": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "camelback resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "kalahari resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "kalahari resort – pennsylvania": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "kalahari resorts": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "dorney park a six flags park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "the inn starlight lake & restaurant": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "harbor base pineapple inn": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "newport harbor island resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "block island beach house": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "george's of galilee": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "dakota gunslingers": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "hills hospitality": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "koa south dakota": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "wall drug store": [
+    "Retail Sales Associate / Cashier / Stocker",
+    13.5,
+    95,
+    false
+  ],
+  "best western plus": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "comfort inn & suites": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "days inn by wyndham": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "deadwood miners hotel & restaurant": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "gunslinger saloon": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "holiday inn express & suites": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "holiday inn": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "outpost lodge hotel": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "staybridge suites": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "super 8 motel": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "travelodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "chick-fil-a": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "horseshoe bay resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "seaworld": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "six flags hurricane harbor": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "six flags over texas": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "beachfront palms hotel": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "brook hollow golf club": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "camp margaritaville resort crystal beach": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "clarion pointe": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "great wall super buffet": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "hyatt select": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "quality inn & suites": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "hannaford-vermont": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "smugglers notch resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.5,
+    95,
+    false
+  ],
+  "thai basil": [
+    "Kitchen Prep / Food Runner",
+    14.5,
+    95,
+    true
+  ],
+  "the lodge at spruce peak": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.5,
+    95,
+    false
+  ],
+  "the equinox golf resort & spa": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.5,
+    95,
+    false
+  ],
+  "atlantic fun park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "busch gardens williamsburg": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "dairy queen-virginia beach": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "dough boys pizza": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "fairfield inn & suites virginia beach": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "holiday inn & suites north beach": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "holiday inn express & suites virginia beach": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "hollywood pictures-virginia beach": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "jamestown settlement market": [
+    "Retail Sales Associate / Cashier / Stocker",
+    14.0,
+    105,
+    false
+  ],
+  "mgn pools": [
+    "Pool Lifeguard",
+    16.0,
+    105,
+    false
+  ],
+  "mcdonald’s williamsburg": [
+    "Crew Member / Food Prep / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "mosaic cafe eatery virginia beach": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "motor world": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "premier aquatics": [
+    "Pool Lifeguard",
+    16.0,
+    105,
+    false
+  ],
+  "residence inn": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "roma pizza -virginia beach": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "shenandoah national park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "springhill suites virginia beach": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "sunset pool management": [
+    "Pool Lifeguard",
+    16.0,
+    105,
+    false
+  ],
+  "sweetfrogs frozen yogurt": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "the omni homestead resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "kings dominion": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "ambassadors inn & suites": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "lifeguard": [
+    "Pool Lifeguard",
+    16.0,
+    110,
+    false
+  ],
+  "premier pool management, inc.": [
+    "Pool Lifeguard",
+    16.0,
+    110,
+    false
+  ],
+  "sunset pool management, inc.": [
+    "Pool Lifeguard",
+    16.0,
+    110,
+    false
+  ],
+  "the sweet spot": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "baitong restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "flagstone motel": [
+    "Housekeeping / Room Attendant",
+    16.5,
+    135,
+    false
+  ],
+  "hyatt-bellevue": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "hyatt-seattle": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "noi cuisine": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "riviera inn motel": [
+    "Housekeeping / Room Attendant",
+    16.5,
+    135,
+    false
+  ],
+  "seattle marriott bellevue": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "super 8": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "town motel": [
+    "Housekeeping / Room Attendant",
+    16.5,
+    135,
+    false
+  ],
+  "zen sushi & bar": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "boh concepts : hyatt": [
+    "Resort Associate / Food Service / Housekeeping",
+    16.5,
+    135,
+    false
+  ],
+  "anchor inn": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "anchorage marriott downtown": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "aviator suites": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "beluga lake lodge homer": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "best western bidarka inn": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "blue yeti": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "cape fox lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "chilkat restaurant and bakery": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "columbia sussex anchorage hilton": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "crush bistro": [
+    "Busser / Food Runner / Host",
+    15.0,
+    110,
+    false
+  ],
+  "denali bluffs hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "denali grizzly bear resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "denali rainbow rv park & motel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "e&m oriental store": [
+    "Retail Sales Associate / Cashier / Stocker",
+    15.0,
+    110,
+    false
+  ],
+  "ess support services": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "fin island lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "fountainhead-wedgewood resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "gilmore hotel/ annabelle’s famous keg and chowder house": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "hap": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "hap-denali shared services": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "harbor 360 hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "island brew cafe": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "midnight sun subway": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "polar bear gift shop": [
+    "Retail Sales Associate / Cashier / Stocker",
+    15.0,
+    110,
+    false
+  ],
+  "seldovia boardwalk hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "siam cuisine anchorage": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "snow city cafe": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "south restaurant + coffeehouse": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "spenard roadhouse": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "talkeetna alaskan lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "thaihouse restaurant": [
+    "Kitchen Prep / Food Runner",
+    15.0,
+    95,
+    true
+  ],
+  "49th state brewing anchorage": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "denali crows nest cabins": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "black diamond resort co": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "comfort inn hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "denali rainbow village rv park & motel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "driftwood inn": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "great alaskan holiday rv company": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "gwin's lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "indian valley meats": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "kami ramen": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "la quinta inns & suites": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "lahn pad thai": [
+    "Kitchen Prep / Food Runner",
+    15.0,
+    95,
+    true
+  ],
+  "orca island cabins": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "pike's waterfront lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "seafarer suites": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "siam noodles and food": [
+    "Kitchen Prep / Food Runner",
+    15.0,
+    95,
+    true
+  ],
+  "sky chefs": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "sweet darlings": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "wildman's": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "ido restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "estes thai restaurant": [
+    "Kitchen Prep / Food Runner",
+    15.0,
+    95,
+    true
+  ],
+  "high creek lodge and cabins": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "marriott international the ritz-carlton bachelor gulch": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "onyx and antler": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "the ridgeline hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "the springs resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "ymca of the rockies": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "golden nugget hotel & casino cripple creek": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "elevations eatery and bar": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "estes souvenir's": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "flavors of the rockies ice cream": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "himalayan curry & kebob": [
+    "Kitchen Prep / Food Runner",
+    15.0,
+    95,
+    true
+  ],
+  "la cabaña mexican bar & grill": [
+    "Busser / Food Runner / Host",
+    15.0,
+    110,
+    false
+  ],
+  "the lazy moose": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "the wapiti colorado pub": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "the wild rose restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "hannaford-maine": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "samoset resort on the ocean": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "the westin portland harborview": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "northland hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "palace playland": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "rudders public house": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "buona vita pizzeria": [
+    "Pizza Cook / Food Runner / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "dolle’s candy": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "dough roller": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "food lion – maryland": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "grand terrace restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "great wolf lodge – perryville": [
+    "Resort Attendant / Housekeeping / F&B",
+    15.0,
+    110,
+    false
+  ],
+  "hollywood picture oceancity": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "oceanic motel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "pizza mambo": [
+    "Pizza Cook / Food Runner / Cashier",
+    15.0,
+    110,
+    false
+  ],
+  "premier pool management inc": [
+    "Pool Lifeguard",
+    16.0,
+    110,
+    false
+  ],
+  "quality inn boardwalk": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "sunsations beach stores ocean city": [
+    "Retail Sales Associate / Cashier / Stocker",
+    15.0,
+    110,
+    false
+  ],
+  "thai o cha": [
+    "Kitchen Prep / Food Runner",
+    15.0,
+    95,
+    true
+  ],
+  "rocky gap casino": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "grand hotel": [
+    "Housekeeping / Room Attendant",
+    15.0,
+    110,
+    false
+  ],
+  "java beach cafe": [
+    "Resort Associate / Food Service / Housekeeping",
+    15.0,
+    110,
+    false
+  ],
+  "ac hotel missoula downtown": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "brutger equities-days inn & suites": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "dnc at yellowstone- west yellowstone": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "koa west glacier": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "yellowstone club": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "one&only moonlight basin resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "travelodge and suites missoula": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "wonderstone at glacier": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "brutger equities": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "big buck’s ice cream": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "black pelican oceanfront restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "bros sandwich shop": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "dairy queen-corolla": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "dirty dick’s crab house": [
+    "Busser / Food Runner / Kitchen Helper",
+    14.0,
+    105,
+    false
+  ],
+  "duck donuts": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "food lion": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "holiday inn express": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "holiday inn express kitty hawk": [
+    "Housekeeping / Room Attendant",
+    14.0,
+    105,
+    false
+  ],
+  "mutiny bay adventure golf": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "rc theaters kdh movies 10, kill devil hills, nc standard location": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "rundown cafe": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "sanderling resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.0,
+    105,
+    false
+  ],
+  "upside restaurant & sweet cups ice cream": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "village pizza of nags head": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "watermen’s bar & grill": [
+    "Busser / Food Runner / Host",
+    14.0,
+    105,
+    false
+  ],
+  "watermen’s retreat": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.0,
+    105,
+    false
+  ],
+  "yellow submarine pizza&subs": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "ned's ice cream & convenience": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    14.0,
+    105,
+    false
+  ],
+  "cameo pizza": [
+    "Pizza Cook / Food Runner / Cashier",
+    14.5,
+    95,
+    false
+  ],
+  "commodore perry inn & suites": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "confort inn oh": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "country house gift": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "dnc sportservice cincinnati": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "frostys bar": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "hidden beach bar": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "hilton akron/fairlawn hotel": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "holiday inn cleveland – south independence": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "islander inn": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "maple cottage shirt tales": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "mariners locker": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "misty bay boutique": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "park hotel": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "pasquales café": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "put in bay resort, ohio": [
+    "Resort Attendant / Housekeeping / F&B",
+    14.5,
+    95,
+    false
+  ],
+  "subway ,put-in-bay, ohio": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "sweet siblings": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "the boardwalk island grill and bar": [
+    "Busser / Food Runner / Host",
+    14.5,
+    95,
+    false
+  ],
+  "the keys restaurant and bar complex": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "the lytle park hotel": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "the round house bar": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "troon golf llc- beechmont country club": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "tru by hilton": [
+    "Resort Associate / Food Service / Housekeeping",
+    14.5,
+    95,
+    false
+  ],
+  "voco the clair cincinnati downtown": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "cedar point amusement park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "kings island a six flags park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "south shore inn": [
+    "Housekeeping / Room Attendant",
+    14.5,
+    95,
+    false
+  ],
+  "bargain beachwear": [
+    "Retail Sales Associate / Cashier / Stocker",
+    13.5,
+    95,
+    false
+  ],
+  "eagles beachwear": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "food lion – south carolina": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "hollywood pictures": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "ricciardi’s italian ice": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "the hangout": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "anakeesta": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "cracker barrel": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "nascar speedpark": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "steak ‘n shake – tennessee": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "wilderness at the smokies": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "wood grill buffet": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "applebee's grill + bar": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "beef jerky experience": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "big rock candy kitchen": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "big top arcade": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "blue moose burgers & wings": [
+    "Crew Member / Food Prep / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "camp margaritaville rv resort & lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "cheddar's scratch kitchen": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "cinnabon / auntie anne's": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "daiquiri shack & grill": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "dollywood": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "dollywood's dreammore resort & spa": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "dollywood's heartsong lodge & resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "downtown flavortown": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "emery’s 5 & 10": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "food city 611": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "food city 665": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "ihop": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "island services (the island)": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "jason aldean's / sun diner": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "krystal": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "landshark bar & grill": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "margaritaville island inn": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "margaritaville resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "margaritaville restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "mcalister's deli": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "mellow mushroom at the island": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "mellow mushroom": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "ober": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "paula deen store": [
+    "Retail Sales Associate / Cashier / Stocker",
+    13.5,
+    95,
+    false
+  ],
+  "paula deen's lumberjack feud supper show": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "pizza hut": [
+    "Pizza Cook / Food Runner / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "ramada": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "river terrace resort and convention center": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "skyfly": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "smoky mountain observation wheel (the island)": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "starbucks": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "sunliner diner": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "sweet!": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "texas roadhouse": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "the island trading post": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "the park vista": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "the peddler steakhouse": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "timberwood grill": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "topjump trampoline & extreme arena": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "westgate smoky mountain resort & water park": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "lagoon amusement park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "the lodge at bryce canyon": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "zion national park lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    85,
+    true
+  ],
+  "aramark destinations north lake powell": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "cafe sabor": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "ephraim's restaurant": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "chula vista resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "dnc sportservice milwaukee": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "dells escape room": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "dells resort-the land of natura": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "door county ice cream factory": [
+    "Ice Cream Scooper / Bakery Associate / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "island fever rum house": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "knuckleheads": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "mcdonald’s-wisconsin": [
+    "Crew Member / Food Prep / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "mt.olympus waterpark & resorts": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "pizza pub": [
+    "Pizza Cook / Food Runner / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "shamrock motel": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "summer house": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "the abbey resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "the landmark resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "three bears resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "timbavati wildlife park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "wilderness resorts-wisconsin": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "wingate by wyndham": [
+    "Resort Associate / Food Service / Housekeeping",
+    13.5,
+    95,
+    false
+  ],
+  "yogi bears jellystone park camp resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "boyd's mason lake resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "island fever rum bar & grill": [
+    "Busser / Food Runner / Host",
+    13.5,
+    95,
+    false
+  ],
+  "mcdonald's (สาขา 30 หรือ 2325)": [
+    "Crew Member / Food Prep / Cashier",
+    13.5,
+    95,
+    false
+  ],
+  "cody holiday lodge": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "wigwam motel": [
+    "Housekeeping / Room Attendant",
+    13.5,
+    95,
+    false
+  ],
+  "snow king resort": [
+    "Resort Attendant / Housekeeping / F&B",
+    13.5,
+    95,
+    false
+  ],
+  "xanterra yellowstone national park": [
+    "Attractions Host / Ride Operator / Arcade Attendant",
+    13.5,
+    95,
+    false
+  ]
+}

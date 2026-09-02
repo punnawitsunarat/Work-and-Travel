@@ -13,6 +13,13 @@ ws_src = wb_public['All Public Jobs']
 
 print(f'Starting individual employer search & enrichment for all {ws_src.max_row - 1} public jobs...')
 
+# Load all 502 specific employer rules
+all_specific_path = r'C:\Users\ASUS\Desktop\WAT\all_specific_entries.json'
+EXTRA_SPECIFIC_DB = {}
+if os.path.exists(all_specific_path):
+    with open(all_specific_path, 'r', encoding='utf-8') as f:
+        EXTRA_SPECIFIC_DB = json.load(f)
+
 # -------------------------------------------------------------------------
 # Verified Specific Employer Lookup Dictionary (J-1 Job Order Database)
 # -------------------------------------------------------------------------
@@ -267,7 +274,12 @@ def enrich_position(raw_pos, title_clean, agency, state_code):
         if key in t_low:
             return val[0]
             
-    # 3. Keyword matching
+    # 3. Check EXTRA_SPECIFIC_DB (502 specific employers)
+    for key, val in EXTRA_SPECIFIC_DB.items():
+        if key in t_low:
+            return val[0]
+            
+    # 4. Keyword matching
     if re.search(r'lifeguard|ไลฟ์การ์ด', p_text + ' ' + t_low, re.I): return 'Pool Lifeguard'
     if re.search(r'ride op|เครื่องเล่น', p_text + ' ' + t_low, re.I): return 'Ride Operator'
     if re.search(r'ice cream|ตักไอศกรีม|candy|fudge|fudgery|kohr|sweets', t_low, re.I): return 'Ice Cream Scooper / Cashier'
@@ -351,7 +363,13 @@ def enrich_rate(raw_rate, raw_pos, title_clean, state_code):
             base_v = val[1]
             return f"ฐาน ${base_v:.2f} / OT ${base_v*1.5:.2f}"
 
-    # 7. Fallback to state standard
+    # 7. Check EXTRA_SPECIFIC_DB
+    for key, val in EXTRA_SPECIFIC_DB.items():
+        if key in t_low:
+            base_v = val[1]
+            return f"ฐาน ${base_v:.2f} / OT ${base_v*1.5:.2f}"
+
+    # 8. Fallback to state standard
     STATE_WAGE_DEFAULTS = {
         'CA': 16.50, 'WA': 16.50, 'NY': 16.00, 'NJ': 15.13, 'MA': 15.50, 'MD': 15.00,
         'DE': 15.00, 'CO': 15.00, 'IL': 15.00, 'ME': 15.00, 'VT': 14.50, 'VA': 14.00,
