@@ -11,7 +11,7 @@ clean_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_202
 wb_public = openpyxl.load_workbook(public_path, data_only=True)
 ws_src = wb_public['All Public Jobs']
 
-print(f'Processing {ws_src.max_row - 1} public jobs with micro-scale per-employer calculations...')
+print(f'Processing {ws_src.max_row - 1} public jobs with specialized Alaska and per-employer calculations...')
 
 def clean_text(val):
     if val is None or str(val).strip().lower() in ['none', 'null', 'nan', '']:
@@ -137,9 +137,15 @@ def calculate_precise_employer_hours(emp_name, state_name, state_code, pos_name,
     s_low = state_name.lower()
     p_low = pos_name.lower()
     
-    # TYPE 1: Mega National Park Lodges & Concessionaires (100s-1000s rooms, continuous tourist influx)
-    # Xanterra, Denali Princess, Grand Teton GTLC, Glacier National Park, Yosemite DNC, Crater Lake, Zion, Grand Canyon, McKinley Chalet
-    if any(k in e_low for k in ['xanterra', 'princess', 'gtlc', 'grand teton lodge', 'glacier national', 'yosemite', 'crater lake', 'zion national', 'grand canyon', 'denali princess', 'mckinley chalet', 'signal mountain', 'pursuit denali']):
+    # SPECIAL 1: Alaska Cruise-Tour Mega Lodges (Princess, Holland America, Grande Denali, Talkeetna Alaskan Lodge, McKinley Chalet)
+    # 600+ rooms, Princess Cruise ship trains arrive daily, Midnight Sun 24-hr daylight, Alaska Daily OT Law (>8 hrs/day = 1.5x)
+    if any(k in e_low for k in ['princess', 'holland america', 'hap-', 'grande denali', 'denali bluffs', 'mckinley chalet', 'talkeetna alaskan']):
+        shifts = "กะหลัก: 07:30 – 16:00 (8.5 ชม.)\nกะเสริม (Luggage เช้า/ครัวดึก): 05:00–08:30 หรือ 18:00–23:00 (ควงกะข้ามแผนกได้)"
+        hours = "กะหลักปกติ: 42–48 ชม./wk\n[สายขยัน Pick-up กะเสริม/งานสอง]: 55–65+ ชม./wk\n(ได้ Daily OT 1.5x หลังทำงานเกิน 8 ชม./วัน ตามกฎหมาย Alaska + ปลอดภาษี 0%)"
+        return shifts, hours
+
+    # TYPE 1: Mega National Park Lodges & Concessionaires (Yellowstone Xanterra, Grand Teton GTLC, Glacier National Park, Yosemite DNC, Crater Lake, Zion, Grand Canyon)
+    elif any(k in e_low for k in ['xanterra', 'gtlc', 'grand teton lodge', 'glacier national', 'yosemite', 'crater lake', 'zion national', 'grand canyon', 'signal mountain', 'pursuit denali', 'under canvas']):
         shifts = "พ.ค. (เปิดอุทยาน): 07:30 – 16:00 (8.5 ชม.)\nมิ.ย.-ส.ค. (พีคสุด): 07:00 – 17:30 (10.5 ชม. หมุนเวียน)"
         hours = "เฉลี่ยรวม: 40–45 ชม./wk\n[มิ.ย.-ต้น ส.ค.]: 46–52 ชม./wk (นักท่องเที่ยวแน่น 100%)\n[ปลาย ส.ค.]: 38–42 ชม./wk (คนเที่ยวเริ่มชะลอ แต่งานยังเสถียร ไม่ตัดกะ)"
         return shifts, hours
@@ -580,4 +586,4 @@ except Exception as e:
     except Exception as err:
         print('Master file in use:', err)
 
-print('Build complete: Successfully updated per-employer precise micro-scale hours for all 1,167 jobs!')
+print('Build complete: Successfully updated Alaska Princess and all jobs with specialized dynamics!')
