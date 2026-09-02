@@ -11,19 +11,74 @@ clean_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_202
 wb_public = openpyxl.load_workbook(public_path, data_only=True)
 ws_src = wb_public['All Public Jobs']
 
-print(f'Processing {ws_src.max_row - 1} public jobs from source...')
+print(f'Processing and cleaning {ws_src.max_row - 1} public jobs from source...')
 
 def clean_text(val):
     if val is None or str(val).strip().lower() in ['none', 'null', 'nan', '']:
         return ''
     return str(val).strip()
 
+def clean_employer_title(title, agency, state_code, raw_loc, pos_val):
+    t = clean_text(title)
+    
+    if agency == 'NewStep':
+        # Remove Thai marketing prefix
+        t = re.sub(r'^เปิดประสบการณ์\s*Work\s*and\s*Travel\s*USA\s*ที่\s*', '', t, flags=re.IGNORECASE)
+        # Remove extra charge/no charge tags at the end
+        t = re.sub(r'\s*\((No Charge|Extra Charge)[^)]*\)\s*$', '', t, flags=re.IGNORECASE)
+        # Match 'Employer เมือง City รัฐ State'
+        m = re.search(r'^(.*?)\s+เมือง\s+(.*?)\s+รัฐ\s+.*$', t)
+        if m:
+            emp = m.group(1).strip()
+            city = m.group(2).strip()
+            return f'{emp} ({city}, {state_code})' if city else f'{emp} ({state_code})'
+        # Match 'Employer เมือง City'
+        m2 = re.search(r'^(.*?)\s+เมือง\s+(.*?)$', t)
+        if m2:
+            emp = m2.group(1).strip()
+            city = m2.group(2).strip()
+            return f'{emp} ({city}, {state_code})'
+        return f'{t} ({state_code})'
+        
+    elif agency == 'Acadex':
+        # Remove group and year tags e.g. (Summer 2027: Group X)
+        t = re.sub(r'\s*\((?:Summer\s*2027|Summer\s*2026)[^)]*\)', '', t, flags=re.IGNORECASE).strip()
+        if state_code and state_code not in t:
+            t = f'{t} ({state_code})'
+        return t
+        
+    elif agency == 'IEE':
+        # Convert ALL CAPS to Title Case
+        t = t.title()
+        if state_code and state_code not in t:
+            t = f'{t} ({state_code})'
+        return t
+        
+    elif agency == 'OEG':
+        if 'Work & Travel' in t:
+            if 'Denali' in str(raw_loc) or 'Denali' in str(pos_val):
+                return f'Denali Princess Wilderness Lodge ({state_code})'
+            elif 'Cedar Point' in str(pos_val) or 'Cedar Point' in str(raw_loc):
+                return f'Cedar Point Amusement Park ({state_code})'
+            elif 'Kalahari' in str(pos_val) or 'Kalahari' in str(raw_loc):
+                return f'Kalahari Resorts & Conventions ({state_code})'
+            elif 'Six Flags' in str(pos_val) or 'Six Flags' in str(raw_loc) or '2 สวนสนุก' in t:
+                return f'Six Flags Great Escape & Hurricane Harbor ({state_code})'
+            else:
+                pos_clean = str(pos_val).split('(')[0].strip() if pos_val else ''
+                return f'OEG Placement - {pos_clean} ({state_code})'
+        return f'{t} ({state_code})' if state_code not in t else t
+        
+    else:
+        if state_code and state_code not in t and len(t) < 40:
+            return f'{t} ({state_code})'
+        return t
+
 def parse_rate(rate_val, pos_val, title_val):
     combined = f"{clean_text(rate_val)} {clean_text(pos_val)} {clean_text(title_val)}"
-    # Search for $XX.XX or $XX
     m = re.findall(r'\$(\d+(?:\.\d+)?)', combined)
     if m:
-        nums = [float(x) for x in m if float(x) >= 5.0] # filter out small tip percentages
+        nums = [float(x) for x in m if float(x) >= 5.0]
         if nums:
             if len(nums) >= 2 and nums[0] != nums[1] and nums[1] <= 35.0:
                 r1, r2 = min(nums[:2]), max(nums[:2])
@@ -50,14 +105,12 @@ def parse_housing(hsg_val, desc_val):
     if any(k in combined for k in ['ฟรี', 'บ้านฟรี', 'free', '$0', 'no charge']):
         return "ฟรี ($0) (ที่พักฟรี!)"
     if any(k in combined for k in ['รวมกิน', 'รวมอาหาร', 'meal included', 'edr included', 'free meals']):
-        # Find price
         m = re.search(r'\$(\d+(?:\.\d+)?)', clean_text(hsg_val))
         if m:
             p = int(float(m.group(1)))
             return f"${p} (รวมกิน)"
         return "$105 (รวมกิน)"
     
-    # Extract dollar amount
     m = re.search(r'\$(\d+(?:\.\d+)?)', clean_text(hsg_val))
     if m:
         p = float(m.group(1))
@@ -165,10 +218,6 @@ for r in range(2, ws_src.max_row + 1):
     state_code = clean_text(ws_src.cell(r, 3).value)
     agency = clean_text(ws_src.cell(r, 4).value)
     title = clean_text(ws_src.cell(r, 5).value)
-    season = clean_text(ws_src.cell(r, 6).value)
-    year = clean_text(ws_src.cell(r, 7).value)
-    evidence = clean_text(ws_src.cell(r, 8).value)
-    avail = clean_text(ws_src.cell(r, 9).value)
     pos = clean_text(ws_src.cell(r, 10).value)
     rate = clean_text(ws_src.cell(r, 11).value)
     hours = clean_text(ws_src.cell(r, 12).value)
@@ -183,10 +232,8 @@ for r in range(2, ws_src.max_row + 1):
 
     state_display = f"{state_name} ({state_code})" if state_code else state_name
     
-    # Format Title with Location if possible
-    emp_display = title
-    if loc and loc.lower() not in title.lower() and len(loc) < 35:
-        emp_display = f"{title} ({loc})"
+    # Clean Employer / Workplace Name
+    emp_display = clean_employer_title(title, agency, state_code, loc, pos)
 
     # Format Position
     pos_display = pos if pos else "Resort Associate / Food Service / Housekeeping / Retail"
@@ -391,11 +438,11 @@ try:
     wb.save(master_path)
     print('Saved to master path:', master_path)
 except Exception as e:
-    print('Master path currently opened in Windows Excel (will sync when closed):', e)
+    print('Master path note (will attempt copy):', e)
     try:
         shutil.copyfile(clean_path, master_path)
         print('Copied to master path successfully.')
     except Exception as err:
-        print('Copy note:', err)
+        print('Master file in use:', err)
 
-print('Build complete: All 1,167 jobs formatted into Top Employers format successfully!')
+print('Build complete: Cleaned NewStep and all public jobs in Top Employers format!')
