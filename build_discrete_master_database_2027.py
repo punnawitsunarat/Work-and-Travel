@@ -204,7 +204,110 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 2. MEGA AMUSEMENT & THEME PARKS (Individual Park Dynamics)
+    # 2. INDIVIDUAL THAI RESTAURANTS (22 Distinct Realities)
+    # -------------------------------------------------------------
+    elif 'farmhouse kitchen' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 15:00 (4 ชม.)\nพักบ่าย (เซ็ตโต๊ะ): 15:00 – 16:30 (1.5 ชม.)\nกะค่ำพีค: 16:30 – 22:30 (6 ชม. ดีเจ+ค็อกเทลแน่น)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–47 ชม./wk (ร้านอาหารไทยขนาดใหญ่ 160 ที่นั่ง Michelin Bib Gourmand, CA)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–54+ ชม./wk (ได้ Daily OT 1.5x หลัง 8 ชม. ตามกฎหมาย CA + ทิปสด $80-$140/คืน)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'mahaniyom' in e_low:
+        shifts = "กะเตรียมวัตถุดิบ/กลางวัน: 11:30 – 15:00 (3.5 ชม.)\nกะค่ำพีค & บาร์ทาปาส: 16:30 – 23:30 (7 ชม. คนต่อคิวยาวทั้งคืน)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 43–48 ชม./wk (ร้านอาหารไทยยอดฮิตติดชาร์ตระดับประเทศใน Boston, MA 70 ที่นั่ง)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (คิวยาว 2-3 ชม. ควงกะดินเนอร์+บาร์ดึก อาหารไทยฟรี)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
+        return shifts, hours
+
+    elif 'sugar & spice' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nพักบ่าย: 14:30 – 16:30 (2 ชม. ไม่คิดเงิน)\nกะค่ำ: 16:30 – 21:30 (5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–44 ชม./wk (120 ที่นั่ง ใกล้ Harvard/Cambridge, MA แขกแน่นสม่ำเสมอ)\n[พีค มิ.ย.-ก.ค.]: 44–50 ชม./wk (บุฟเฟต์กลางวันและดินเนอร์ ทิป $40-$90/คืน)\n[ปลาย ส.ค.]: 36–40 ชม./wk"
+        return shifts, hours
+
+    elif 'real thai' in e_low:
+        shifts = "กะกลางวัน: 11:30 – 14:00 (2.5 ชม.)\nกะค่ำ: 16:30 – 21:00 (4.5 ชม. วันธรรมดาเข้าเฉพาะกะค่ำ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 32–37 ชม./wk (⚠️ ร้านครอบครัวขนาด 45 ที่นั่ง ใน Grand Rapids, MI)\n[มิ.ย.-ก.ค.]: 38–42 ชม./wk (ศุกร์-เสาร์-อาทิตย์ ควง 2 กะเต็ม)\n[ส.ค.-ต้น ก.ย.]: 28–34 ชม./wk (วันธรรมดาตัดเหลือกะเย็น 4.5 ชม. ต้องประหยัดค่าแรง)"
+        return shifts, hours
+
+    elif 'boone' in e_low and 'thai' in e_low:
+        shifts = "กะกลางวัน: 11:30 – 14:30 (3 ชม.)\nกะค่ำ: 16:30 – 21:00 (4.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 35–40 ชม./wk (ร้านท้องถิ่นใน Epping, NH เรตทิป Server $5+Tips)\n[พีค มิ.ย.-ก.ค.]: 40–46 ชม./wk (ทิปสด $50-$90/คืน ปลอดภาษีซื้อของ 0% NH)\n[ปลาย ส.ค.]: 30–35 ชม./wk"
+        return shifts, hours
+
+    elif 'thai chili' in e_low:
+        shifts = "กะค่ำพีค: 15:30 – 21:30 (6 ชม. เน้นช่วงเย็น)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 34–39 ชม./wk (ร้านใน Salem, NH เรต $12+Tips)\n[พีค มิ.ย.-ก.ค.]: 38–44 ชม./wk\n[ปลาย ส.ค.]: 30–35 ชม./wk"
+        return shifts, hours
+
+    elif 'thai nakornping' in e_low:
+        shifts = "กะกลางวัน: 11:30 – 14:30 (3 ชม.)\nกะค่ำ: 16:30 – 21:30 (5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–43 ชม./wk (เมืองท่องเที่ยว White Mountains, North Conway, NH)\n[พีค มิ.ย.-ต้น ส.ค.]: 44–50 ชม./wk (นักท่องเที่ยวปีนเขาและช้อปปิ้ง Outlet แน่น)\n[ปลาย ส.ค.]: 34–38 ชม./wk"
+        return shifts, hours
+
+    elif 'erawan thai' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nกะค่ำ: 16:30 – 22:00 (5.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–44 ชม./wk (ร้านอาหารไทยยอดนิยม 85 ที่นั่งใน Queens/NY เรต $17/ชม.)\n[พีค มิ.ย.-ก.ค.]: 43–48 ชม./wk (ยอด Take-out และ Dine-in หนาแน่น)\n[ปลาย ส.ค.]: 36–40 ชม./wk"
+        return shifts, hours
+
+    elif 'isaan thai star' in e_low:
+        shifts = "กะค่ำดินเนอร์: 15:00 – 21:30 (6.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 35–40 ชม./wk (ร้านอาหารอีสานใน Hudson, NY เมืองศิลปะริมแม่น้ำ)\n[พีค มิ.ย.-ก.ค.]: 40–46 ชม./wk (ทิปเงินสด+บัตรเครดิต $50-$90/คืน)\n[ปลาย ส.ค.]: 32–36 ชม./wk"
+        return shifts, hours
+
+    elif 'maliwan thai' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 14:00 (3 ชม.)\nกะค่ำ: 16:30 – 21:00 (4.5 ชม. Line Cook ทำอาหาร 2 มื้อ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 36–41 ชม./wk (Essex, VT - ที่พักถูกมาก $250/เดือน ($58/wk))\n[พีค มิ.ย.-ก.ค.]: 40–45 ชม./wk\n[ปลาย ส.ค.]: 32–36 ชม./wk"
+        return shifts, hours
+
+    elif 'asian thai' in e_low and 'luray' in e_low:
+        shifts = "กะกลางวัน: 11:30 – 14:30 (3 ชม.)\nกะค่ำ: 16:30 – 21:30 (5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 37–42 ชม./wk (เมืองหน้าด่านอุทยานแห่งชาติ Shenandoah & ถ้ำ Luray Caverns, VA)\n[พีค มิ.ย.-ต้น ส.ค.]: 42–48 ชม./wk (นักท่องเที่ยวแวะกินหลังเที่ยวอุทยาน)\n[ปลาย ส.ค.]: 34–38 ชม./wk"
+        return shifts, hours
+
+    elif 'keen kow' in e_low:
+        shifts = "กะเช้า-กลางวัน: 10:30 – 14:30 (4 ชม.)\nกะค่ำ: 16:00 – 21:30 (5.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 40–46 ชม./wk (เมืองตกปลา Ninilchik บนคาบสมุทร Kenai, AK ซีซันตกปลาแซลมอน)\n[พีค มิ.ย.-ก.ค.]: 46–52+ ชม./wk (Daily OT หลัง 8 ชม. + ปลอดภาษี 0% AK)\n[ปลาย ส.ค.]: 35–40 ชม./wk"
+        return shifts, hours
+
+    elif 'siam cuisine' in e_low or 'thaihouse' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nกะค่ำ: 16:30 – 22:00 (5.5 ชม. ควงคู่)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–48 ชม./wk (ใจกลางเมือง Anchorage, AK นักท่องเที่ยวเรือสำราญและคนท้องถิ่นแน่น)\n[พีค มิ.ย.-ก.ค.]: 48–54+ ชม./wk (Daily OT 1.5x หลัง 8 ชม. + ปลอดภาษี 0% AK)\n[ปลาย ส.ค.]: 38–42 ชม./wk"
+        return shifts, hours
+
+    elif 'lahn pad thai' in e_low:
+        shifts = "กะเช้า: 10:30 – 16:00 (5.5 ชม.)\nกะเย็น: 16:00 – 21:30 (5.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–43 ชม./wk (ร้านสตรีทฟู้ดและฟาสต์แคชชวลใน Anchorage, AK)\n[พีค มิ.ย.-ก.ค.]: 43–48 ชม./wk (Daily OT 1.5x)\n[ปลาย ส.ค.]: 36–40 ชม./wk"
+        return shifts, hours
+
+    elif 'estes thai' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nกะค่ำพีค: 16:30 – 21:30 (5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 42–48 ชม./wk (เมืองหน้าด่าน Rocky Mountain NP, CO สูง 7,500 ฟุต นักท่องเที่ยวล้น)\n[พีค มิ.ย.-ต้น ส.ค.]: 48–55+ ชม./wk (คิวยาวตลอดบ่าย-ค่ำ ทิปสดแน่น)\n[ปลาย ส.ค.]: 36–42 ชม./wk"
+        return shifts, hours
+
+    elif 'dok mali' in e_low:
+        shifts = "กะค่ำ & นู้ดเดิ้ลบาร์: 15:30 – 22:30 (7 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–44 ชม./wk (ใจกลาง Old Port Portland, ME เมืองตากอากาศริมทะเล)\n[พีค มิ.ย.-ต้น ส.ค.]: 44–50 ชม./wk (นักท่องเที่ยวริมท่าเรือหนาแน่น)\n[ปลาย ส.ค.]: 34–38 ชม./wk"
+        return shifts, hours
+
+    elif 'so zap' in e_low:
+        shifts = "กะกลางวัน: 11:30 – 14:30 (3 ชม.)\nกะค่ำ: 16:30 – 22:00 (5.5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 40–46 ชม./wk (เมืองชายหาดยอดฮิต Ogunquit, ME คนเที่ยวชายหาดแน่น)\n[พีค มิ.ย.-ต้น ส.ค.]: 46–52+ ชม./wk (โต๊ะแน่นช่วงค่ำ ทิปสด $60-$110/คืน)\n[ปลาย ส.ค.]: 34–38 ชม./wk"
+        return shifts, hours
+
+    elif 'thai tree' in e_low:
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nกะค่ำ: 16:30 – 21:30 (5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 41–47 ชม./wk (เมือง Ellsworth หน้าด่านอุทยานแห่งชาติ Acadia, ME เรต $16.75/ชม.)\n[พีค มิ.ย.-ต้น ส.ค.]: 47–54+ ชม./wk (กรุ๊ปทัวร์ Acadia แวะตลอดวัน)\n[ปลาย ส.ค.]: 36–40 ชม./wk"
+        return shifts, hours
+
+    elif 'thai o-cha' in e_low or 'thai o cha' in e_low:
+        shifts = "กะกลางวัน: 11:30 – 14:30 (3 ชม.)\nกะค่ำ: 16:30 – 22:30 (6 ชม. ควงรอบค่ำ)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 38–44 ชม./wk (เมืองชายหาดบอร์ดวอล์ก Ocean City, MD เรต $16-$17/ชม.)\n[พีค ก.ค.-ต้น ส.ค.]: 45–52+ ชม./wk (คนเดินถนนและนักท่องเที่ยวริมหาดแน่น)\n[ปลาย ส.ค.]: 32–36 ชม./wk"
+        return shifts, hours
+
+    elif any(k in e_low for k in ['thai', 'pad thai', 'asian thai']):
+        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nพักเบรกบ่าย (ร้านปิด): 14:30 – 16:30 (2 ชม. ไม่คิดเงิน)\nกะค่ำ: 16:30 – 21:30 (5 ชม.)"
+        hours = "งานหลักอย่างเดียว (เฉลี่ย): 36–42 ชม./wk (ร้านอาหารไทยเฉพาะแห่ง ติด Split Shift)\n[พีค มิ.ย.-ก.ค.]: 42–47 ชม./wk\n[วันธรรมดา]: 30–35 ชม./wk (อาหารไทยฟรี 3 มื้อ)"
+        return shifts, hours
+
+    # -------------------------------------------------------------
+    # 3. MEGA AMUSEMENT & THEME PARKS (Individual Park Dynamics)
     # -------------------------------------------------------------
     elif 'cedar point' in e_low:
         shifts = "พ.ค.: 09:00 – 17:00 (เฉพาะ ส.-อา. 8 ชม.)\nมิ.ย.-ต้น ส.ค. (พีค): 08:30 – 22:00 (11–13 ชม. ควงกะเปิด-ปิดปาร์ค)"
@@ -247,7 +350,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 3. MEGA WATERPARK RESORTS (Wisconsin Dells & Poconos)
+    # 4. MEGA WATERPARK RESORTS (Wisconsin Dells & Poconos)
     # -------------------------------------------------------------
     elif 'kalahari' in e_low:
         shifts = "พ.ค.: 08:30 – 16:30 (8 ชม.)\nมิ.ย.-ส.ค. (พีคสวนน้ำ): 07:30 – 18:30 (11 ชม. 5–6 วัน/wk)"
@@ -270,7 +373,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 4. FAMOUS MEGA RESTAURANTS & PIZZERIAS (300-600 Seats)
+    # 5. FAMOUS MEGA RESTAURANTS & PIZZERIAS (300-600 Seats)
     # -------------------------------------------------------------
     elif 'moosejaw' in e_low:
         shifts = "พ.ค.: 11:30 – 20:30 (พักเบรก)\nมิ.ย.-ส.ค. (พีคคิวยาว): 11:00 – 23:00 (10–11.5 ชม. ควงรอบค่ำ ทิปแน่น)"
@@ -293,7 +396,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 5. LUXURY HISTORIC 4-5 DIAMOND RESORTS (Grand Hotel, Omni, Tenaya)
+    # 6. LUXURY HISTORIC 4-5 DIAMOND RESORTS (Grand Hotel, Omni, Tenaya)
     # -------------------------------------------------------------
     elif 'grand hotel' in e_low and 'mackinac' in e_low:
         shifts = "พ.ค.-มิ.ย. (เปิดเกาะ): 07:30 – 16:30 (8.5–9 ชม.)\nก.ค.-ส.ค. (พีคหรู): 07:00 – 17:30 (10 ชม. 5–6 วัน/wk)"
@@ -316,7 +419,7 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
         return shifts, hours
 
     # -------------------------------------------------------------
-    # 6. NATIONAL PARK LODGES (Xanterra Yellowstone / Grand Teton GTLC)
+    # 7. NATIONAL PARK LODGES (Xanterra Yellowstone / Grand Teton GTLC)
     # -------------------------------------------------------------
     elif 'xanterra' in e_low or 'yellowstone' in e_low:
         shifts = "พ.ค. (เปิดถนนอุทยาน): 07:30 – 16:00 (8 ชม.)\nมิ.ย.-ส.ค. (พีคสุด): 07:00 – 17:30 (10 ชม. 5–6 วัน/wk)"
@@ -331,14 +434,6 @@ def evaluate_discrete_employer_hours(emp_name, state_name, state_code, pos_name,
     elif 'glacier national' in e_low:
         shifts = "มิ.ย. (เปิดถนน Going-to-the-Sun): 08:00 – 16:30 (8 ชม.)\nก.ค.-ส.ค. (พีคสั้นแต่แน่นมาก): 07:00 – 18:00 (10.5 ชม. 5–6 วัน/wk)"
         hours = "งานหลักอย่างเดียว (เฉลี่ย): 45–50 ชม./wk (Glacier NP, MT - ซีซันเปิดแค่ 3 เดือน แขกทะลัก)\n[พีค ก.ค.-ต้น ส.ค.]: 50–58+ ชม./wk (ควงกะแน่น ปลอดภาษีซื้อของ 0% MT)\n[ปลาย ส.ค.]: 40–44 ชม./wk"
-        return shifts, hours
-
-    # -------------------------------------------------------------
-    # 7. AUTHENTIC THAI RESTAURANTS (Split Shift Reality)
-    # -------------------------------------------------------------
-    elif any(k in e_low for k in ['thai', 'erawan', 'maliwan', 'dok mali', 'so zap', 'pad thai', 'mahaniyom', 'keen kow', 'asian thai', 'siam cuisine', 'thaihouse']):
-        shifts = "กะกลางวัน: 11:00 – 14:30 (3.5 ชม.)\nพักเบรกบ่าย (ร้านปิด): 14:30 – 16:30 (2 ชม. ไม่คิดเงิน)\nกะค่ำพีค: 16:30 – 21:30 (5 ชม. ควงรอบค่ำ)"
-        hours = "งานหลักอย่างเดียว (เฉลี่ย): 36–42 ชม./wk (⚠️ ติด Split Shift เบรกบ่าย 2 ชม.)\n[พีค มิ.ย.-ก.ค. ควงสองกะ 5-6 วัน]: 44–48 ชม./wk (โต๊ะแน่น + ทิปสด $40-$80/คืน)\n[วันธรรมดา/ร้านเล็ก ตัดเหลือกะเย็น]: 30–35 ชม./wk (แต่อิ่มท้อง อาหารไทยฟรี 3 มื้อ)"
         return shifts, hours
 
     # -------------------------------------------------------------
