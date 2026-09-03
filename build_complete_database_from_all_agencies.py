@@ -7,7 +7,6 @@ public_path = r'C:\Users\ASUS\Desktop\WAT\WAT_Tier_S_A_All_Public_Jobs_2027.xlsx
 master_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027.xlsx'
 clean_path = r'C:\Users\ASUS\Desktop\WAT\Work_and_Travel_Master_Job_Database_2027_Clean.xlsx'
 
-# 1. Load Scraped Live Agency Databases
 print("Loading official scraped databases from live agency APIs...")
 
 with open(r'C:\Users\ASUS\Desktop\WAT\job.json', 'r', encoding='utf-8') as f:
@@ -21,9 +20,11 @@ ns_employers = ns_raw.get('data', [])
 with open(r'C:\Users\ASUS\Desktop\WAT\higher_parsed_database.json', 'r', encoding='utf-8') as f:
     higher_jobs = json.load(f)
 
-print(f"Loaded {len(alc_jobs)} American Learning jobs, {len(ns_employers)} NewStep employers, {len(higher_jobs)} Higher Education jobs.")
+with open(r'C:\Users\ASUS\Desktop\WAT\iee_parsed_jobs.json', 'r', encoding='utf-8') as f:
+    iee_dict = json.load(f)
 
-# Helper text cleaners
+print(f"Loaded: ALC={len(alc_jobs)}, NewStep={len(ns_employers)}, Higher={len(higher_jobs)}, IEE={len(iee_dict)}")
+
 def clean_text(val):
     if val is None or str(val).strip().lower() in ['none', 'null', 'nan', '']:
         return ''
@@ -96,7 +97,7 @@ def clean_employer_title(title, agency, state_code, raw_loc, pos_val):
         return t
 
 # -------------------------------------------------------------------------
-# Exact Matchers for NewStep, American Learning, and Higher Education
+# Matchers for Agency Databases
 # -------------------------------------------------------------------------
 
 def match_newstep(title, state_code):
@@ -123,7 +124,6 @@ def match_newstep(title, state_code):
             break
 
     if not best_match:
-        # Relaxed match without state
         for emp in ns_employers:
             e_name = str(emp.get('name') or '').strip().lower()
             if emp_name == e_name or (len(emp_name) > 5 and emp_name in e_name) or (len(e_name) > 5 and e_name in emp_name):
@@ -131,7 +131,6 @@ def match_newstep(title, state_code):
                 break
 
     if best_match:
-        # Extract positions and rates
         jobs = best_match.get('jobs', [])
         positions = []
         rates = []
@@ -162,7 +161,6 @@ def match_newstep(title, state_code):
             else:
                 rate_str = f"ฐาน ${min_r:.2f} - ${max_r:.2f}{tip_tag} / OT ${min_r*1.5:.2f} - ${max_r*1.5:.2f}"
 
-        # Housing
         h_cost = str(best_match.get('houseCost') or '').strip()
         hsg_str = "-"
         if h_cost and h_cost.lower() not in ['n/a', 'none', 'null', '']:
@@ -187,6 +185,7 @@ def match_american_learning(title, state_code):
     t_clean = re.sub(r'\s*-\s*', ' ', t_clean).strip()
 
     best_match = None
+    # 1. Exact or substring match with state
     for aj in alc_jobs:
         aj_name = str(aj.get('job_name') or '').strip().lower()
         aj_state = str(aj.get('state_code') or '').strip().upper()
@@ -195,19 +194,51 @@ def match_american_learning(title, state_code):
         if t_clean == aj_name or (len(t_clean) > 4 and t_clean in aj_name) or (len(aj_name) > 4 and aj_name in t_clean):
             best_match = aj
             break
-        # First 2 words match
         w_t = t_clean.split()
         w_a = aj_name.split()
         if len(w_t) >= 2 and len(w_a) >= 2 and w_t[:2] == w_a[:2]:
             best_match = aj
             break
 
+    # 2. Match without state if distinctive name
     if not best_match:
         for aj in alc_jobs:
             aj_name = str(aj.get('job_name') or '').strip().lower()
-            if t_clean == aj_name or (len(t_clean) > 5 and t_clean in aj_name) or (len(aj_name) > 5 and aj_name in t_clean):
+            if t_clean == aj_name or (len(t_clean) > 6 and t_clean in aj_name) or (len(aj_name) > 6 and aj_name in t_clean):
                 best_match = aj
                 break
+
+    # 3. Known exact alias mappings for ALC
+    if not best_match:
+        alc_aliases = {
+            'squire inn resort': 'DNC at The Squire Resort ',
+            'delaware north at tenaya lodge at yosemite': 'DNC at Tenaya Lodge at Yosemite',
+            'delaware north at grand canyon': 'DNC Grand Canyon',
+            'delaware north at sequoia national park': 'DNC at Sequoia National Park',
+            'seaworld orlando': 'SeaWorld - Orlando',
+            'stop and shop nantucket': 'Stop & Shop - Nantucket',
+            'stop&shop edgartown': 'Stop & Shop - Edgartown',
+            'mcdonald’s-branson': "McDonald's - 1209 Branson Hills Pkwy",
+            'mcdonald’s cape cod': "McDonald's Cape Cod",
+            'steak ‘n shake': 'Steak n Shake',
+            'story land theme park': 'Storyland Theme Park',
+            'dolle’s candy': "Dolle's Candy",
+            'dirty dick’s crab house': "Dirty Dick's Crab House",
+            'yellow submarine pizza&subs': 'Outer Banks Yellow Submarine Pizza & Subs',
+            'the ridgeline hotel': 'DNC Ridgeline Holiday Inn, CO',
+            'chilkat restaurant and bakery': "Chilkat's Bakery & Restaurant",
+            'e&m oriental store': 'E & M Oriental Store',
+            'fountainhead-wedgewood resort': 'Fountainhead - Wedgewood Resort',
+            'gilmore hotel/ annabelle’s famous keg and chowder house': "Gilmore Hotel/Annabelle's Famous Keg and Chowder House",
+            'hap-denali shared services': 'HAP-Denali Shared Services'
+        }
+        for alias_k, target_name in alc_aliases.items():
+            if alias_k in t_clean:
+                for aj in alc_jobs:
+                    if str(aj.get('job_name') or '').strip().lower() == target_name.lower():
+                        best_match = aj
+                        break
+            if best_match: break
 
     if best_match:
         pay = str(best_match.get('pay_rate') or '').strip()
@@ -219,7 +250,6 @@ def match_american_learning(title, state_code):
         has_tips = 'tip' in pay.lower()
 
         rate_str = "-"
-        # Parse pay numbers
         nums = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', pay)]
         if not nums and min_r is not None:
             try: nums.append(float(str(min_r).replace('$', '')))
@@ -247,12 +277,76 @@ def match_american_learning(title, state_code):
 
     return None
 
+def match_iee(title, state_code):
+    t_clean = re.sub(r'\(.*?\)', '', title).strip().lower()
+    
+    # Exact and high-confidence aliases
+    iee_aliases = {
+        'anaheim majestic garden hotel': 'ANAHEIM MAJESTIC GARDEN HOTEL',
+        'camp richardson resort': 'CAMP RICHARDSON RESORT',
+        'margaritaville resort lake tahoe': 'MARGARITAVILLE RESORT LAKE TAHOE',
+        'safeway at north lake tahoe': 'SAFEWAY AT NORTH LAKE TAHOE',
+        'safeway at south lake tahoe': 'SAFEWAY AT SOUTH LAKE TAHOE',
+        'foxwoods resort casino': 'FOXWOODS RESORT CASINO',
+        'mohegan sun': 'MOHEGAN SUN',
+        'amangiri resort utah': 'AMANGIRI RESORT UTAH',
+        'round hill pines beach resort': 'ROUND HILL PINES BEACH RESORT',
+        'grand country resort': 'GRAND COUNTRY RESORT',
+        'six flags great escape': 'SIX FLAGS GREAT ESCAPE',
+        'six flags great adventure': 'SIX FLAGS GREAT ADVENTURE',
+        'snow king resort': 'SNOW KING RESORT',
+        'cedar point amusement park': 'CEDAR POINT AMUSEMENT PARK',
+        'xanterra yellowstone national park': 'XANTERRA YELLOWSTONE NATIONAL PARK',
+        'xanterra the oasis at death valley national park': 'XANTERRA THE OASIS AT DEATH VALLEY NATIONAL PARK',
+        'one&only moonlight basin resort': 'ONE&ONLY MOONLIGHT BASIN RESORT',
+        'dorney park a six flags park': 'DORNEY PARK A SIX FLAGS PARK',
+        'kings island a six flags park': 'KINGS ISLAND A SIX FLAGS PARK',
+        'nantasket beach resort': 'NANTASKET BEACH RESORT',
+        'nugget casino resort': 'NUGGET CASINO RESORT',
+        'harrah’s resort atlantic city': 'HARRAH’S RESORT ATLANTIC CITY',
+        'harrah’s and caesars republic lake tahoe': 'HARRAH’S AND CAESARS REPUBLIC LAKE TAHOE',
+        'mcdonald’s': 'MCDONALD’S',
+        'mountaineer casino': 'MOUNTAINEER CASINO',
+        'circus circus hotel & casino las vegas': 'CIRCUS CIRCUS HOTEL & CASINO LAS VEGAS',
+        'bally’s atlantic city hotel & casino': 'BALLY’S ATLANTIC CITY HOTEL & CASINO',
+        'resorts atlantic city': 'RESORTS ATLANTIC CITY',
+        'rocky gap casino': 'ROCKY GAP CASINO',
+        'edgewater': 'EDGEWATER',
+        'aquarius casino & resort': 'AQUARIUS CASINO & RESORT',
+        'golden nugget atlantic city hotel, casino & marina': 'GOLDEN NUGGET ATLANTIC CITY HOTEL, CASINO & MARINA',
+        'golden nugget hotel & casino cripple creek': 'GOLDEN NUGGET HOTEL & CASINO CRIPPLE CREEK',
+        'dunkin’ donuts': 'DUNKIN’ DONUTS',
+        'tropicana': 'TROPICANA',
+        'casino beach pier breakwater beach': 'CASINO BEACH PIER BREAKWATER BEACH'
+    }
+
+    matched_name = None
+    for k, v in iee_aliases.items():
+        if k in t_clean:
+            matched_name = v
+            break
+
+    if not matched_name:
+        for k in iee_dict:
+            if t_clean in k.lower() or k.lower() in t_clean:
+                matched_name = k
+                break
+
+    if matched_name and matched_name in iee_dict:
+        rate_val = iee_dict[matched_name]['rate']
+        rate_str = f"ฐาน ${rate_val:.2f} / OT ${rate_val*1.5:.2f}"
+        pos_str = "Resort / Hotel / Service Worker"
+        hsg_str = "-"
+        return pos_str, rate_str, hsg_str, False, None
+
+    return None
+
 def match_higher(title, state_code):
     t_clean = re.sub(r'\(.*?\)', '', title).strip().lower()
     best_match = None
     for jid, hj in higher_jobs.items():
         h_title = str(hj.get('title') or hj.get('company') or '').strip().lower()
-        if t_clean and (t_clean in h_title or h_title in t_clean or (len(t_clean) > 4 and t_clean[:8] in h_title)):
+        if t_clean and len(t_clean) > 4 and (t_clean in h_title or h_title in t_clean):
             best_match = hj
             break
 
@@ -275,7 +369,6 @@ def match_higher(title, state_code):
 
     return None
 
-# General robust fallback rate parser for already scraped agencies (Acadex, IEO, OEG)
 def parse_raw_rate_and_ot(raw_rate, raw_pos, title_clean):
     r_text = clean_text(raw_rate)
     p_text = clean_text(raw_pos)
@@ -287,7 +380,6 @@ def parse_raw_rate_and_ot(raw_rate, raw_pos, title_clean):
     has_no_ot = bool(re.search(r'\bno\s*ot\b', combined, re.I))
     has_tips = bool(re.search(r'\+\s*tips?|plus\s*tips?|\(tips\)', combined, re.I))
     
-    # Explicit Rate & OT pattern like "$14 (OT $21)" or "Rate $5+Tips (OT $7.50+Tips)"
     m_ot = re.search(r'\$(\d+(?:\.\d+)?)(?:\s*\+\s*tips?)?\s*\(?OT\s*\$?(\d+(?:\.\d+)?)(?:\s*\+?\s*tips?)?\)?', combined, re.I)
     if m_ot:
         base_v = float(m_ot.group(1))
@@ -295,7 +387,6 @@ def parse_raw_rate_and_ot(raw_rate, raw_pos, title_clean):
         tip_tag = " (+ Tips)" if has_tips else ""
         return f"ฐาน ${base_v:.2f}{tip_tag} / OT ${ot_v:.2f}{tip_tag if has_tips else ''}"
 
-    # Range pattern
     clean_for_range = re.sub(r'\(?OT\s*\$?\d+(?:\.\d+)?\)?', '', r_text, flags=re.I)
     m_r = re.findall(r'\$(\d+(?:\.\d+)?)', clean_for_range)
     valid_r = [float(x) for x in m_r if 2.0 <= float(x) <= 35.0]
@@ -381,7 +472,13 @@ for r in range(2, ws_src.max_row + 1):
         if res:
             pos_res, rate_res, hsg_res, has_tips, _ = res
             
-    # 3. Match Higher
+    # 3. Match IEE
+    elif agency == 'IEE':
+        res = match_iee(title, state_code)
+        if res:
+            pos_res, rate_res, hsg_res, has_tips, _ = res
+
+    # 4. Match Higher
     elif agency == 'Higher':
         res = match_higher(title, state_code)
         if res:
@@ -454,14 +551,13 @@ for r in range(2, ws_src.max_row + 1):
     ]
     all_formatted_jobs.append(job_row)
 
-print("\n--- STATS AFTER LIVE API INTEGRATION ---")
-print(f"Total Jobs Processed: {stats['total']}")
+print("\n--- FINAL STATS AFTER STRICT MULTI-AGENCY INTEGRATION ---")
+print(f"Total Jobs: {stats['total']}")
 print(f"Genuine Rates Disclosed: {stats['rates_found']} ({stats['rates_found']/stats['total']*100:.1f}%)")
 print(f"Genuine Positions Disclosed: {stats['pos_found']} ({stats['pos_found']/stats['total']*100:.1f}%)")
 print(f"Genuine Housing Costs Disclosed: {stats['housing_found']} ({stats['housing_found']/stats['total']*100:.1f}%)")
-print(f"Unlisted Rates strictly marked '-': {stats['total'] - stats['rates_found']}")
+print(f"Unlisted Rates strictly marked '-': {stats['total'] - stats['rates_found']} ({(stats['total'] - stats['rates_found'])/stats['total']*100:.1f}%)")
 
-# Build Excel Workbook
 wb = openpyxl.Workbook()
 
 header_fill = PatternFill(start_color='0F172A', end_color='0F172A', fill_type='solid')
@@ -606,7 +702,6 @@ for r in range(2, ws3.max_row + 1):
         cell.border = thin_border
         cell.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
 
-# Save clean workbook first
 try:
     wb.save(clean_path)
     print('Saved to clean path:', clean_path)
@@ -619,4 +714,4 @@ try:
 except Exception as e:
     print('Master path note:', e)
 
-print('Build with full live agency database completed successfully!')
+print('Updated Master Excel with authentic data from all agencies successfully!')
